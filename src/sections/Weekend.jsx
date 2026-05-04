@@ -3,7 +3,7 @@ import { Reveal } from '../components/Reveal'
 const plans = [
   {
     eyebrow: 'FRIDAY EVENING · JULY 31',
-    title: 'Dinner in the old town',
+    title: 'Old town dinner',
     body: [
       'A casual dinner and a walk through the old town in Lucerne. Nothing planned too strictly — just an easy start.',
       'Time: around 7:00 PM on Friday, July 31',
@@ -17,7 +17,7 @@ const plans = [
     body: [
       'This day also happens to be Swiss National Day, for those who want a real Swiss experience — a relaxed brunch on a farm just outside Lucerne.',
       'Time: 11:00 AM - 2:00 PM on Saturday, August 1',
-      'Location: Lisbeth & Walter Wüest-Meier, Kantonsstrasse 16, 6211 Buchs LU (about 20 minutes from Lucerne)',
+      'Location: Lisbeth & Walter Wüest-Meier, Kantonsstrasse 16, 6211 Buchs LU (about 20-mins drive from Lucerne)',
       'Dress code: something red or white — if you feel like leaning into it',
       'Transport: we’ll coordinate once we know how many of you are joining — either sharing cars or meeting at Sursee station and going together',
     ],
