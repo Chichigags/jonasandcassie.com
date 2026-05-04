@@ -8,27 +8,31 @@ export function Gifts() {
   return (
     <section
       id="gifts"
-      className="relative w-full bg-paper px-6 py-20 md:px-12 md:py-24 lg:py-28"
+      className="relative w-full bg-paper px-6 py-16 md:px-12 md:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="eyebrow">
             ONE LAST THING
           </p>
-          <h2 className="mt-4 font-display text-[2.4rem] font-medium leading-[1.08] tracking-[-0.005em] text-navy md:text-[3rem]">
+          <h2 className="mt-4 font-display text-[2.25rem] font-medium leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
             Gifts
           </h2>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
-          <div className="mx-auto mt-8 max-w-xl space-y-2 font-sans text-[1rem] leading-[1.7] text-navy/85 md:text-[1.05rem]">
-            <p>Your presence is already the best gift for us</p>
-            <p>— especially if you&apos;re traveling to celebrate together.</p>
+          <div className="mx-auto mt-7 max-w-[34rem] font-sans text-[1rem] leading-[1.72] text-navy/85 md:text-[1.05rem]">
+            <p>
+              Your presence is already the best gift — especially if you&apos;re
+              traveling to celebrate with us.
+            </p>
           </div>
         </Reveal>
 
+        <div className="mx-auto mt-8 h-px w-16 bg-gold/35" aria-hidden />
+
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-9 font-display italic text-[1.4rem] leading-snug text-gold md:text-[1.65rem]">
+          <p className="mt-7 font-display italic text-[1.32rem] leading-snug text-gold md:text-[1.55rem]">
             Truly — no gifts needed.
           </p>
         </Reveal>

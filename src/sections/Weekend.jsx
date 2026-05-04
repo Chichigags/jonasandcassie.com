@@ -37,7 +37,15 @@ function StackedPlanLine({ children }) {
         {labelMatch[1]}
       </p>
       <p className="font-sans text-[16px] leading-[1.65] text-navy/80">
-        {labelMatch[2]}
+        {labelMatch[2].includes('something red or white') ? (
+          <>
+            something red or white —
+            <br />
+            if you feel like leaning into it
+          </>
+        ) : (
+          labelMatch[2]
+        )}
       </p>
     </div>
   )
@@ -47,16 +55,10 @@ export function Weekend() {
   return (
     <section
       id="weekend"
-      className="relative w-full bg-paper px-6 pb-[100px] pt-20 md:px-12 md:pt-24"
+      className="relative w-full bg-paper px-6 py-20 md:px-10 md:py-24"
     >
       <div className="mx-auto max-w-[1000px]">
-        <Reveal>
-          <h2 className="mb-14 text-center font-display text-[2.25rem] font-medium leading-[1.08] tracking-[-0.005em] text-navy md:mb-16 md:text-[2.8rem]">
-            well, since you&apos;re already here
-          </h2>
-        </Reveal>
-
-        <div className="grid gap-10 md:grid-cols-2 md:items-stretch md:gap-12">
+        <div className="grid gap-8 md:grid-cols-2 md:items-stretch md:gap-10 lg:gap-12">
           {plans.map((plan, index) => (
             <Reveal
               key={plan.eyebrow}
@@ -65,24 +67,31 @@ export function Weekend() {
             >
               <div className="flex h-full flex-col">
               {index === 0 ? (
-                <p className="mb-14 max-w-2xl font-sans text-[0.98rem] leading-[1.7] text-navy/80 md:mb-16 md:text-[1.02rem]">
-                  ...we want to spend more time with you together, so we&apos;re
-                  stretching it just a little.
-                </p>
+                <div className="mb-8 max-w-2xl md:mb-10">
+                  <h2 className="font-display text-[1.3rem] font-normal leading-[1.16] tracking-[-0.003em] text-navy/72 sm:whitespace-nowrap md:text-[1.55rem]">
+                    well, since you&apos;re already here...
+                  </h2>
+                  <p className="mt-4 font-sans text-[0.98rem] leading-[1.7] text-navy/72 md:text-[1rem]">
+                    we want to spend more time together, so we&apos;re stretching
+                    it just a little.
+                  </p>
+                </div>
               ) : null}
               <article
-                className="flex-1 rounded-[18px] px-9 py-8"
+                className="flex-1 rounded-[18px] px-8 py-8 md:px-9 md:py-9"
                 style={{
-                  background: 'rgba(0, 0, 0, 0.018)',
-                  border: '1px solid rgba(0, 0, 0, 0.04)',
+                  background: 'rgba(0, 0, 0, 0.012)',
+                  border: '1px solid rgba(0, 0, 0, 0.03)',
                 }}
               >
                 <div className="max-w-[480px]">
-                  <p className="eyebrow mb-3.5">{plan.eyebrow}</p>
-                  <h3 className="mb-[18px] font-display text-[1.85rem] font-medium leading-[1.12] text-gold md:text-[2.1rem]">
+                  <p className="mb-3.5 font-sans text-[0.72rem] font-medium uppercase tracking-[0.13em] text-navy/55 md:text-[0.74rem]">
+                    {plan.eyebrow}
+                  </p>
+                  <h3 className="mb-[18px] font-display text-[1.7rem] font-medium leading-[1.15] text-gold md:text-[1.9rem]">
                     {plan.title}
                   </h3>
-                  <div className="space-y-2 font-sans text-[0.98rem] leading-[1.7] text-navy/80 md:text-[1.02rem]">
+                  <div className="space-y-2 font-sans text-[0.98rem] leading-[1.68] text-navy/80 md:text-[1rem]">
                     {plan.body
                       .filter((line) => !/^(Time|Location|Dress code|Transport):/.test(line))
                       .map((line) => (

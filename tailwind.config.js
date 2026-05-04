@@ -23,8 +23,6 @@ export default {
       fontFamily: {
         // Editorial display serif — titles and italic accents only.
         display: ['"Playfair Display"', 'Georgia', 'serif'],
-        // Reading serif — paragraphs, schedule rows, etc.
-        serif: ['"Source Serif 4"', 'Georgia', 'serif'],
         // Sans — small labels and uppercase metadata only.
         sans: ['"Inter"', 'system-ui', 'sans-serif'],
       },

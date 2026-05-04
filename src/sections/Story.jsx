@@ -11,7 +11,6 @@ export function Story() {
     flex: '0 1 auto',
     width: 'auto',
     height: 'auto',
-    maxWidth: 'calc(50% - 10px)',
     objectFit: 'contain',
     borderRadius: '12px',
     opacity: 0.96,
@@ -33,7 +32,7 @@ export function Story() {
             {/* Left ~2/3: two images, horizontal, contain, no crop */}
             <div className="story-images-col flex w-full min-w-0 items-center justify-center md:flex-[2_1_0%]">
               <div
-                className="story-images flex w-full items-center justify-center"
+                className="story-images flex w-full flex-col items-center justify-center sm:flex-row"
                 style={{
                   gap: '20px',
                   maxWidth: '90%',
@@ -42,7 +41,7 @@ export function Story() {
                 <img
                   src="/images/beijing.png"
                   alt="A couple walking through a Beijing hutong on a sunlit afternoon"
-                  className="story-image story-image-beijing block"
+                  className="story-image story-image-beijing block max-w-full sm:max-w-[calc(50%_-_10px)]"
                   style={imgStyle}
                   loading="lazy"
                   decoding="async"
@@ -50,7 +49,7 @@ export function Story() {
                 <img
                   src="/images/singapore.png"
                   alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
-                  className="story-image story-image-singapore block"
+                  className="story-image story-image-singapore block max-w-full sm:max-w-[calc(50%_-_10px)]"
                   style={imgStyle}
                   loading="lazy"
                   decoding="async"

@@ -17,7 +17,7 @@ const items = [
     note: 'Fireworks around 10 PM (we didn’t plan this — Switzerland did)',
   },
   { time: '11:00 PM', label: 'Shuttle back to Lucerne' },
-  { time: 'Late', label: 'Afterparty somwhere (if we still have energy)' },
+  { time: 'Late', label: 'Afterparty somewhere (if we still have energy)' },
 ]
 
 /**
@@ -34,12 +34,18 @@ export function Evening() {
         <p className="text-center font-sans text-[0.74rem] font-medium uppercase tracking-[0.13em] text-navy/55 md:text-[0.82rem]">
           AN EVENING THAT TURNS INTO
         </p>
-        <h2 className="mt-3 text-center font-display text-[2.4rem] font-medium leading-[1.05] tracking-[-0.005em] text-navy md:mt-4 md:text-[3rem]">
+        <h2 className="mt-3 text-center font-display text-[2.55rem] font-medium leading-[1.05] tracking-[-0.005em] text-navy md:mt-4 md:text-[3.15rem]">
           Something special
         </h2>
       </Reveal>
 
-      <div className="mx-auto mt-12 max-w-3xl md:mt-14">
+      <Reveal delayClass="reveal-delay-1">
+        <p className="mx-auto mt-8 max-w-xl text-center font-sans text-[1rem] leading-[1.7] text-navy/75 md:text-[1.04rem]">
+          So here&apos;s the plan:
+        </p>
+      </Reveal>
+
+      <div className="mx-auto mt-10 max-w-3xl md:mt-12">
         <ul className="divide-y divide-navy/8">
           {items.map((item, i) => (
             <li key={item.time} className="py-5 md:py-6">
@@ -50,7 +56,7 @@ export function Evening() {
                   <div className="font-display text-[1rem] font-normal tracking-tight text-gold/85 md:text-[1.05rem]">
                     {item.time}
                   </div>
-                  <div className="text-left font-sans text-[0.98rem] leading-relaxed text-navy/80 md:text-[1.02rem]">
+                  <div className="text-left font-sans text-[0.98rem] leading-[1.65] text-navy/80 md:text-[1.02rem]">
                     <p>{item.label}</p>
                     {item.note ? (
                       <p className="mt-1 text-[14px] leading-relaxed text-navy/75">
