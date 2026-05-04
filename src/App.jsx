@@ -1,5 +1,6 @@
 import { Hero } from './sections/Hero'
 import { Story } from './sections/Story'
+import { Weekend } from './sections/Weekend'
 import { Evening } from './sections/Evening'
 import { DressCode } from './sections/DressCode'
 import { LetUsKnow } from './sections/LetUsKnow'
@@ -19,6 +20,7 @@ export default function App() {
         <Story />
         <Evening />
         <DressCode />
+        <Weekend />
         <LetUsKnow />
         <Gifts />
         <LakeFooter />

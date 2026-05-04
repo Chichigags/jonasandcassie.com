@@ -1,16 +1,23 @@
 import { Reveal } from '../components/Reveal'
 
 const items = [
-  { time: '5:00 PM', label: 'Meet at Lucerne Pier 1' },
+  {
+    time: '5:00 PM',
+    label: 'Meet at Lucerne Pier 1',
+    note: '(please keep an eye on time — the boat leaves right on time. very Swiss.)',
+  },
   {
     time: '5:15 – 7:15 PM',
-    label: 'Boat ride to Weggis, with Aperol along the way',
+    label: 'Boat ride to Weggis',
+    note: 'Aperol along the way',
   },
   {
     time: '7:45 – 10:45 PM',
-    label: 'Dinner by the lake, with fireworks around 10 PM',
+    label: 'Dinner by the lake',
+    note: 'Fireworks around 10 PM (we didn’t plan this — Switzerland did)',
   },
   { time: '11:00 PM', label: 'Shuttle back to Lucerne' },
+  { time: 'Late', label: 'Afterparty somwhere (if we still have energy)' },
 ]
 
 /**
@@ -24,8 +31,8 @@ export function Evening() {
       className="relative w-full bg-bone px-6 py-20 md:px-12 md:py-24 lg:py-28"
     >
       <Reveal>
-        <p className="text-center font-sans text-[0.74rem] font-medium uppercase tracking-[0.34em] text-navy/55 md:text-[0.82rem]">
-          An evening that turns into
+        <p className="text-center font-sans text-[0.74rem] font-medium uppercase tracking-[0.13em] text-navy/55 md:text-[0.82rem]">
+          AN EVENING THAT TURNS INTO
         </p>
         <h2 className="mt-3 text-center font-display text-[2.4rem] font-medium leading-[1.05] tracking-[-0.005em] text-navy md:mt-4 md:text-[3rem]">
           Something special
@@ -43,24 +50,20 @@ export function Evening() {
                   <div className="font-display text-[1rem] font-normal tracking-tight text-gold/85 md:text-[1.05rem]">
                     {item.time}
                   </div>
-                  <p className="font-serif text-[1rem] leading-relaxed text-navy/80 md:text-[1.08rem]">
-                    {item.label}
-                  </p>
+                  <div className="text-left font-sans text-[0.98rem] leading-relaxed text-navy/80 md:text-[1.02rem]">
+                    <p>{item.label}</p>
+                    {item.note ? (
+                      <p className="mt-1 text-[14px] leading-relaxed text-navy/75">
+                        {item.note}
+                      </p>
+                    ) : null}
+                  </div>
                 </div>
               </Reveal>
             </li>
           ))}
         </ul>
       </div>
-
-      <Reveal delayClass="reveal-delay-3">
-        <p className="mx-auto mt-12 max-w-2xl text-center font-serif text-[1rem] leading-relaxed text-navy/75 md:mt-14 md:text-[1.08rem]">
-          Please keep an eye on the timings — especially the boat.{' '}
-          <em className="font-display italic text-gold">
-            Just on time. Very Swiss.
-          </em>
-        </p>
-      </Reveal>
     </section>
   )
 }

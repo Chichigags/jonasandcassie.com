@@ -36,8 +36,8 @@ export function LakeFooter() {
           <p className="font-display italic text-[1.7rem] leading-none text-navy md:text-[2.2rem]">
             See you by the water.
           </p>
-          <p className="mt-3 font-sans text-[0.7rem] font-medium uppercase tracking-[0.32em] text-navy/65 md:text-[0.78rem]">
-            Lucerne · August 1, 2026
+          <p className="eyebrow mt-3">
+            LUCERNE · AUGUST 1, 2026
           </p>
         </div>
       </div>

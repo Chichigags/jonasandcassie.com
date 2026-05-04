@@ -12,8 +12,8 @@ export function Gifts() {
     >
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
-          <p className="font-sans text-[0.74rem] font-medium uppercase tracking-[0.34em] text-navy/55 md:text-[0.82rem]">
-            One last thing
+          <p className="eyebrow">
+            ONE LAST THING
           </p>
           <h2 className="mt-4 font-display text-[2.4rem] font-medium leading-[1.08] tracking-[-0.005em] text-navy md:text-[3rem]">
             Gifts
@@ -21,7 +21,7 @@ export function Gifts() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
-          <div className="mx-auto mt-8 max-w-xl space-y-2 font-serif text-[1.05rem] leading-relaxed text-navy/85 md:text-[1.12rem]">
+          <div className="mx-auto mt-8 max-w-xl space-y-2 font-sans text-[1rem] leading-[1.7] text-navy/85 md:text-[1.05rem]">
             <p>Your presence is already the best gift for us</p>
             <p>— especially if you&apos;re traveling to celebrate together.</p>
           </div>

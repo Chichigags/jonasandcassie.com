@@ -61,42 +61,43 @@ export function Story() {
             {/* Right ~1/3: text, vertically centered, left-aligned */}
             <div className="story-text-col flex w-full min-w-0 flex-col justify-center md:flex-[1_1_0%]">
               <div className="story-text text-left">
-                <p
-                  className="story-heading font-sans"
-                  style={{
-                    fontSize: '12px',
-                    letterSpacing: '0.18em',
-                    textTransform: 'uppercase',
-                    color: '#9CA3AF',
-                    fontWeight: 500,
-                    marginBottom: '14px',
-                    lineHeight: 1.6,
-                  }}
-                >
-                  Beijing · Singapore
+                <p className="story-heading eyebrow mb-4">
+                  BEIJING · SINGAPORE
                 </p>
                 <p
-                  className="story-line-1 font-serif"
+                  className="story-line-1 font-sans"
                   style={{
-                    fontSize: '1.35rem',
+                    fontSize: '1.25rem',
                     lineHeight: 1.6,
-                    fontWeight: 500,
+                    fontWeight: 400,
                     color: '#1F2A37',
-                    marginBottom: '10px',
+                    marginBottom: '8px',
                   }}
                 >
                   Two people. One dog.
                 </p>
                 <p
-                  className="story-line-2 font-serif"
+                  className="story-line-2 font-sans"
                   style={{
-                    fontSize: '1.05rem',
+                    fontSize: '1.02rem',
                     lineHeight: 1.6,
                     fontWeight: 400,
                     color: '#4A5568',
+                    marginBottom: '18px',
                   }}
                 >
-                  Across cities — and who knows where next.
+                  Life moves between cities — and who knows where next.
+                </p>
+                <p
+                  className="story-line-3 font-sans"
+                  style={{
+                    fontSize: '1.02rem',
+                    lineHeight: 1.6,
+                    fontWeight: 400,
+                    color: 'rgba(74, 85, 104, 0.78)',
+                  }}
+                >
+                  So we&apos;re taking a moment, with you.
                 </p>
               </div>
             </div>

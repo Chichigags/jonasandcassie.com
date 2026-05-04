@@ -36,8 +36,8 @@ export function DressCode() {
 
       <div className="relative mx-auto max-w-2xl text-center">
         <Reveal>
-          <p className="font-sans text-[0.74rem] font-medium uppercase tracking-[0.34em] text-navy/55 md:text-[0.82rem]">
-            Dress Code
+          <p className="eyebrow">
+            DRESS CODE
           </p>
           <h2 className="mt-4 font-display text-[2.4rem] font-medium leading-[1.08] tracking-[-0.005em] text-navy md:text-[3rem]">
             Summer by the Lake
@@ -45,7 +45,7 @@ export function DressCode() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
-          <div className="mx-auto mt-8 max-w-xl space-y-4 font-serif text-[1.05rem] leading-relaxed text-navy/85 md:text-[1.12rem]">
+          <div className="mx-auto mt-8 max-w-xl space-y-4 font-sans text-[1rem] leading-[1.7] text-navy/85 md:text-[1.05rem]">
             <p>Something light, comfortable, and just a little festive.</p>
             <p>
               Think linen, soft colors, and relaxed tailoring — easy by the
