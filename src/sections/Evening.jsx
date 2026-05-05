@@ -31,21 +31,12 @@ export function Evening() {
       className="relative w-full bg-bone px-6 py-20 md:px-12 md:py-24 lg:py-28"
     >
       <Reveal>
-        <p className="text-center font-sans text-[0.74rem] font-medium uppercase tracking-[0.13em] text-celadon md:text-[0.82rem]">
-          AN EVENING THAT TURNS INTO
-        </p>
-        <h2 className="mt-3 text-center font-display text-[2.55rem] font-medium leading-[1.05] tracking-[-0.005em] text-navy md:mt-4 md:text-[3.15rem]">
-          Something special
+        <h2 className="text-center font-display text-[2.55rem] font-medium leading-[1.05] tracking-[-0.005em] text-navy md:text-[3.15rem]">
+          Here&apos;s the plan
         </h2>
       </Reveal>
 
-      <Reveal delayClass="reveal-delay-1">
-        <p className="mx-auto mt-8 max-w-xl text-center font-sans text-[1rem] leading-[1.7] text-navy/75 md:text-[1.04rem]">
-          So here&apos;s the plan:
-        </p>
-      </Reveal>
-
-      <div className="mx-auto mt-10 max-w-3xl md:mt-12">
+      <div className="mx-auto mt-12 max-w-3xl md:mt-14">
         <ul>
           {items.map((item, i) => (
             <li

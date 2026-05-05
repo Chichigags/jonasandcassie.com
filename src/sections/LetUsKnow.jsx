@@ -3,7 +3,7 @@ import { Reveal } from '../components/Reveal'
 const fieldClass =
   'rounded-xl border border-navy/10 bg-[#EFEDE7]/70 px-5 py-4 font-sans text-[0.98rem] text-navy outline-none transition-colors placeholder:text-navy/35 focus:border-celadon/60 md:text-[1.02rem]'
 const labelClass =
-  'block font-sans text-[0.76rem] font-medium uppercase tracking-[0.13em] text-celadon'
+  'block font-sans text-[0.76rem] font-medium uppercase tracking-[0.13em] text-navy/80'
 const optionClass =
   'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-navy/80 md:text-[1.02rem]'
 
@@ -22,7 +22,6 @@ export function LetUsKnow() {
           <h2 className="font-display text-[2.25rem] font-medium leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
             Are you coming?
           </h2>
-          <p className="eyebrow mt-4">SO WE CAN PLAN THIS PROPERLY.</p>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
@@ -74,7 +73,7 @@ export function LetUsKnow() {
 
             <button
               type="submit"
-              className="rounded-xl bg-celadon px-7 py-3.5 font-sans text-[0.95rem] font-medium text-white transition hover:brightness-95"
+              className="mx-auto block rounded-xl bg-celadon px-7 py-3.5 font-sans text-[0.95rem] font-medium text-white transition hover:brightness-95"
             >
               Let us know
             </button>

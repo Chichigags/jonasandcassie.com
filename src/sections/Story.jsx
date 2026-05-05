@@ -64,13 +64,13 @@ export function Story() {
                   BEIJING · SINGAPORE
                 </p>
                 <p
-                  className="story-line-1 font-sans"
+                  className="story-line-1 font-display"
                   style={{
-                    fontSize: '1.25rem',
-                    lineHeight: 1.6,
-                    fontWeight: 400,
+                    fontSize: '1.55rem',
+                    lineHeight: 1.25,
+                    fontWeight: 500,
                     color: '#1F2A37',
-                    marginBottom: '8px',
+                    marginBottom: '10px',
                   }}
                 >
                   Two people. One dog.
@@ -97,7 +97,7 @@ export function Story() {
                   }}
                 >
                   So we&apos;re taking a moment — and turning it into something
-                  worth celebrating, with you.
+                  worth celebrating, <span className="text-gold">with you.</span>
                 </p>
               </div>
             </div>
