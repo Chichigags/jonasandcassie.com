@@ -19,10 +19,13 @@ export default {
           deep: '#A8853F',
           soft: '#DCBE85',
         },
+        celadon: '#7FA89C',
       },
       fontFamily: {
         // Editorial display serif — titles and italic accents only.
         display: ['"Playfair Display"', 'Georgia', 'serif'],
+        // Handwritten footer note only.
+        script: ['"Caveat"', 'cursive'],
         // Sans — small labels and uppercase metadata only.
         sans: ['"Inter"', 'system-ui', 'sans-serif'],
       },

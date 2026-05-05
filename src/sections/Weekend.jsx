@@ -5,9 +5,9 @@ const plans = [
     eyebrow: 'FRIDAY EVENING · JULY 31',
     title: 'Old town dinner',
     body: [
-      'A casual dinner and a walk through the old town in Lucerne. Nothing planned too strictly — just an easy start.',
+      'A casual walk in the old town, then dinner somewhere. Nothing fixed — just a warm start.',
       'Time: around 7:00 PM on Friday, July 31',
-      'Location: somewhere in downtown Lucerne',
+      'Location: somewhere in Lucerne Old Town',
       'Dress code: tourist mode (comfortable, slightly lost is perfectly fine)',
     ],
   },
@@ -15,11 +15,11 @@ const plans = [
     eyebrow: 'SATURDAY · AUGUST 1',
     title: 'Swiss farm brunch',
     body: [
-      'This day also happens to be Swiss National Day, for those who want a real Swiss experience — a relaxed brunch on a farm just outside Lucerne.',
-      'Time: 11:00 AM - 2:00 PM on Saturday, August 1',
-      'Location: Lisbeth & Walter Wüest-Meier, Kantonsstrasse 16, 6211 Buchs LU (about 20-mins drive from Lucerne)',
+      'This day also happens to be Swiss National Day — so we’re starting the morning on a farm just outside Lucerne. It felt fitting.',
+      'Time: 11:00 AM – 2:00 PM on Saturday, August 1',
+      'Location: Lisbeth & Walter Wüest-Meier, Kantonsstrasse 16, 6211 Buchs LU (about 20 mins drive from Lucerne)',
       'Dress code: something red or white — if you feel like leaning into it',
-      'Transport: we’ll coordinate once we know how many of you are joining — either sharing cars or meeting at Sursee station and going together',
+      "Transport: We’ll sort out the details once we know who's coming — either carpooling or meeting at Sursee station.",
     ],
   },
 ]
@@ -32,12 +32,20 @@ function StackedPlanLine({ children }) {
   }
 
   return (
-    <div className="mb-[18px]">
-      <p className="mb-1 font-sans text-[14px] font-normal leading-snug tracking-[0.01em] text-black/50">
+    <div className="mb-4">
+      <p className="mb-1 font-sans text-[14px] font-normal leading-snug tracking-[0.01em] text-celadon">
         {labelMatch[1]}
       </p>
       <p className="font-sans text-[16px] leading-[1.65] text-navy/80">
-        {labelMatch[2].includes('something red or white') ? (
+        {labelMatch[1] === 'Location' && labelMatch[2].includes('Kantonsstrasse') ? (
+          <>
+            Lisbeth &amp; Walter Wüest-Meier,
+            <br />
+            Kantonsstrasse 16, 6211 Buchs LU
+            <br />
+            (about 20 mins drive from Lucerne)
+          </>
+        ) : labelMatch[2].includes('something red or white') ? (
           <>
             something red or white —
             <br />
@@ -68,24 +76,22 @@ export function Weekend() {
               <div className="flex h-full flex-col">
               {index === 0 ? (
                 <div className="mb-8 max-w-2xl md:mb-10">
-                  <h2 className="font-display text-[1.3rem] font-normal leading-[1.16] tracking-[-0.003em] text-navy/72 sm:whitespace-nowrap md:text-[1.55rem]">
-                    well, since you&apos;re already here...
+                  <h2 className="font-display text-[2.25rem] font-medium leading-[1.12] tracking-[-0.005em] text-navy sm:whitespace-nowrap md:text-[2.75rem]">
+                    Since you&apos;re already here,
+                    <br />
+                    let&apos;s start a little early.
                   </h2>
-                  <p className="mt-4 font-sans text-[0.98rem] leading-[1.7] text-navy/72 md:text-[1rem]">
-                    we want to spend more time together, so we&apos;re stretching
-                    it just a little.
-                  </p>
                 </div>
               ) : null}
               <article
-                className="flex-1 rounded-[18px] px-8 py-8 md:px-9 md:py-9"
+                className="flex-1 rounded-[18px] px-8 py-7 md:px-9 md:py-8"
                 style={{
                   background: 'rgba(0, 0, 0, 0.012)',
-                  border: '1px solid rgba(0, 0, 0, 0.03)',
+                  border: '1px solid rgba(0, 0, 0, 0.025)',
                 }}
               >
                 <div className="max-w-[480px]">
-                  <p className="mb-3.5 font-sans text-[0.72rem] font-medium uppercase tracking-[0.13em] text-navy/55 md:text-[0.74rem]">
+                  <p className="mb-3.5 font-sans text-[0.72rem] font-medium uppercase tracking-[0.13em] text-celadon md:text-[0.74rem]">
                     {plan.eyebrow}
                   </p>
                   <h3 className="mb-[18px] font-display text-[1.7rem] font-medium leading-[1.15] text-gold md:text-[1.9rem]">

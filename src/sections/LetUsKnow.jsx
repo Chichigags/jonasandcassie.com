@@ -1,9 +1,9 @@
 import { Reveal } from '../components/Reveal'
 
 const fieldClass =
-  'rounded-xl border border-navy/10 bg-[#EFEDE7]/70 px-5 py-4 font-sans text-[0.98rem] text-navy outline-none transition-colors placeholder:text-navy/35 focus:border-gold/60 md:text-[1.02rem]'
+  'rounded-xl border border-navy/10 bg-[#EFEDE7]/70 px-5 py-4 font-sans text-[0.98rem] text-navy outline-none transition-colors placeholder:text-navy/35 focus:border-celadon/60 md:text-[1.02rem]'
 const labelClass =
-  'block font-sans text-[0.76rem] font-medium uppercase tracking-[0.13em] text-navy/60'
+  'block font-sans text-[0.76rem] font-medium uppercase tracking-[0.13em] text-celadon'
 const optionClass =
   'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-navy/80 md:text-[1.02rem]'
 
@@ -20,13 +20,13 @@ export function LetUsKnow() {
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <h2 className="font-display text-[2.25rem] font-medium leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
-            Let us know
+            Are you coming?
           </h2>
           <p className="eyebrow mt-4">SO WE CAN PLAN THIS PROPERLY.</p>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
-          <form className="mx-auto mt-9 max-w-xl space-y-7 text-left">
+          <form className="mx-auto mt-9 max-w-xl space-y-8 text-left">
             <div>
               <label htmlFor="rsvp-name" className={labelClass}>
                 Name(s)
@@ -35,7 +35,7 @@ export function LetUsKnow() {
                 id="rsvp-name"
                 name="name"
                 type="text"
-                placeholder="Your name (and your plus one, if you're bringing someone)"
+                placeholder="Your name (+1, if any)"
                 className={`mt-3 w-full ${fieldClass}`}
               />
             </div>
@@ -51,7 +51,7 @@ export function LetUsKnow() {
                       type="checkbox"
                       name="optional-weekend-parts"
                       value={option}
-                      className="h-4 w-4 accent-gold"
+                      className="h-4 w-4 accent-celadon"
                     />
                     {option}
                   </label>
@@ -71,6 +71,13 @@ export function LetUsKnow() {
                 className={`mt-3 w-full resize-none ${fieldClass}`}
               />
             </div>
+
+            <button
+              type="submit"
+              className="rounded-xl bg-celadon px-7 py-3.5 font-sans text-[0.95rem] font-medium text-white transition hover:brightness-95"
+            >
+              Let us know
+            </button>
           </form>
         </Reveal>
 

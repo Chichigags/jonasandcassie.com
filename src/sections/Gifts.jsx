@@ -29,7 +29,7 @@ export function Gifts() {
           </div>
         </Reveal>
 
-        <div className="mx-auto mt-8 h-px w-16 bg-gold/35" aria-hidden />
+        <div className="mx-auto mt-8 h-px w-12 bg-gold/20" aria-hidden />
 
         <Reveal delayClass="reveal-delay-2">
           <p className="mt-7 font-display italic text-[1.32rem] leading-snug text-gold md:text-[1.55rem]">

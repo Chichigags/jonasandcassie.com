@@ -4,7 +4,7 @@ const items = [
   {
     time: '5:00 PM',
     label: 'Meet at Lucerne Pier 1',
-    note: '(please keep an eye on time — the boat leaves right on time. very Swiss.)',
+    note: '(please keep an eye on time — the boat leaves right on time. Very Swiss.)',
   },
   {
     time: '5:15 – 7:15 PM',
@@ -31,7 +31,7 @@ export function Evening() {
       className="relative w-full bg-bone px-6 py-20 md:px-12 md:py-24 lg:py-28"
     >
       <Reveal>
-        <p className="text-center font-sans text-[0.74rem] font-medium uppercase tracking-[0.13em] text-navy/55 md:text-[0.82rem]">
+        <p className="text-center font-sans text-[0.74rem] font-medium uppercase tracking-[0.13em] text-celadon md:text-[0.82rem]">
           AN EVENING THAT TURNS INTO
         </p>
         <h2 className="mt-3 text-center font-display text-[2.55rem] font-medium leading-[1.05] tracking-[-0.005em] text-navy md:mt-4 md:text-[3.15rem]">
@@ -46,14 +46,17 @@ export function Evening() {
       </Reveal>
 
       <div className="mx-auto mt-10 max-w-3xl md:mt-12">
-        <ul className="divide-y divide-navy/8">
+        <ul>
           {items.map((item, i) => (
-            <li key={item.time} className="py-5 md:py-6">
+            <li
+              key={item.time}
+              className={`py-5 md:py-6 ${i === 1 || i === 3 ? 'border-t border-navy/8' : ''}`}
+            >
               <Reveal
                 delayClass={i === 0 ? '' : `reveal-delay-${Math.min(i, 3)}`}
               >
                 <div className="grid grid-cols-1 items-baseline gap-1 md:grid-cols-[12rem_1fr] md:gap-10">
-                  <div className="font-display text-[1rem] font-normal tracking-tight text-gold/85 md:text-[1.05rem]">
+                  <div className="font-display text-[0.92rem] font-normal tracking-tight text-gold/85 md:text-[0.98rem]">
                     {item.time}
                   </div>
                   <div className="text-left font-sans text-[0.98rem] leading-[1.65] text-navy/80 md:text-[1.02rem]">

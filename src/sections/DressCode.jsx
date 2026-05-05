@@ -48,14 +48,14 @@ export function DressCode() {
           <div className="mx-auto mt-8 max-w-xl space-y-4 font-sans text-[1rem] leading-[1.7] text-navy/85 md:text-[1.05rem]">
             <p>Something light, comfortable, and just a little festive.</p>
             <p>
-              Think linen, soft colors, and relaxed tailoring — easy by the
-              water.
+              Think linen, soft colors — something you&apos;d actually enjoy
+              wearing by the lake.
             </p>
           </div>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-12 font-display italic text-[1.4rem] leading-snug text-gold md:whitespace-nowrap md:text-[1.65rem]">
+          <p className="mt-9 font-display italic text-[1.3rem] leading-snug text-gold md:whitespace-nowrap md:text-[1.5rem]">
             No black tie. No pressure. Just feel good.
           </p>
         </Reveal>

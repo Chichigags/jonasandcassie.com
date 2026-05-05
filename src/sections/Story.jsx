@@ -28,7 +28,7 @@ export function Story() {
     >
       <div className="story-container mx-auto max-w-[1200px] px-6 md:px-10">
         <Reveal>
-          <div className="story-row flex flex-col gap-10 md:flex-row md:items-center md:gap-12 lg:gap-16">
+          <div className="story-row flex flex-col gap-8 md:flex-row md:items-center md:gap-10 lg:gap-12">
             {/* Left ~2/3: two images, horizontal, contain, no crop */}
             <div className="story-images-col flex w-full min-w-0 items-center justify-center md:flex-[2_1_0%]">
               <div
@@ -96,7 +96,8 @@ export function Story() {
                     color: 'rgba(74, 85, 104, 0.78)',
                   }}
                 >
-                  So we&apos;re taking a moment, with you.
+                  So we&apos;re taking a moment — and turning it into something
+                  worth celebrating, with you.
                 </p>
               </div>
             </div>

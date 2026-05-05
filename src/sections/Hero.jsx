@@ -32,7 +32,7 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-[1100px] flex-col justify-center px-6 py-24 md:px-12 md:py-28 lg:px-16">
         <div className="max-w-2xl">
-          <p className="font-sans text-[0.78rem] font-medium uppercase tracking-[0.13em] text-navy/65 opacity-0 animate-fade-up md:text-[0.85rem]">
+          <p className="font-sans text-[0.78rem] font-medium uppercase tracking-[0.13em] text-celadon opacity-0 animate-fade-up md:text-[0.85rem]">
             LUCERNE · AUGUST 1, 2026
           </p>
 
@@ -40,7 +40,7 @@ export function Hero() {
             Life, Love &amp; 40
           </h1>
 
-          <p className="mt-5 font-sans text-[0.9rem] font-medium uppercase tracking-[0.13em] text-navy/70 opacity-0 animate-fade-up-slow md:text-[1rem]">
+          <p className="mt-5 font-sans text-[0.9rem] font-medium uppercase tracking-[0.13em] text-celadon opacity-0 animate-fade-up-slow md:text-[1rem]">
             JONAS &amp; CASSIE
           </p>
 
@@ -48,13 +48,13 @@ export function Hero() {
             One marriage. Two forties.
           </p>
 
-          <p className="mt-7 max-w-xl font-sans text-[1.02rem] leading-[1.75] text-navy/85 opacity-0 animate-fade-up-slow md:text-[1.08rem]">
+          <p className="mt-7 max-w-xl font-sans text-[1.02rem] leading-[1.62] text-navy/85 opacity-0 animate-fade-up-slow md:text-[1.08rem]">
             We thought it deserved a proper celebration. Nothing too formal, just
             a summer evening by the lake, with good people, good food, and good
             drinks.
           </p>
 
-          <p className="mt-10 font-display italic text-[1.4rem] leading-snug text-gold opacity-0 animate-fade-up-slow md:text-[1.65rem]">
+          <p className="mt-8 font-display italic text-[1.34rem] leading-snug text-gold opacity-0 animate-fade-up-slow md:text-[1.55rem]">
             We&apos;d love for you to be part of it.
           </p>
         </div>

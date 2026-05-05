@@ -7,7 +7,7 @@ export function LakeFooter() {
   return (
     <footer
       id="lake-footer"
-      className="relative isolate w-full overflow-hidden bg-paper"
+      className="relative isolate mt-10 w-full overflow-hidden bg-paper md:mt-16"
     >
       <div className="relative h-[42svh] min-h-[280px] w-full md:h-[48svh]">
         <img
@@ -33,11 +33,11 @@ export function LakeFooter() {
         />
 
         <div className="absolute inset-x-0 top-12 text-center md:top-20">
-          <p className="font-display italic text-[1.7rem] leading-none text-navy md:text-[2.2rem]">
+          <p className="font-script text-[2.25rem] leading-none text-navy md:text-[2.9rem]">
             See you by the water.
           </p>
-          <p className="eyebrow mt-3">
-            LUCERNE · AUGUST 1, 2026
+          <p className="mt-5 font-display text-[1.1rem] font-medium leading-none text-navy md:text-[1.35rem]">
+            Jonas &amp; Cassie
           </p>
         </div>
       </div>
