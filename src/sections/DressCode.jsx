@@ -39,17 +39,17 @@ export function DressCode() {
           <p className="eyebrow">
             DRESS CODE
           </p>
-          <h2 className="mt-4 font-display text-[2.25rem] font-medium italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
+          <h2 className="mt-4 font-display text-[2.25rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
             Summer by the Lake
           </h2>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
-          <div className="mx-auto mt-8 max-w-xl space-y-4 font-sans text-[1rem] leading-[1.7] text-navy/85 md:text-[1.05rem]">
-            <p>Something light, comfortable, and just a little festive.</p>
+          <div className="mx-auto mt-8 max-w-xl font-sans text-[1rem] leading-[1.7] text-navy/85 md:text-[1.05rem]">
             <p>
-              Think linen, soft colors — something you&apos;d actually enjoy
-              wearing by the lake.
+              Something light, comfortable, and just a little festive. Think
+              linen, soft colors, something you&apos;d actually enjoy wearing by
+              the lake.
             </p>
           </div>
         </Reveal>

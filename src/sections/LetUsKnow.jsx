@@ -20,7 +20,7 @@ export function LetUsKnow() {
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="eyebrow mb-4">YES?</p>
-          <h2 className="font-display text-[2.25rem] font-medium italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
+          <h2 className="font-display text-[2.25rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
             Are you coming?
           </h2>
         </Reveal>

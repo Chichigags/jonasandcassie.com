@@ -68,8 +68,8 @@ export function Weekend() {
       <div className="mx-auto max-w-[1000px]">
         <Reveal>
           <div className="mx-auto mb-12 max-w-xl text-center md:mb-14">
-            <p className="eyebrow">HAVE FUN</p>
-            <h2 className="mt-4 font-display text-[2.25rem] font-medium italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
+            <p className="eyebrow">MORE FUN</p>
+            <h2 className="mt-4 font-display text-[2.25rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
               A little bit more
             </h2>
             <p className="mx-auto mt-6 max-w-md font-sans text-[1rem] leading-[1.7] text-navy/80 md:text-[1.04rem]">
