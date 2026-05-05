@@ -31,7 +31,7 @@ export function Evening() {
       className="relative w-full bg-bone px-6 py-20 md:px-12 md:py-24 lg:py-28"
     >
       <Reveal>
-        <h2 className="text-center font-display text-[2.55rem] font-medium leading-[1.05] tracking-[-0.005em] text-navy md:text-[3.15rem]">
+        <h2 className="text-center font-display text-[2.25rem] font-medium italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
           Here&apos;s the plan
         </h2>
       </Reveal>

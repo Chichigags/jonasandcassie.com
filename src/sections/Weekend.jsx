@@ -66,6 +66,18 @@ export function Weekend() {
       className="relative w-full bg-paper px-6 py-20 md:px-10 md:py-24"
     >
       <div className="mx-auto max-w-[1000px]">
+        <Reveal>
+          <div className="mx-auto mb-12 max-w-xl text-center md:mb-14">
+            <p className="eyebrow">HAVE FUN</p>
+            <h2 className="mt-4 font-display text-[2.25rem] font-medium italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
+              A little bit more
+            </h2>
+            <p className="mx-auto mt-6 max-w-md font-sans text-[1rem] leading-[1.7] text-navy/80 md:text-[1.04rem]">
+              Since you&apos;re already here, let&apos;s start a little early.
+            </p>
+          </div>
+        </Reveal>
+
         <div className="grid gap-8 md:grid-cols-2 md:items-stretch md:gap-10 lg:gap-12">
           {plans.map((plan, index) => (
             <Reveal
@@ -74,15 +86,6 @@ export function Weekend() {
               className="h-full"
             >
               <div className="flex h-full flex-col">
-              {index === 0 ? (
-                <div className="mb-8 max-w-2xl md:mb-10">
-                  <h2 className="font-display text-[1.7rem] font-medium leading-[1.15] tracking-[-0.005em] text-navy sm:whitespace-nowrap md:text-[1.9rem]">
-                    Since you&apos;re already here,
-                    <br />
-                    let&apos;s start a little early.
-                  </h2>
-                </div>
-              ) : null}
               <article
                 className="flex-1 rounded-[18px] px-8 py-7 md:px-9 md:py-8"
                 style={{

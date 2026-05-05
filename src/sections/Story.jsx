@@ -93,10 +93,10 @@ export function Story() {
                     fontSize: '1.02rem',
                     lineHeight: 1.6,
                     fontWeight: 400,
-                    color: 'rgba(74, 85, 104, 0.78)',
+                    color: '#4A5568',
                   }}
                 >
-                  So we&apos;re taking a moment — and turning it into something
+                  So we&apos;re taking a moment, and turning it into something
                   worth celebrating, <span className="text-gold">with you.</span>
                 </p>
               </div>

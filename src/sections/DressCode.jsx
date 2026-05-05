@@ -39,7 +39,7 @@ export function DressCode() {
           <p className="eyebrow">
             DRESS CODE
           </p>
-          <h2 className="mt-4 font-display text-[2.25rem] font-medium leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
+          <h2 className="mt-4 font-display text-[2.25rem] font-medium italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
             Summer by the Lake
           </h2>
         </Reveal>
