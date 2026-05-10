@@ -46,11 +46,7 @@ export function DressCode() {
 
         <Reveal delayClass="reveal-delay-1">
           <div className="mx-auto mt-8 max-w-xl font-sans text-[1rem] leading-[1.7] text-navy/85 md:text-[1.05rem]">
-            <p>
-              Something light, comfortable, and just a little festive. Think
-              linen, soft colors, something you&apos;d actually enjoy wearing by
-              the lake.
-            </p>
+            <p>Boat-friendly, dance-friendly.</p>
           </div>
         </Reveal>
 
