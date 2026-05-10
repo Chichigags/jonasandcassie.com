@@ -72,7 +72,9 @@ export function Weekend() {
               A little bit more
             </h2>
             <p className="mx-auto mt-6 max-w-md font-sans text-[1rem] leading-[1.7] text-navy/80 md:text-[1.04rem]">
-              Since you&apos;re already here, let&apos;s start a little early.
+              Since you&apos;re already here,
+              <br className="md:hidden" />
+              {' '}let&apos;s start a little early.
             </p>
           </div>
         </Reveal>

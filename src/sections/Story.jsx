@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 /**
- * Story / From Beijing to Singapore.
+ * Story — HOW WE GOT HERE / From Beijing to Singapore.
  *
  * Editorial split: images (two panels, side by side, contained) on the
  * left; story copy on the right — balanced, not a poster.
@@ -60,11 +60,9 @@ export function Story() {
             {/* Right ~1/3: text, vertically centered, left-aligned */}
             <div className="story-text-col flex w-full min-w-0 flex-col justify-center md:flex-[1_1_0%]">
               <div className="story-text text-left">
-                <p className="mb-0 font-sans text-[0.7rem] font-medium tracking-[0.13em] text-celadon md:text-[0.74rem]">
-                  From Beijing to Singapore
-                </p>
+                <p className="eyebrow mb-0">HOW WE GOT HERE</p>
                 <h2 className="mt-4 font-display text-[2.25rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
-                  Two cities. One story.
+                  From Beijing to Singapore
                 </h2>
                 <p
                   className="story-line-2 mt-8 font-sans"
