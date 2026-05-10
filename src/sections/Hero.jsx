@@ -45,13 +45,14 @@ export function Hero() {
           </p>
 
           <p className="mt-10 font-display italic text-[1.5rem] leading-tight text-gold opacity-0 animate-fade-up-slow md:text-[1.75rem]">
-            One marriage. Two forties.
+            One marriage. Two birthdays.
+            <br />
+            One summer evening by the lake.
           </p>
 
           <p className="mt-7 max-w-xl font-sans text-[1.02rem] leading-[1.62] text-navy/85 opacity-0 animate-fade-up-slow md:text-[1.08rem]">
-            We thought it deserved a proper celebration. Nothing too formal, just
-            a summer evening by the lake, with good people, good food, and good
-            drinks.
+            We&apos;re celebrating a special season of life — our marriage, our
+            forties, and the people who make it all meaningful.
           </p>
 
           <p className="mt-8 font-display italic text-[1.34rem] leading-snug text-gold opacity-0 animate-fade-up-slow md:text-[1.55rem]">

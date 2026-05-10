@@ -73,7 +73,7 @@ export function Story() {
                     marginBottom: '10px',
                   }}
                 >
-                  Two people. One dog.
+                  From Beijing to Singapore
                 </p>
                 <p
                   className="story-line-2 font-sans"
@@ -85,7 +85,9 @@ export function Story() {
                     marginBottom: '18px',
                   }}
                 >
-                  Life moves between cities — and who knows where next.
+                  What started in Beijing turned into a life built together in
+                  Singapore — with plenty of adventures, a few plot twists, and
+                  eventually, one very spoiled little dog.
                 </p>
                 <p
                   className="story-line-3 font-sans"
@@ -96,8 +98,8 @@ export function Story() {
                     color: '#4A5568',
                   }}
                 >
-                  So we&apos;re taking a moment, and turning it into something
-                  worth celebrating, <span className="text-gold">with you.</span>
+                  This summer, we&apos;re taking a moment to celebrate it all,
+                  with the people who matter most.
                 </p>
               </div>
             </div>
