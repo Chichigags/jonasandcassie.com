@@ -73,7 +73,7 @@ export function Story() {
                     marginBottom: '10px',
                   }}
                 >
-                  From Beijing to Singapore
+                  Two cities. One story.
                 </p>
                 <p
                   className="story-line-2 font-sans"
