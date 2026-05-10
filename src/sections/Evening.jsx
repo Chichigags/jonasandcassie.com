@@ -115,14 +115,14 @@ export function Evening() {
                         {block.accent.map((line) => (
                           <p
                             key={line}
-                            className="font-display text-[0.96rem] italic leading-relaxed text-gold md:text-[1.02rem]"
+                            className="font-display text-[0.96rem] italic leading-relaxed text-gold-deep md:text-[1.02rem]"
                           >
                             {line}
                           </p>
                         ))}
                       </div>
                     ) : (
-                      <p className="mt-5 font-display text-[0.96rem] italic leading-relaxed text-gold md:text-[1.03rem]">
+                      <p className="mt-5 font-display text-[0.96rem] italic leading-relaxed text-gold-deep md:text-[1.03rem]">
                         {block.accent}
                       </p>
                     )}

@@ -82,7 +82,7 @@ export function LetUsKnow() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-9 font-display italic text-[1.4rem] leading-snug text-gold md:text-[1.65rem]">
+          <p className="mt-9 font-display italic text-[1.4rem] leading-snug text-gold-deep md:text-[1.65rem]">
             A text, message or call is also fine.
           </p>
         </Reveal>

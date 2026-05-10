@@ -44,7 +44,7 @@ export function Hero() {
             JONAS &amp; CASSIE
           </p>
 
-          <p className="mt-10 font-display italic text-[1.5rem] leading-tight text-gold opacity-0 animate-fade-up-slow md:text-[1.75rem]">
+          <p className="mt-10 font-display italic text-[1.5rem] leading-tight text-gold-deep opacity-0 animate-fade-up-slow md:text-[1.75rem]">
             One marriage. Two birthdays.
             <br />
             One summer evening by the lake.

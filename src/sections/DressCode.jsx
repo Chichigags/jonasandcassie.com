@@ -51,7 +51,7 @@ export function DressCode() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-9 font-display italic text-[1.3rem] leading-snug text-gold md:text-[1.5rem]">
+          <p className="mt-9 font-display italic text-[1.3rem] leading-snug text-gold-deep md:text-[1.5rem]">
             No black tie. No pressure.
           </p>
         </Reveal>
