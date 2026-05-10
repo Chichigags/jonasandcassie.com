@@ -29,8 +29,8 @@ export function Story() {
       <div className="story-container mx-auto max-w-[1200px] px-6 md:px-10">
         <Reveal>
           <div className="story-row flex flex-col gap-8 md:flex-row md:items-center md:gap-10 lg:gap-12">
-            {/* Left ~2/3: two images, horizontal, contain, no crop */}
-            <div className="story-images-col flex w-full min-w-0 items-center justify-center md:flex-[2_1_0%]">
+            {/* Left: photo pair — slightly narrower on md+ so the headline fits one line */}
+            <div className="story-images-col flex w-full min-w-0 items-center justify-center md:flex-[5_1_0%]">
               <div
                 className="story-images flex w-full flex-col items-center justify-center sm:flex-row"
                 style={{
@@ -57,11 +57,11 @@ export function Story() {
               </div>
             </div>
 
-            {/* Right ~1/3: text, vertically centered, left-aligned */}
-            <div className="story-text-col flex w-full min-w-0 flex-col justify-center md:flex-[1_1_0%]">
+            {/* Right — ~44% on md+ for readable single-line title */}
+            <div className="story-text-col flex w-full min-w-0 flex-col justify-center md:flex-[4_1_0%]">
               <div className="story-text text-left">
                 <p className="eyebrow mb-0">HOW WE GOT HERE</p>
-                <h2 className="mt-4 font-display text-[2.25rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
+                <h2 className="mt-4 whitespace-nowrap font-display text-[2.05rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[1.52rem] lg:text-[1.72rem] xl:text-[1.95rem] 2xl:text-[2.1rem]">
                   From Beijing to Singapore
                 </h2>
                 <p
