@@ -55,7 +55,7 @@ export function Hero() {
             forties, and the people who make it all meaningful.
           </p>
 
-          <p className="mt-8 font-display italic text-[1.34rem] leading-snug text-gold opacity-0 animate-fade-up-slow md:text-[1.55rem]">
+          <p className="mt-8 font-display italic text-[1.34rem] leading-snug text-navy opacity-0 animate-fade-up-slow md:text-[1.55rem]">
             We&apos;d love for you to be part of it.
           </p>
         </div>
