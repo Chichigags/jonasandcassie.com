@@ -61,7 +61,7 @@ export function Story() {
             <div className="story-text-col flex w-full min-w-0 flex-col justify-center md:flex-[4_1_0%]">
               <div className="story-text text-left">
                 <p className="eyebrow mb-0">HOW WE GOT HERE</p>
-                <h2 className="mt-4 whitespace-nowrap font-display text-[2.05rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[1.52rem] lg:text-[1.72rem] xl:text-[1.95rem] 2xl:text-[2.1rem]">
+                <h2 className="mt-4 whitespace-nowrap font-display text-[1.9rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[1.4rem] lg:text-[1.6rem] xl:text-[1.8rem] 2xl:text-[1.95rem]">
                   From Beijing to Singapore
                 </h2>
                 <p
