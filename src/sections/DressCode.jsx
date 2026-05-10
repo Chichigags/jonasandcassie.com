@@ -40,7 +40,7 @@ export function DressCode() {
             DRESS CODE
           </p>
           <h2 className="mt-4 font-display text-[2.25rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
-            Summer by the Lake
+            Summer chic
           </h2>
         </Reveal>
 
@@ -55,8 +55,8 @@ export function DressCode() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-9 font-display italic text-[1.3rem] leading-snug text-gold md:whitespace-nowrap md:text-[1.5rem]">
-            No black tie. No pressure. Just feel good.
+          <p className="mt-9 font-display italic text-[1.3rem] leading-snug text-gold md:text-[1.5rem]">
+            No black tie. No pressure.
           </p>
         </Reveal>
       </div>

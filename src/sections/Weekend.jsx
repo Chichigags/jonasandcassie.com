@@ -3,12 +3,11 @@ import { Reveal } from '../components/Reveal'
 const plans = [
   {
     eyebrow: 'FRIDAY EVENING · JULY 31',
-    title: 'Old town dinner',
+    title: 'Old Town dinner',
     body: [
-      'A casual walk in the old town, then dinner somewhere. Nothing fixed — just a warm start.',
+      'A bit of sightseeing in the old town, followed by a dinner. Nothing fancy — just a warm start.',
       'Time: around 7:00 PM on Friday, July 31',
       'Location: somewhere in Lucerne Old Town',
-      'Dress code: tourist mode (comfortable, slightly lost is perfectly fine)',
     ],
   },
   {
