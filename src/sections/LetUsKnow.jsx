@@ -1,4 +1,7 @@
+import { useState } from 'react'
 import { Reveal } from '../components/Reveal'
+
+const FORMSPREE_ACTION = 'https://formspree.io/f/xvzldrop'
 
 const fieldClass =
   'rounded-xl border border-navy/10 bg-paper/90 px-5 py-4 font-sans text-[0.98rem] text-navy outline-none transition-colors placeholder:text-navy/35 focus:border-ocean focus:ring-1 focus:ring-ocean/12 md:text-[1.02rem]'
@@ -8,9 +11,65 @@ const optionClass =
   'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-navy-soft md:text-[1.02rem]'
 
 /**
- * RSVP — airy white, typography-led; ocean button as the single strong anchor.
+ * RSVP — Formspree backend; stays on page after submit.
  */
 export function LetUsKnow() {
+  const [status, setStatus] = useState('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    const form = e.currentTarget
+    setStatus('submitting')
+    setErrorMessage('')
+
+    const fd = new FormData(form)
+    const weekendChecked = form.querySelectorAll(
+      'input[name="weekend_events"]:checked',
+    )
+    const weekendEvents = [...weekendChecked].map((input) => input.value)
+
+    const payload = {
+      name: String(fd.get('name') ?? '').trim(),
+      notes: String(fd.get('notes') ?? '').trim(),
+      weekend_events:
+        weekendEvents.length > 0 ? weekendEvents.join(', ') : '(none selected)',
+      _subject: 'RSVP — Jonas & Cassie (wedding site)',
+    }
+
+    try {
+      const res = await fetch(FORMSPREE_ACTION, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+
+      const body = await res.json().catch(() => ({}))
+
+      if (res.ok) {
+        setStatus('success')
+        form.reset()
+        return
+      }
+
+      const fromErrors =
+        Array.isArray(body.errors) &&
+        body.errors.map((err) => err.message).filter(Boolean).join('; ')
+      setErrorMessage(
+        fromErrors ||
+          body.error ||
+          `Could not send (${res.status}). Check Formspree domain settings or try again.`,
+      )
+      setStatus('error')
+    } catch {
+      setErrorMessage('Network error. Please try again.')
+      setStatus('error')
+    }
+  }
+
   return (
     <section
       id="let-us-know"
@@ -25,7 +84,12 @@ export function LetUsKnow() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
-          <form className="mx-auto mt-11 max-w-xl space-y-9 text-left">
+          <form
+            className="mx-auto mt-11 max-w-xl space-y-9 text-left"
+            action={FORMSPREE_ACTION}
+            method="POST"
+            onSubmit={handleSubmit}
+          >
             <div>
               <label htmlFor="rsvp-name" className={labelClass}>
                 Name(s)
@@ -34,6 +98,7 @@ export function LetUsKnow() {
                 id="rsvp-name"
                 name="name"
                 type="text"
+                required
                 placeholder="Your name (+1, if any)"
                 className={`mt-3 w-full ${fieldClass}`}
               />
@@ -48,7 +113,7 @@ export function LetUsKnow() {
                   <label key={option} className={optionClass}>
                     <input
                       type="checkbox"
-                      name="optional-weekend-parts"
+                      name="weekend_events"
                       value={option}
                       className="h-4 w-4 accent-ocean"
                     />
@@ -73,10 +138,28 @@ export function LetUsKnow() {
 
             <button
               type="submit"
-              className="mx-auto block rounded-xl bg-ocean px-8 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-colors hover:bg-ocean-deep"
+              disabled={status === 'submitting'}
+              className="mx-auto block rounded-xl bg-ocean px-8 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-colors hover:bg-ocean-deep disabled:cursor-not-allowed disabled:opacity-65"
             >
-              Let us know
+              {status === 'submitting' ? 'Sending…' : 'Let us know'}
             </button>
+
+            {status === 'success' && (
+              <p
+                className="text-center font-sans text-[0.95rem] text-ocean"
+                role="status"
+              >
+                Thank you — we got your note.
+              </p>
+            )}
+            {status === 'error' && errorMessage && (
+              <p
+                className="text-center font-sans text-[0.92rem] text-navy-soft"
+                role="alert"
+              >
+                {errorMessage}
+              </p>
+            )}
           </form>
         </Reveal>
 
