@@ -1,7 +1,5 @@
 /**
- * Closing card. Calm sunset-over-lake photograph fills the section. The
- * sky portion at the top stays light, so the closing line and date sit
- * on it with no heavy overlay.
+ * Closing card — natural lake/sunset image; light typographic panel only.
  */
 export function LakeFooter() {
   return (
@@ -16,29 +14,20 @@ export function LakeFooter() {
           className="absolute inset-0 h-full w-full object-cover"
           style={{
             objectPosition: 'center bottom',
-            filter: 'saturate(0.92) brightness(1.02)',
           }}
           loading="lazy"
           decoding="async"
         />
 
-        {/* Lightest possible top wash so the closing line stays readable. */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-[40%]"
-          style={{
-            background:
-              'linear-gradient(to bottom, rgba(246,244,239,0.35), rgba(246,244,239,0))',
-          }}
-          aria-hidden
-        />
-
-        <div className="absolute inset-x-0 top-12 text-center md:top-20">
-          <p className="font-script text-[2.25rem] leading-none text-navy md:text-[2.9rem]">
-            See you by the water.
-          </p>
-          <p className="mt-5 font-display text-[1.1rem] font-medium leading-none text-navy md:text-[1.35rem]">
-            Jonas &amp; Cassie
-          </p>
+        <div className="absolute inset-x-0 top-10 flex justify-center px-4 md:top-16">
+          <div className="rounded-xl bg-air/58 px-7 py-6 text-center backdrop-blur-[5px] md:px-9 md:py-7">
+            <p className="font-script text-[2.35rem] leading-none text-ocean [text-shadow:0_1px_18px_rgba(252,253,255,0.9)] md:text-[3rem]">
+              See you by the water.
+            </p>
+            <p className="mt-4 font-display text-[1.12rem] font-semibold leading-none text-ocean md:text-[1.38rem]">
+              Jonas &amp; Cassie
+            </p>
+          </div>
         </div>
       </div>
     </footer>

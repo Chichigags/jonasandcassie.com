@@ -4,36 +4,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Surfaces — warm off-white paper, slightly cooler bone for alternating sections.
-        paper: '#F6F4EF',
-        bone: '#EFEDE7',
-        // Deep blue-gray text. Two muted variants for body/secondary copy.
+        // Surfaces
+        paper: '#FAF8F3',
+        air: '#FCFDFF',
+        bone: '#FBEDB0',
+        // Ink
         navy: {
-          DEFAULT: '#1F2A37',
-          soft: '#3D4855',
-          muted: '#6B7280',
+          DEFAULT: '#3F4348',
+          soft: '#6F6A64',
+          muted: '#6F6A64',
         },
-        // Soft summer gold — used very sparingly (subtitles, italic close lines).
-        gold: {
-          DEFAULT: '#C9A35D',
-          deep: '#A8853F',
-          soft: '#DCBE85',
+        // Bold Scandinavian summer accents
+        ocean: {
+          DEFAULT: '#0A1680',
+          deep: '#070d5c',
         },
-        celadon: '#7FA89C',
+        sky: {
+          bright: '#93B2F8',
+          wash: '#F7FBFD',
+        },
+        sage: '#A8B8A3',
+        butter: '#FBEDB0',
+        citrus: '#F1B94C',
+        cream: '#FFFFFF',
       },
       fontFamily: {
-        // Editorial display serif — titles and italic accents only.
         display: ['"Playfair Display"', 'Georgia', 'serif'],
-        // Handwritten footer note only.
         script: ['"Caveat"', 'cursive'],
-        // Sans — small labels and uppercase metadata only.
         sans: ['"Inter"', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         eyebrow: '0.28em',
         label: '0.2em',
       },
-      // Extended opacity so slash modifiers like text-navy/70 resolve.
       opacity: {
         4: '0.04',
         6: '0.06',
@@ -63,15 +66,16 @@ export default {
         soft: '1.25rem',
       },
       boxShadow: {
-        gentle: '0 14px 32px -18px rgba(31, 42, 68, 0.18)',
+        gentle: '0 12px 28px -20px rgba(10, 22, 128, 0.08)',
         photo:
-          '0 28px 60px -32px rgba(31, 42, 68, 0.28), 0 8px 24px -12px rgba(31, 42, 68, 0.10)',
+          '0 20px 44px -28px rgba(10, 22, 128, 0.09), 0 8px 20px -14px rgba(147, 178, 248, 0.12)',
+        postcard:
+          '0 10px 28px -18px rgba(10, 22, 128, 0.06), 0 4px 12px -8px rgba(10, 22, 128, 0.04)',
       },
       animation: {
         'fade-up': 'fadeUp 1s ease-out forwards',
         'fade-up-delay': 'fadeUp 1.05s ease-out 0.18s both',
         'fade-up-slow': 'fadeUp 1.05s ease-out 0.42s both',
-        // Almost imperceptible vertical drift — flowers floating in air.
         float: 'float 14s ease-in-out infinite',
         'float-slow': 'float 18s ease-in-out infinite',
       },

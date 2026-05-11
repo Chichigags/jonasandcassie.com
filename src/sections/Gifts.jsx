@@ -1,8 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 /**
- * Gifts. Big serif title up top, two-line body, italic gold close.
- * No bouquet image — clean, balanced, centered.
+ * Gifts — quiet close; ocean-led (warmth from copy, not orange chrome).
  */
 export function Gifts() {
   return (
@@ -12,16 +11,14 @@ export function Gifts() {
     >
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
-          <p className="eyebrow">
-            ONE LAST THING
-          </p>
-          <h2 className="mt-4 font-display text-[2.25rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
+          <p className="eyebrow">ONE LAST THING</p>
+          <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
             Gifts
           </h2>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
-          <div className="mx-auto mt-7 max-w-[34rem] font-sans text-[1rem] leading-[1.72] text-navy/85 md:text-[1.05rem]">
+          <div className="mx-auto mt-7 max-w-[34rem] font-sans text-[1.02rem] leading-[1.72] text-navy-soft md:text-[1.06rem] md:leading-[1.75]">
             <p>
               Your presence is already the best gift — especially if you&apos;re
               traveling to celebrate with us.
@@ -29,10 +26,10 @@ export function Gifts() {
           </div>
         </Reveal>
 
-        <div className="mx-auto mt-8 h-px w-12 bg-gold/20" aria-hidden />
+        <div className="mx-auto mt-8 h-px w-12 bg-ocean/22" aria-hidden />
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-7 font-display italic text-[1.32rem] leading-snug text-gold-deep md:text-[1.55rem]">
+          <p className="mt-7 font-display italic text-[1.34rem] font-normal leading-snug text-ocean md:text-[1.52rem]">
             Truly — no gifts needed.
           </p>
         </Reveal>

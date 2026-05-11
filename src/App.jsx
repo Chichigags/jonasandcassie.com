@@ -8,9 +8,8 @@ import { Gifts } from './sections/Gifts'
 import { LakeFooter } from './sections/LakeFooter'
 
 /**
- * Single-column, full-width, section-by-section scroll. Each section
- * carries its own background and breathing room — the page reads like
- * an invitation rather than a magazine spread.
+ * Single-column scroll — structure unchanged; bold bright Scandinavian
+ * summer palette (ocean, sky, citrus, lake air).
  */
 export default function App() {
   return (

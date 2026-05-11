@@ -1,32 +1,31 @@
 import { Reveal } from '../components/Reveal'
 
 const fieldClass =
-  'rounded-xl border border-navy/10 bg-[#EFEDE7]/70 px-5 py-4 font-sans text-[0.98rem] text-navy outline-none transition-colors placeholder:text-navy/35 focus:border-celadon/60 md:text-[1.02rem]'
+  'rounded-xl border border-navy/10 bg-paper/90 px-5 py-4 font-sans text-[0.98rem] text-navy outline-none transition-colors placeholder:text-navy/35 focus:border-ocean focus:ring-1 focus:ring-ocean/12 md:text-[1.02rem]'
 const labelClass =
-  'block font-sans text-[0.76rem] font-medium uppercase tracking-[0.13em] text-navy/80'
+  'block font-sans text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-ocean'
 const optionClass =
-  'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-navy/80 md:text-[1.02rem]'
+  'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-navy-soft md:text-[1.02rem]'
 
 /**
- * RSVP. Eyebrow → body request → italic gold close. The italic gold
- * "text, message or call" line sits at the end as the warm sign-off.
+ * RSVP — airy white, typography-led; ocean button as the single strong anchor.
  */
 export function LetUsKnow() {
   return (
     <section
       id="let-us-know"
-      className="relative w-full bg-bone px-6 py-20 md:px-12 md:py-24 lg:py-28"
+      className="relative w-full bg-air px-6 py-24 md:px-12 md:py-28 lg:py-32"
     >
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="eyebrow mb-4">YES?</p>
-          <h2 className="font-display text-[2.25rem] font-medium not-italic leading-[1.08] tracking-[-0.005em] text-navy md:text-[2.75rem]">
+          <h2 className="font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
             Are you coming?
           </h2>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
-          <form className="mx-auto mt-9 max-w-xl space-y-8 text-left">
+          <form className="mx-auto mt-11 max-w-xl space-y-9 text-left">
             <div>
               <label htmlFor="rsvp-name" className={labelClass}>
                 Name(s)
@@ -51,7 +50,7 @@ export function LetUsKnow() {
                       type="checkbox"
                       name="optional-weekend-parts"
                       value={option}
-                      className="h-4 w-4 accent-celadon"
+                      className="h-4 w-4 accent-ocean"
                     />
                     {option}
                   </label>
@@ -74,7 +73,7 @@ export function LetUsKnow() {
 
             <button
               type="submit"
-              className="mx-auto block rounded-xl bg-celadon px-7 py-3.5 font-sans text-[0.95rem] font-medium text-white transition hover:brightness-95"
+              className="mx-auto block rounded-xl bg-ocean px-8 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-colors hover:bg-ocean-deep"
             >
               Let us know
             </button>
@@ -82,13 +81,13 @@ export function LetUsKnow() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-9 font-display italic text-[1.4rem] leading-snug text-gold-deep md:text-[1.65rem]">
+          <p className="mt-11 font-display text-[1.36rem] font-normal italic leading-snug text-ocean md:text-[1.62rem]">
             A text, message or call is also fine.
           </p>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-3">
-          <p className="mx-auto mt-5 max-w-xl font-sans italic text-[0.92rem] leading-relaxed text-navy/55 md:text-[0.96rem]">
+          <p className="mx-auto mt-6 max-w-xl font-sans text-[0.92rem] leading-relaxed text-navy-soft md:text-[0.96rem]">
             If you don&apos;t have our number… you&apos;re probably in the
             wrong place.
           </p>
