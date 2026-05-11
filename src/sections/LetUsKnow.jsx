@@ -11,7 +11,7 @@ const optionClass =
   'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-navy-soft md:text-[1.02rem]'
 
 /**
- * RSVP — Formspree backend; stays on page after submit.
+ * RSVP — POST to Formspree; inline thank-you, no redirect.
  */
 export function LetUsKnow() {
   const [status, setStatus] = useState('idle')
@@ -23,35 +23,18 @@ export function LetUsKnow() {
     setStatus('submitting')
     setErrorMessage('')
 
-    const fd = new FormData(form)
-    const weekendChecked = form.querySelectorAll(
-      'input[name="weekend_events"]:checked',
-    )
-    const weekendEvents = [...weekendChecked].map((input) => input.value)
-
-    const payload = {
-      name: String(fd.get('name') ?? '').trim(),
-      notes: String(fd.get('notes') ?? '').trim(),
-      weekend_events:
-        weekendEvents.length > 0 ? weekendEvents.join(', ') : '(none selected)',
-      _subject: 'RSVP — Jonas & Cassie (wedding site)',
-    }
-
     try {
       const res = await fetch(FORMSPREE_ACTION, {
         method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
       })
 
       const body = await res.json().catch(() => ({}))
 
       if (res.ok) {
-        setStatus('success')
         form.reset()
+        setStatus('success')
         return
       }
 
@@ -99,6 +82,7 @@ export function LetUsKnow() {
                 name="name"
                 type="text"
                 required
+                autoComplete="name"
                 placeholder="Your name (+1, if any)"
                 className={`mt-3 w-full ${fieldClass}`}
               />
@@ -109,28 +93,35 @@ export function LetUsKnow() {
                 Will you join any of these as well? (optional)
               </legend>
               <div className="mt-3 grid gap-3">
-                {['Friday dinner', 'Saturday brunch'].map((option) => (
-                  <label key={option} className={optionClass}>
-                    <input
-                      type="checkbox"
-                      name="weekend_events"
-                      value={option}
-                      className="h-4 w-4 accent-ocean"
-                    />
-                    {option}
-                  </label>
-                ))}
+                <label className={optionClass}>
+                  <input
+                    type="checkbox"
+                    name="friday_dinner"
+                    value="Yes"
+                    className="h-4 w-4 min-h-[1rem] min-w-[1rem] shrink-0 accent-ocean"
+                  />
+                  Friday dinner
+                </label>
+                <label className={optionClass}>
+                  <input
+                    type="checkbox"
+                    name="saturday_brunch"
+                    value="Yes"
+                    className="h-4 w-4 min-h-[1rem] min-w-[1rem] shrink-0 accent-ocean"
+                  />
+                  Saturday brunch
+                </label>
               </div>
             </fieldset>
 
             <div>
-              <label htmlFor="notes" className={labelClass}>
+              <label htmlFor="rsvp-message" className={labelClass}>
                 Any dietary restrictions? If not, any love or life advice for
                 us?
               </label>
               <textarea
-                id="notes"
-                name="notes"
+                id="rsvp-message"
+                name="message"
                 rows="4"
                 className={`mt-3 w-full resize-none ${fieldClass}`}
               />
@@ -139,18 +130,21 @@ export function LetUsKnow() {
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="mx-auto block rounded-xl bg-ocean px-8 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-colors hover:bg-ocean-deep disabled:cursor-not-allowed disabled:opacity-65"
+              aria-busy={status === 'submitting'}
+              className="mx-auto block min-h-[2.75rem] rounded-xl bg-ocean px-8 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-[opacity,background-color] duration-200 hover:bg-ocean-deep disabled:cursor-not-allowed disabled:opacity-70"
             >
               {status === 'submitting' ? 'Sending…' : 'Let us know'}
             </button>
 
             {status === 'success' && (
-              <p
-                className="text-center font-sans text-[0.95rem] text-ocean"
-                role="status"
-              >
-                Thank you — we got your note.
-              </p>
+              <div className="space-y-2 pt-1 text-center" role="status">
+                <p className="font-sans text-[1.02rem] font-normal leading-snug text-ocean md:text-[1.06rem]">
+                  Thank you — we can&apos;t wait to see you by the lake.
+                </p>
+                <p className="font-sans text-[0.88rem] leading-relaxed text-navy-soft md:text-[0.9rem]">
+                  Swiss timing starts now.
+                </p>
+              </div>
             )}
             {status === 'error' && errorMessage && (
               <p
