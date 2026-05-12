@@ -63,6 +63,7 @@ export function LetUsKnow() {
 
   async function handleSubmit(e) {
     e.preventDefault()
+    e.stopPropagation()
     const form = e.currentTarget
     setStatus('submitting')
     setErrorMessage('')
@@ -76,7 +77,9 @@ export function LetUsKnow() {
 
       const body = await res.json().catch(() => ({}))
 
-      if (res.ok) {
+      const succeeded = res.ok || body?.ok === true
+
+      if (succeeded) {
         form.reset()
         setSuccessLeaving(false)
         setStatus('success')
@@ -127,9 +130,9 @@ export function LetUsKnow() {
         <Reveal delayClass="reveal-delay-1">
           <form
             className="mx-auto mt-11 max-w-xl space-y-9 text-left"
-            action={FORMSPREE_ACTION}
-            method="POST"
-            onSubmit={handleSubmit}
+            onSubmit={(e) => {
+              void handleSubmit(e)
+            }}
           >
             <div>
               <label htmlFor="rsvp-name" className={labelClass}>

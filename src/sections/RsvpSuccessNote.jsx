@@ -53,12 +53,10 @@ function WildflowerCorner() {
   )
 }
 
-export function RsvpSuccessNote({ visible, leaving, onDismiss }) {
-  if (!visible) return null
-
+export function RsvpSuccessNote({ leaving, onDismiss }) {
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center px-5 py-10 transition-opacity duration-300 ease-out ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center px-5 py-10 transition-opacity duration-300 ease-out ${
         leaving ? 'pointer-events-none opacity-0' : 'opacity-100'
       }`}
       style={{ background: 'rgba(10, 22, 128, 0.05)' }}
