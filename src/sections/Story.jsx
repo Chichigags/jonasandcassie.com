@@ -1,17 +1,12 @@
 import { Reveal } from '../components/Reveal'
-
-const ASSET = (path) => {
-  const raw = import.meta.env.BASE_URL || '/'
-  const base = raw.endsWith('/') ? raw : `${raw}/`
-  return `${base}${path.replace(/^\//, '')}`
-}
+import beijingImg from '../assets/story/beijing.png'
+import singaporeImg from '../assets/story/singapore.png'
 
 /**
  * Story — same layout; warm ivory field; slight editorial offset on photos.
  *
- * Desktop uses CSS grid with minmax on the photo track so the column cannot
- * collapse to zero (flex + nowrap headline could still starve photos on some
- * breakpoints). Image treatment stays subtle via Tailwind filters.
+ * Photos are imported so Vite emits correct URLs on any base path. Desktop
+ * uses CSS grid with minmax on the photo track so that column cannot collapse.
  */
 export function Story() {
   const imgStyle = {
@@ -30,7 +25,7 @@ export function Story() {
     >
       <div className="story-container mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="story-row grid grid-cols-1 gap-10 md:grid-cols-[minmax(300px,1.15fr)_minmax(0,1fr)] md:items-center md:gap-x-12 lg:gap-x-14">
-          <div className="story-images-col flex w-full min-w-0 items-center justify-center">
+          <div className="story-images-col flex w-full items-center justify-center">
             <div
               className="story-images flex w-full flex-col items-center justify-center sm:flex-row"
               style={{
@@ -39,7 +34,7 @@ export function Story() {
               }}
             >
               <img
-                src={ASSET('/images/beijing.png')}
+                src={beijingImg}
                 alt="A couple walking through a Beijing hutong on a sunlit afternoon"
                 width={480}
                 height={510}
@@ -50,7 +45,7 @@ export function Story() {
                 fetchPriority="high"
               />
               <img
-                src={ASSET('/images/singapore.png')}
+                src={singaporeImg}
                 alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
                 width={480}
                 height={510}
