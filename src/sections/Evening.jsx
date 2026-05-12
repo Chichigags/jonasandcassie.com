@@ -61,11 +61,11 @@ const blocks = [
 ]
 
 const accentMuted =
-  'font-sans text-[0.98rem] leading-relaxed text-navy-soft md:text-[1.04rem]'
+  'font-sans text-[0.98rem] leading-relaxed text-faded md:text-[1.02rem]'
 const accentWarmItalic =
-  'font-display text-[1.02rem] italic font-normal leading-relaxed text-citrus md:text-[1.08rem]'
+  'font-display text-[1.02rem] italic font-normal leading-relaxed text-blush md:text-[1.04rem]'
 const accentCoolItalic =
-  'font-display text-[1.02rem] italic font-normal leading-relaxed text-ocean md:text-[1.08rem]'
+  'font-display text-[1.02rem] italic font-normal leading-relaxed text-ink/88 md:text-[1.04rem]'
 
 function ScheduleAccent({ accent, italic, warm }) {
   const italicClass = warm ? accentWarmItalic : accentCoolItalic
@@ -100,21 +100,21 @@ function ScheduleAccent({ accent, italic, warm }) {
 }
 
 /**
- * Evening — editorial itinerary; ocean structure, orange only on chosen lines.
+ * Evening — editorial itinerary; ink + faded type, blush accents.
  */
 export function Evening() {
   return (
     <section
       id="evening"
-      className="relative w-full bg-paper px-6 py-20 md:px-12 md:py-24 lg:py-28"
+      className="relative w-full bg-paper px-6 py-20 md:px-10 md:py-22 lg:px-12 lg:py-24"
     >
       <Reveal>
         <header className="mx-auto max-w-prose text-center">
           <p className="eyebrow">THE EVENING</p>
-          <h2 className="mt-4 font-display text-[2.5rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.9rem]">
+          <h2 className="mt-4 font-display text-[2.5rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ink md:text-[2.58rem]">
             Here&apos;s the plan
           </h2>
-          <p className="mx-auto mt-6 max-w-xl font-sans text-[1.02rem] leading-[1.72] text-navy-soft md:text-[1.06rem] md:leading-[1.75]">
+          <p className="mx-auto mt-6 max-w-xl font-sans text-[1.02rem] leading-[1.72] text-faded md:text-[1.03rem] md:leading-[1.75]">
             <span className="block">A summer evening by the lake —</span>
             <span className="block">simple, relaxed,</span>
             <span className="block">and hopefully memorable.</span>
@@ -124,11 +124,11 @@ export function Evening() {
 
       <div className="relative mx-auto mt-16 max-w-content md:mt-20">
         <div
-          className="pointer-events-none absolute bottom-8 left-[11.55rem] top-8 hidden w-px bg-ocean/28 md:block lg:left-[12.05rem]"
+          className="pointer-events-none absolute bottom-8 left-[11.55rem] top-8 hidden w-px bg-ink/16 md:block lg:left-[12.05rem]"
           aria-hidden
         />
 
-        <ul className="relative space-y-14 md:space-y-[4rem] lg:space-y-[4.25rem]">
+        <ul className="relative space-y-14 md:space-y-[3.25rem] lg:space-y-[3.5rem]">
           {blocks.map((block, i) => (
             <li key={block.title}>
               <Reveal
@@ -136,16 +136,16 @@ export function Evening() {
               >
                 <article className="grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,11.25rem)_minmax(0,1fr)] md:gap-x-12 lg:gap-x-16">
                   <div className="md:pt-0.5">
-                    <p className="font-display text-[1.48rem] font-semibold leading-none tracking-[-0.02em] text-ocean md:text-[1.62rem]">
+                    <p className="font-display text-[1.48rem] font-semibold leading-none tracking-[-0.02em] text-ink md:text-[1.52rem]">
                       {block.time}
                     </p>
                   </div>
 
                   <div className="min-w-0 md:max-w-prose lg:max-w-none">
-                    <h3 className="font-display text-[1.26rem] font-semibold leading-snug tracking-[-0.01em] text-navy md:text-[1.34rem]">
+                    <h3 className="font-display text-[1.26rem] font-semibold leading-snug tracking-[-0.01em] text-ink md:text-[1.3rem]">
                       {block.title}
                     </h3>
-                    <div className="mt-3.5 space-y-3 font-sans text-[0.98rem] leading-[1.72] text-navy-soft md:text-[1.02rem] md:leading-[1.75]">
+                    <div className="mt-3.5 space-y-3 font-sans text-[0.98rem] leading-[1.72] text-faded md:text-[1.01rem] md:leading-[1.75]">
                       {block.body.map((para, j) => (
                         <p key={j}>{para}</p>
                       ))}

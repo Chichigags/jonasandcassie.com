@@ -19,7 +19,7 @@ export function Story() {
   return (
     <section
       id="story"
-      className="story-section relative w-full bg-sky-wash py-24 md:py-28 lg:py-32"
+      className="story-section relative w-full bg-sky-wash py-24 md:py-24 lg:py-28"
     >
       <div className="story-container mx-auto max-w-[1200px] px-6 md:px-10">
         <Reveal>
@@ -56,15 +56,15 @@ export function Story() {
             <div className="story-text-col flex w-full min-w-0 flex-col justify-center md:flex-[4_1_0%]">
               <div className="story-text text-left">
                 <p className="eyebrow mb-0">HOW WE GOT HERE</p>
-                <h2 className="mt-5 whitespace-nowrap font-display text-[1.95rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[1.4rem] lg:text-[1.62rem] xl:text-[1.82rem] 2xl:text-[1.98rem]">
+                <h2 className="mt-5 whitespace-nowrap font-display text-[1.95rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ink md:text-[2.02rem] lg:text-[2.1rem] xl:text-[2.14rem] 2xl:text-[2.18rem]">
                   From Beijing to Singapore
                 </h2>
-                <p className="story-line-2 mt-8 font-sans text-[1.02rem] font-normal leading-[1.65] text-navy-soft md:text-[1.05rem] md:leading-[1.7] mb-[18px]">
+                <p className="story-line-2 mt-8 font-sans text-[1.02rem] font-normal leading-[1.65] text-faded md:text-[1.03rem] md:leading-[1.7] mb-[18px]">
                   What started in Beijing turned into a life built together in
                   Singapore — with plenty of adventures, a few plot twists, and
                   eventually, one very spoiled little dog.
                 </p>
-                <p className="story-line-3 font-sans text-[1.02rem] font-normal leading-[1.65] text-navy-soft md:text-[1.05rem] md:leading-[1.7]">
+                <p className="story-line-3 font-sans text-[1.02rem] font-normal leading-[1.65] text-faded md:text-[1.03rem] md:leading-[1.7]">
                   This summer, we&apos;re taking a moment to celebrate it all,
                   with the people who matter most.
                 </p>

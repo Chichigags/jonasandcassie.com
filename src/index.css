@@ -34,19 +34,19 @@
   .reveal-delay-2 { transition-delay: 220ms; }
   .reveal-delay-3 { transition-delay: 360ms; }
 
-  /* Small caps — ocean-forward; helpers only when contrast needs sky */
+  /* Small caps — ink-forward */
   .eyebrow {
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    @apply text-ocean;
+    @apply text-ink;
   }
   @media (min-width: 768px) {
     .eyebrow {
-      font-size: 0.76rem;
-      letter-spacing: 0.13em;
+      font-size: 0.74rem;
+      letter-spacing: 0.135em;
     }
   }
 
@@ -56,11 +56,11 @@
     font-size: 2.35rem;
     line-height: 1.08;
     letter-spacing: -0.015em;
-    @apply text-ocean;
+    @apply text-ink;
   }
   @media (min-width: 768px) {
     .h-section {
-      font-size: 2.95rem;
+      font-size: 2.52rem;
     }
   }
 
@@ -78,11 +78,23 @@
     }
   }
 
-  /* Emotional italic — use section-level ocean or citrus utilities */
+  /* Emotional italic — section-level ink / blush utilities */
   .accent-italic {
     font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
     font-weight: 400;
-    @apply text-ocean;
+    @apply text-ink;
+  }
+}
+
+/* Dress code — base blur (mobile); md+ slightly crisper to match small-screen clarity */
+.dress-code-photo-blur {
+  filter: blur(3px);
+  transform: scale(1.03);
+}
+@media (min-width: 768px) {
+  .dress-code-photo-blur {
+    filter: blur(2px);
+    transform: scale(1.02);
   }
 }

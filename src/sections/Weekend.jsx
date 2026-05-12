@@ -32,10 +32,10 @@ function StackedPlanLine({ children }) {
 
   return (
     <div className="mb-4">
-      <p className="mb-1 font-sans text-[12px] font-semibold uppercase leading-snug tracking-[0.08em] text-ocean/85">
+      <p className="mb-1 font-sans text-[12px] font-semibold uppercase leading-snug tracking-[0.08em] text-ink/75">
         {labelMatch[1]}
       </p>
-      <p className="font-sans text-[16px] leading-[1.65] text-navy-soft">
+      <p className="font-sans text-[16px] leading-[1.65] text-faded">
         {labelMatch[1] === 'Location' && labelMatch[2].includes('Kantonsstrasse') ? (
           <>
             Lisbeth &amp; Walter Wüest-Meier,
@@ -62,16 +62,16 @@ export function Weekend() {
   return (
     <section
       id="weekend"
-      className="relative w-full bg-sky-wash px-6 py-22 md:px-10 md:py-26"
+      className="relative w-full bg-sky-wash px-6 py-22 md:px-10 md:py-24"
     >
       <div className="mx-auto max-w-[1000px]">
         <Reveal>
           <div className="mx-auto mb-14 max-w-xl text-center md:mb-16">
             <p className="eyebrow">MORE FUN</p>
-            <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
+            <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ink md:text-[2.52rem]">
               A little bit more
             </h2>
-            <p className="mx-auto mt-6 max-w-md font-sans text-[1.02rem] leading-[1.72] text-navy-soft md:text-[1.06rem] md:leading-[1.75]">
+            <p className="mx-auto mt-6 max-w-md font-sans text-[1.02rem] leading-[1.72] text-faded md:text-[1.03rem] md:leading-[1.75]">
               Since you&apos;re already here,
               <br className="md:hidden" />
               {' '}let&apos;s start a little early.
@@ -79,7 +79,7 @@ export function Weekend() {
           </div>
         </Reveal>
 
-        <div className="grid gap-10 md:grid-cols-2 md:items-stretch md:gap-12 lg:gap-14">
+        <div className="grid gap-10 md:grid-cols-2 md:items-stretch md:gap-10 lg:gap-12">
           {plans.map((plan, index) => (
             <Reveal
               key={plan.eyebrow}
@@ -88,7 +88,7 @@ export function Weekend() {
             >
               <div className="flex h-full flex-col">
                 <article
-                  className={`relative flex h-full min-h-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-ocean/18 bg-air shadow-postcard ${
+                  className={`relative flex h-full min-h-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-ink/12 bg-air shadow-postcard ${
                     index === 0
                       ? ''
                       : 'px-9 py-8 md:px-10 md:py-9'
@@ -101,13 +101,13 @@ export function Weekend() {
                         : 'relative z-10 max-w-[480px]'
                     }
                   >
-                    <p className="mb-3.5 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-ocean md:text-[0.74rem]">
+                    <p className="mb-3.5 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-faded md:text-[0.73rem]">
                       {plan.eyebrow}
                     </p>
-                    <h3 className="mb-5 font-display text-[1.78rem] font-semibold leading-[1.12] text-ocean md:text-[1.92rem]">
+                    <h3 className="mb-5 font-display text-[1.78rem] font-semibold leading-[1.12] text-ink md:text-[1.86rem]">
                       {plan.title}
                     </h3>
-                    <div className="space-y-2 font-sans text-[0.98rem] leading-[1.72] text-navy-soft md:text-[1rem] md:leading-[1.75]">
+                    <div className="space-y-2 font-sans text-[0.98rem] leading-[1.72] text-faded md:text-[1.01rem] md:leading-[1.75]">
                       {plan.body
                         .filter((line) => !/^(Time|Location|Dress code|Transport):/.test(line))
                         .map((line) => (
@@ -124,7 +124,7 @@ export function Weekend() {
                   </div>
 
                   {index === 0 && (
-                    <div className="relative mt-auto min-h-[12.5rem] w-full flex-1 md:min-h-[15rem] lg:min-h-[17rem]">
+                    <div className="relative mt-auto min-h-[12.5rem] w-full flex-1 md:min-h-[13rem] lg:min-h-[13.5rem]">
                       <img
                         src="/images/weekend-riva.png"
                         alt=""
