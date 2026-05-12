@@ -57,10 +57,7 @@ export function RsvpSuccessNote({ leaving, onDismiss }) {
             id="rsvp-success-title"
             className="font-display text-[1.65rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[#1D2E6F] md:text-[1.85rem]"
           >
-            Lovely to see you.
-          </p>
-          <p className="mt-6 max-w-[22rem] font-sans text-[0.84rem] font-normal italic leading-relaxed text-[#7B8088] opacity-70 md:text-[0.88rem] md:leading-relaxed">
-            Or, as they say here — bis gli in Lozärn.
+            Nice, can&apos;t wait to see you in Lucerne.
           </p>
         </div>
       </div>
