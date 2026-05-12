@@ -124,17 +124,34 @@ export function Weekend() {
                   </div>
 
                   {index === 0 && (
-                    <div className="relative mt-auto min-h-[9.5rem] w-full flex-1 md:min-h-[11rem]">
+                    <div className="relative mt-auto min-h-[12.5rem] w-full flex-1 md:min-h-[15rem] lg:min-h-[17rem]">
                       <img
                         src="/images/weekend-riva.png"
                         alt=""
                         aria-hidden
-                        className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-bottom"
-                        style={{ objectPosition: '50% 100%' }}
+                        className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
+                        style={{ objectPosition: '88% 100%' }}
                       />
+                      {/* Short vertical blend into text area + soft L/R into card air — keeps dog sharp lower in frame */}
                       <div
                         aria-hidden
-                        className="pointer-events-none absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-air to-transparent md:h-14"
+                        className="pointer-events-none absolute inset-0"
+                        style={{
+                          background: `
+                            linear-gradient(to bottom,
+                              rgba(252,253,255,1) 0%,
+                              rgba(252,253,255,0.55) 4%,
+                              rgba(252,253,255,0.12) 10%,
+                              transparent 16%),
+                            linear-gradient(90deg,
+                              rgba(252,253,255,0.82) 0%,
+                              rgba(252,253,255,0.28) 14%,
+                              transparent 36%),
+                            linear-gradient(270deg,
+                              rgba(252,253,255,0.2) 0%,
+                              transparent 14%)
+                          `,
+                        }}
                       />
                     </div>
                   )}
