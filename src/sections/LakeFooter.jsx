@@ -19,7 +19,7 @@ export function LakeFooter() {
           decoding="async"
         />
 
-        <div className="absolute inset-0 flex items-center justify-center px-4 translate-y-2 md:translate-y-3">
+        <div className="absolute inset-0 flex items-center justify-center px-4 -translate-y-2 md:-translate-y-3">
           <div className="text-center">
             <p className="font-script text-[2.35rem] leading-none text-ocean [text-shadow:0_1px_22px_rgba(252,253,255,0.95),0_0_1px_rgba(252,253,255,0.9)] md:text-[3rem]">
               See you by the water.
