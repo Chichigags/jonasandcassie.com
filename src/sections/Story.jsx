@@ -11,7 +11,6 @@ export function Story() {
     objectFit: 'contain',
     borderRadius: '12px',
     opacity: 1,
-    filter: 'saturate(0.94) contrast(0.97) brightness(1.01)',
   }
 
   return (
@@ -20,36 +19,37 @@ export function Story() {
       className="story-section relative w-full bg-paper py-28 md:py-32 lg:py-36"
     >
       <div className="story-container mx-auto max-w-[1200px] px-6 md:px-10">
-        <Reveal>
-          <div className="story-row flex flex-col gap-10 md:flex-row md:items-center md:gap-12 lg:gap-14">
-            <div className="story-images-col flex w-full min-w-0 items-center justify-center md:flex-[5_1_0%]">
-              <div
-                className="story-images flex w-full flex-col items-center justify-center sm:flex-row"
-                style={{
-                  gap: '20px',
-                  maxWidth: '90%',
-                }}
-              >
-                <img
-                  src="/images/beijing.png"
-                  alt="A couple walking through a Beijing hutong on a sunlit afternoon"
-                  className="story-image story-image-beijing block max-w-full translate-x-0.5 rotate-[0.35deg] sm:max-w-[calc(50%_-_10px)]"
-                  style={imgStyle}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="/images/singapore.png"
-                  alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
-                  className="story-image story-image-singapore block max-w-full -translate-x-0.5 -rotate-[0.25deg] sm:max-w-[calc(50%_-_10px)]"
-                  style={imgStyle}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+        <div className="story-row flex flex-col gap-10 md:flex-row md:items-center md:gap-12 lg:gap-14">
+          {/* Photos stay outside Reveal so they are never opacity-0 (fixes missing images with filter/IO edge cases). Film grade on wrapper only. */}
+          <div className="story-images-col flex w-full min-w-0 items-center justify-center md:flex-[5_1_0%]">
+            <div
+              className="story-images flex w-full flex-col items-center justify-center sm:flex-row [&_img]:[filter:saturate(0.94)_contrast(0.97)_brightness(1.01)]"
+              style={{
+                gap: '20px',
+                maxWidth: '90%',
+              }}
+            >
+              <img
+                src="/images/beijing.png"
+                alt="A couple walking through a Beijing hutong on a sunlit afternoon"
+                className="story-image story-image-beijing block max-w-full translate-x-0.5 rotate-[0.35deg] sm:max-w-[calc(50%_-_10px)]"
+                style={imgStyle}
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                src="/images/singapore.png"
+                alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
+                className="story-image story-image-singapore block max-w-full -translate-x-0.5 -rotate-[0.25deg] sm:max-w-[calc(50%_-_10px)]"
+                style={imgStyle}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
+          </div>
 
-            <div className="story-text-col flex w-full min-w-0 flex-col justify-center md:flex-[4_1_0%]">
+          <Reveal className="min-w-0 md:flex-[4_1_0%]">
+            <div className="story-text-col flex w-full flex-col justify-center">
               <div className="story-text text-left">
                 <p className="eyebrow mb-0">HOW WE GOT HERE</p>
                 <h2 className="mt-5 whitespace-nowrap font-display text-[1.95rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[1.4rem] lg:text-[1.62rem] xl:text-[1.82rem] 2xl:text-[1.98rem]">
@@ -66,8 +66,8 @@ export function Story() {
                 </p>
               </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
     </section>
   )
