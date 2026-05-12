@@ -9,8 +9,9 @@ const ASSET = (path) => {
 /**
  * Story — same layout; warm ivory field; slight editorial offset on photos.
  *
- * Image column uses md:shrink-0 so flex never collapses it when the headline
- * has a large min-content width (nowrap was starving the photo flex child).
+ * Desktop uses CSS grid with minmax on the photo track so the column cannot
+ * collapse to zero (flex + nowrap headline could still starve photos on some
+ * breakpoints). Image treatment stays subtle via Tailwind filters.
  */
 export function Story() {
   const imgStyle = {
@@ -20,7 +21,6 @@ export function Story() {
     objectFit: 'contain',
     borderRadius: '12px',
     opacity: 1,
-    filter: 'saturate(0.94) contrast(0.97) brightness(1.01)',
   }
 
   return (
@@ -29,13 +29,13 @@ export function Story() {
       className="story-section relative w-full bg-paper py-28 md:py-32 lg:py-36"
     >
       <div className="story-container mx-auto max-w-[1200px] px-6 md:px-10">
-        <div className="story-row flex flex-col gap-10 md:flex-row md:items-center md:gap-12 lg:gap-14">
-          <div className="story-images-col flex w-full items-center justify-center md:shrink-0 md:flex-[5_1_0%]">
+        <div className="story-row grid grid-cols-1 gap-10 md:grid-cols-[minmax(300px,1.15fr)_minmax(0,1fr)] md:items-center md:gap-x-12 lg:gap-x-14">
+          <div className="story-images-col flex w-full min-w-0 items-center justify-center">
             <div
               className="story-images flex w-full flex-col items-center justify-center sm:flex-row"
               style={{
                 gap: '20px',
-                maxWidth: '90%',
+                maxWidth: 'min(100%,520px)',
               }}
             >
               <img
@@ -43,7 +43,7 @@ export function Story() {
                 alt="A couple walking through a Beijing hutong on a sunlit afternoon"
                 width={480}
                 height={510}
-                className="story-image story-image-beijing block h-auto max-w-full translate-x-0.5 rotate-[0.35deg] sm:max-w-[calc(50%_-_10px)]"
+                className="story-image story-image-beijing block h-auto max-w-full translate-x-0.5 rotate-[0.35deg] saturate-[0.94] contrast-[0.97] brightness-[1.01] sm:max-w-[calc(50%_-_10px)]"
                 style={imgStyle}
                 loading="eager"
                 decoding="async"
@@ -54,7 +54,7 @@ export function Story() {
                 alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
                 width={480}
                 height={510}
-                className="story-image story-image-singapore block h-auto max-w-full -translate-x-0.5 -rotate-[0.25deg] sm:max-w-[calc(50%_-_10px)]"
+                className="story-image story-image-singapore block h-auto max-w-full -translate-x-0.5 -rotate-[0.25deg] saturate-[0.94] contrast-[0.97] brightness-[1.01] sm:max-w-[calc(50%_-_10px)]"
                 style={imgStyle}
                 loading="eager"
                 decoding="async"
@@ -62,7 +62,7 @@ export function Story() {
             </div>
           </div>
 
-          <Reveal className="min-w-0 md:flex-[4_1_0%]">
+          <Reveal className="min-w-0">
             <div className="story-text-col flex w-full min-w-0 flex-col justify-center">
               <div className="story-text text-left">
                 <p className="eyebrow mb-0">HOW WE GOT HERE</p>
