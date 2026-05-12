@@ -1,5 +1,5 @@
 /**
- * Hero — meadow photo full-bleed; lightest airy veil + localized text lift only.
+ * Hero — meadow; soft late-summer grade; generous lower breathing room.
  */
 export function Hero() {
   return (
@@ -11,19 +11,28 @@ export function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
         style={{
           objectPosition: 'center center',
+          filter: 'saturate(0.92) contrast(0.96) brightness(1.02)',
         }}
       />
       <div
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(to bottom, rgba(252,253,255,0.05), rgba(252,253,255,0.16))',
+            'linear-gradient(to bottom, rgba(245,242,236,0.12) 0%, rgba(245,242,236,0.06) 45%, transparent 100%)',
+        }}
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(252,253,255,0.06), rgba(252,253,255,0.14))',
         }}
         aria-hidden
       />
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-[1100px] flex-col justify-center px-6 py-24 md:px-12 md:py-28 lg:px-16">
-        <div className="max-w-2xl [text-shadow:0_1px_20px_rgba(252,253,255,0.85)]">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-[1100px] flex-col justify-center px-6 pb-32 pt-28 md:px-12 md:pb-40 md:pt-32 lg:px-16 lg:pb-44">
+        <div className="max-w-2xl [text-shadow:0_1px_18px_rgba(252,253,255,0.8)]">
           <p className="font-sans text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-charcoal opacity-0 animate-fade-up md:text-[0.82rem]">
             LUCERNE · AUGUST 1, 2026
           </p>
@@ -42,7 +51,7 @@ export function Hero() {
             One summer evening by the lake.
           </p>
 
-          <p className="mt-7 max-w-xl font-sans text-[1.02rem] leading-[1.68] text-navy-soft opacity-0 animate-fade-up-slow md:text-[1.08rem] md:leading-[1.72]">
+          <p className="mt-7 max-w-xl pb-4 font-sans text-[1.02rem] leading-[1.72] text-navy-soft opacity-0 animate-fade-up-slow md:text-[1.08rem] md:leading-[1.75] md:pb-8">
             We&apos;re celebrating a special season of life — our marriage, our
             forties, and the people who make it all meaningful.
           </p>

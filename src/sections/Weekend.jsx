@@ -31,11 +31,11 @@ function StackedPlanLine({ children }) {
   }
 
   return (
-    <div className="mb-4">
-      <p className="mb-1 font-sans text-[12px] font-semibold uppercase leading-snug tracking-[0.08em] text-ocean/85">
+    <div className="mb-5">
+      <p className="mb-1 font-sans text-[0.72rem] font-medium uppercase leading-snug tracking-[0.07em] text-ocean/75">
         {labelMatch[1]}
       </p>
-      <p className="font-sans text-[16px] leading-[1.65] text-navy-soft">
+      <p className="font-sans text-[15px] leading-[1.72] text-navy-soft md:text-[16px] md:leading-[1.74]">
         {labelMatch[1] === 'Location' && labelMatch[2].includes('Kantonsstrasse') ? (
           <>
             Lisbeth &amp; Walter Wüest-Meier,
@@ -62,16 +62,16 @@ export function Weekend() {
   return (
     <section
       id="weekend"
-      className="relative w-full bg-sky-wash px-6 py-22 md:px-10 md:py-24"
+      className="relative w-full bg-paper px-6 py-28 md:px-10 md:py-32"
     >
       <div className="mx-auto max-w-[1000px]">
         <Reveal>
-          <div className="mx-auto mb-14 max-w-xl text-center md:mb-16">
+          <div className="mx-auto mb-16 max-w-xl text-center md:mb-20">
             <p className="eyebrow">MORE FUN</p>
             <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
               A little bit more
             </h2>
-            <p className="mx-auto mt-6 max-w-md font-sans text-[1.02rem] leading-[1.72] text-navy-soft md:text-[1.06rem] md:leading-[1.75]">
+            <p className="mx-auto mt-7 max-w-md font-sans text-[1.02rem] leading-[1.78] text-navy-soft md:text-[1.06rem] md:leading-[1.82]">
               Since you&apos;re already here,
               <br className="md:hidden" />
               {' '}let&apos;s start a little early.
@@ -79,7 +79,7 @@ export function Weekend() {
           </div>
         </Reveal>
 
-        <div className="grid gap-10 md:grid-cols-2 md:items-stretch md:gap-10 lg:gap-12">
+        <div className="grid gap-12 md:grid-cols-2 md:items-stretch md:gap-12 lg:gap-14">
           {plans.map((plan, index) => (
             <Reveal
               key={plan.eyebrow}
@@ -88,10 +88,10 @@ export function Weekend() {
             >
               <div className="flex h-full flex-col">
                 <article
-                  className={`relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-ocean/18 shadow-postcard ${
+                  className={`relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-ocean/[0.11] shadow-postcard ${
                     index === 0
                       ? 'min-h-[27rem] sm:min-h-[26rem] md:min-h-[24rem]'
-                      : 'bg-[#faf7f2] px-9 py-8 md:px-10 md:py-9'
+                      : 'bg-paper px-9 py-9 md:px-10 md:py-10'
                   }`}
                 >
                   {index === 0 && (
@@ -103,12 +103,12 @@ export function Weekend() {
                         className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-top"
                         style={{
                           filter:
-                            'saturate(0.97) contrast(1.02) brightness(1.02)',
+                            'saturate(0.95) contrast(0.98) brightness(1.02)',
                         }}
                       />
                       <div
                         aria-hidden
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(253,252,250,0.35)] from-0% via-transparent via-[48%] to-transparent md:from-[rgba(253,252,250,0.28)] md:via-[42%]"
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(253,252,250,0.28)] from-0% via-transparent via-[48%] to-transparent md:from-[rgba(253,252,250,0.22)] md:via-[42%]"
                       />
                     </>
                   )}
@@ -116,24 +116,24 @@ export function Weekend() {
                   <div
                     className={
                       index === 0
-                        ? 'relative z-10 flex flex-1 flex-col px-9 pb-8 pt-8 md:px-10 md:pb-9 md:pt-9'
+                        ? 'relative z-10 flex flex-1 flex-col px-9 pb-9 pt-9 md:px-10 md:pb-10 md:pt-10'
                         : 'relative z-10 max-w-[480px]'
                     }
                   >
-                    <p className="mb-3.5 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-ocean md:text-[0.74rem]">
+                    <p className="mb-4 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-ocean md:text-[0.74rem]">
                       {plan.eyebrow}
                     </p>
-                    <h3 className="mb-5 font-display text-[1.78rem] font-semibold leading-[1.12] text-ocean md:text-[1.92rem]">
+                    <h3 className="mb-6 font-display text-[1.78rem] font-semibold leading-[1.12] text-ocean md:text-[1.92rem]">
                       {plan.title}
                     </h3>
-                    <div className="space-y-2 font-sans text-[0.98rem] leading-[1.72] text-navy-soft md:text-[1rem] md:leading-[1.75]">
+                    <div className="space-y-3 font-sans text-[0.98rem] leading-[1.78] text-navy-soft md:text-[1rem] md:leading-[1.82]">
                       {plan.body
                         .filter((line) => !/^(Time|Location|Dress code|Transport):/.test(line))
                         .map((line) => (
                           <p key={line}>{line}</p>
                         ))}
                     </div>
-                    <div className="mt-6">
+                    <div className="mt-7">
                       {plan.body
                         .filter((line) => /^(Time|Location|Dress code|Transport):/.test(line))
                         .map((line) => (

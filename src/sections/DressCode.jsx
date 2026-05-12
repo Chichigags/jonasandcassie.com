@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 /**
- * Dress code — wide lake / wildflower plate; ginger title, ocean body lines.
+ * Dress code — lake plate; softened golden hour, ivory veil, honey title.
  */
 export function DressCode() {
   return (
@@ -11,7 +11,7 @@ export function DressCode() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 scale-[1.02] blur-[2.5px] md:blur-[2px]"
+        className="pointer-events-none absolute inset-0 scale-[1.02] blur-[1.25px] md:blur-[1px]"
       >
         <img
           src="/images/dresscode-hero-lake.png"
@@ -19,28 +19,36 @@ export function DressCode() {
           className="absolute inset-0 h-full w-full object-cover"
           style={{
             objectPosition: 'center 42%',
-            filter: 'saturate(0.96) brightness(1.02) contrast(1.03)',
+            filter: 'saturate(0.85) brightness(1.03) contrast(0.9)',
           }}
         />
       </div>
 
-      {/* Light centre lift so type sits on calmer sky/water — not heavy white fog */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 85% 70% at 50% 38%, rgba(252,253,255,0.38) 0%, rgba(252,253,255,0.12) 45%, transparent 72%)',
+            'linear-gradient(to bottom, rgba(245,242,236,0.22) 0%, rgba(245,242,236,0.38) 55%, rgba(245,242,236,0.48) 100%)',
         }}
       />
 
-      <div className="relative mx-auto flex min-h-[420px] max-w-[1100px] flex-col items-center justify-center px-6 py-24 text-center md:min-h-[460px] md:px-12 md:py-24 lg:px-14">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 90% 65% at 50% 40%, rgba(252,253,255,0.28) 0%, rgba(252,253,255,0.08) 50%, transparent 75%)',
+        }}
+      />
+
+      <div className="relative mx-auto flex min-h-[420px] max-w-[1100px] flex-col items-center justify-center px-6 py-28 text-center md:min-h-[460px] md:px-12 md:py-28 lg:px-14">
         <div className="max-w-xl">
           <Reveal>
             <p className="eyebrow !text-ocean [text-shadow:0_1px_2px_rgba(255,255,255,0.95),0_0_12px_rgba(255,255,255,0.55)]">
               DRESS CODE
             </p>
-            <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.05] tracking-[-0.015em] text-[#D6A83F] [text-shadow:0_1px_2px_rgba(255,255,255,0.98),0_0_20px_rgba(255,255,255,0.7),0_1px_3px_rgba(10,22,128,0.08)] md:text-[2.5rem]">
+            <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.05] tracking-[-0.015em] text-citrus [text-shadow:0_1px_2px_rgba(255,255,255,0.98),0_0_20px_rgba(255,255,255,0.7),0_1px_3px_rgba(30,45,120,0.06)] md:text-[2.5rem]">
               Summer chic
             </h2>
           </Reveal>

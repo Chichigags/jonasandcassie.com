@@ -6,14 +6,14 @@ import { RsvpSuccessNote } from './RsvpSuccessNote'
 const FORMSPREE_ACTION = 'https://formspree.io/f/xvzldrop'
 
 const fieldClass =
-  'rounded-xl border border-navy/10 bg-paper/90 px-5 py-4 font-sans text-[0.98rem] text-charcoal outline-none transition-colors placeholder:text-navy/35 focus:border-ocean focus:ring-1 focus:ring-ocean/12 md:text-[1.02rem]'
+  'rounded-lg border border-navy/[0.09] bg-paper/95 px-4 py-3 font-sans text-[0.98rem] text-charcoal outline-none transition-colors placeholder:text-navy/30 focus:border-ocean/35 focus:ring-1 focus:ring-ocean/[0.08] md:text-[1.02rem]'
 const labelClass =
-  'block font-sans text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-charcoal'
+  'block font-sans text-[0.78rem] font-medium tracking-[0.02em] text-navy-soft'
 const optionClass =
   'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-charcoal md:text-[1.02rem]'
 
 /**
- * RSVP — POST to Formspree; success modal closes manually only.
+ * RSVP — warm ivory field; quiet form; editorial capsule button.
  */
 export function LetUsKnow() {
   const [status, setStatus] = useState('idle')
@@ -105,11 +105,16 @@ export function LetUsKnow() {
   return (
     <section
       id="let-us-know"
-      className="relative w-full bg-air px-6 py-24 md:px-12 md:py-28 lg:py-32"
+      className="relative w-full bg-paper px-6 py-28 md:px-12 md:py-32 lg:py-36"
     >
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 z-0 h-28 bg-gradient-to-b from-bone/55 from-0% via-paper/40 to-transparent md:h-32"
+        aria-hidden
+      />
+
       {successModal}
 
-      <div className="mx-auto max-w-2xl text-center">
+      <div className="relative z-10 mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="eyebrow mb-4">YES?</p>
           <h2 className="font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
@@ -119,7 +124,7 @@ export function LetUsKnow() {
 
         <Reveal delayClass="reveal-delay-1">
           <form
-            className="mx-auto mt-11 max-w-xl space-y-9 text-left"
+            className="mx-auto mt-12 max-w-xl space-y-8 text-left"
             onSubmit={(e) => {
               void handleSubmit(e)
             }}
@@ -135,7 +140,7 @@ export function LetUsKnow() {
                 required
                 autoComplete="name"
                 placeholder="Your name (+1, if any)"
-                className={`mt-3 w-full ${fieldClass}`}
+                className={`mt-2.5 w-full ${fieldClass}`}
               />
             </div>
 
@@ -143,13 +148,13 @@ export function LetUsKnow() {
               <legend className={labelClass}>
                 Will you join any of these as well? (optional)
               </legend>
-              <div className="mt-3 grid gap-3">
+              <div className="mt-2.5 grid gap-2.5">
                 <label className={optionClass}>
                   <input
                     type="checkbox"
                     name="friday_dinner"
                     value="Yes"
-                    className="h-4 w-4 min-h-[1rem] min-w-[1rem] shrink-0 accent-ocean"
+                    className="h-3.5 w-3.5 min-h-[0.875rem] min-w-[0.875rem] shrink-0 accent-citrus"
                   />
                   Friday dinner
                 </label>
@@ -158,7 +163,7 @@ export function LetUsKnow() {
                     type="checkbox"
                     name="saturday_brunch"
                     value="Yes"
-                    className="h-4 w-4 min-h-[1rem] min-w-[1rem] shrink-0 accent-ocean"
+                    className="h-3.5 w-3.5 min-h-[0.875rem] min-w-[0.875rem] shrink-0 accent-citrus"
                   />
                   Saturday brunch
                 </label>
@@ -174,7 +179,7 @@ export function LetUsKnow() {
                 id="rsvp-message"
                 name="message"
                 rows="4"
-                className={`mt-3 w-full resize-none ${fieldClass}`}
+                className={`mt-2.5 w-full resize-none ${fieldClass}`}
               />
             </div>
 
@@ -182,7 +187,7 @@ export function LetUsKnow() {
               type="submit"
               disabled={status === 'submitting' || status === 'success'}
               aria-busy={status === 'submitting'}
-              className="mx-auto block min-h-[2.75rem] rounded-xl bg-citrus px-8 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-[opacity,background-color] duration-200 hover:bg-citrus-deep disabled:cursor-not-allowed disabled:opacity-70"
+              className="mx-auto flex min-h-[2.35rem] min-w-[min(100%,14rem)] items-center justify-center rounded-full border border-transparent bg-citrus px-12 py-2 font-sans text-[0.88rem] font-medium tracking-[0.04em] text-cream transition-[opacity,background-color] duration-200 hover:bg-citrus-deep disabled:cursor-not-allowed disabled:opacity-70 md:min-w-[16.5rem] md:text-[0.9rem]"
             >
               {status === 'submitting' ? 'Sending…' : 'Let us know'}
             </button>
@@ -199,15 +204,8 @@ export function LetUsKnow() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-11 font-display text-[1.36rem] font-normal italic leading-snug text-ocean md:text-[1.62rem]">
+          <p className="mt-12 font-display text-[1.36rem] font-normal italic leading-snug text-ocean md:text-[1.62rem]">
             A text, message or call is also fine.
-          </p>
-        </Reveal>
-
-        <Reveal delayClass="reveal-delay-3">
-          <p className="mx-auto mt-6 max-w-xl font-sans text-[0.92rem] leading-relaxed text-navy-soft md:text-[0.96rem]">
-            If you don&apos;t have our number… you&apos;re probably in the
-            wrong place.
           </p>
         </Reveal>
       </div>

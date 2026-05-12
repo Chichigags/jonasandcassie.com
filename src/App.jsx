@@ -8,8 +8,7 @@ import { Gifts } from './sections/Gifts'
 import { LakeFooter } from './sections/LakeFooter'
 
 /**
- * Single-column scroll — structure unchanged; bold bright Scandinavian
- * summer palette (ocean, sky, citrus, lake air).
+ * Single-column scroll — structure unchanged; unified ink, ivory, honey.
  */
 export default function App() {
   return (

@@ -4,31 +4,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Surfaces
-        paper: '#FAF8F3',
-        air: '#FCFDFF',
-        bone: '#FBEDB0',
-        // Ink
+        paper: '#F5F2EC',
+        air: '#F5F2EC',
+        bone: '#EDE8DF',
         navy: {
           DEFAULT: '#3F4348',
           soft: '#6F6A64',
           muted: '#6F6A64',
         },
-        // Bold Scandinavian summer accents
         ocean: {
-          DEFAULT: '#0A1680',
-          deep: '#070d5c',
+          DEFAULT: '#1E2D78',
+          deep: '#161f5c',
         },
         sky: {
           bright: '#93B2F8',
-          wash: '#F7FBFD',
+          wash: '#F0EDE6',
         },
         sage: '#A8B8A3',
-        butter: '#FBEDB0',
+        butter: '#E8DFD0',
         charcoal: '#4A4A4A',
         citrus: {
-          DEFAULT: '#D8862E',
-          deep: '#C27828',
+          DEFAULT: '#C89A5A',
+          deep: '#b8894e',
         },
         cream: '#FFFFFF',
       },
@@ -70,11 +67,12 @@ export default {
         soft: '1.25rem',
       },
       boxShadow: {
-        gentle: '0 12px 28px -20px rgba(10, 22, 128, 0.08)',
+        gentle:
+          '0 12px 28px -20px rgba(30, 45, 120, 0.06)',
         photo:
-          '0 20px 44px -28px rgba(10, 22, 128, 0.09), 0 8px 20px -14px rgba(147, 178, 248, 0.12)',
+          '0 20px 44px -28px rgba(30, 45, 120, 0.06), 0 8px 20px -14px rgba(147, 178, 248, 0.08)',
         postcard:
-          '0 10px 28px -18px rgba(10, 22, 128, 0.06), 0 4px 12px -8px rgba(10, 22, 128, 0.04)',
+          '0 8px 22px -16px rgba(30, 45, 120, 0.05), 0 2px 8px -6px rgba(30, 45, 120, 0.04)',
       },
       animation: {
         'fade-up': 'fadeUp 1s ease-out forwards',
