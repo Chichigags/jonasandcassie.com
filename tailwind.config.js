@@ -26,11 +26,6 @@ export default {
         sage: '#A8B8A3',
         butter: '#FBEDB0',
         charcoal: '#4A4A4A',
-        /** Editorial type — softer than saturated ocean */
-        ink: '#1c2e44',
-        faded: '#566273',
-        blush: '#a88f8d',
-        ivory: '#faf8f5',
         citrus: {
           DEFAULT: '#D8862E',
           deep: '#C27828',

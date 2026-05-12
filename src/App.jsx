@@ -9,7 +9,7 @@ import { LakeFooter } from './sections/LakeFooter'
 
 /**
  * Single-column scroll — structure unchanged; bold bright Scandinavian
- * summer palette (ink, sky, citrus, lake air).
+ * summer palette (ocean, sky, citrus, lake air).
  */
 export default function App() {
   return (

@@ -21,10 +21,10 @@ export function LakeFooter() {
 
         <div className="absolute inset-x-0 top-10 flex justify-center px-4 md:top-16">
           <div className="text-center">
-            <p className="font-script text-[2.35rem] leading-none text-ink [text-shadow:0_1px_14px_rgba(252,253,255,0.88)] md:text-[2.55rem] md:[text-shadow:0_1px_12px_rgba(252,253,255,0.82)]">
+            <p className="font-script text-[2.35rem] leading-none text-ocean [text-shadow:0_1px_22px_rgba(252,253,255,0.95),0_0_1px_rgba(252,253,255,0.9)] md:text-[3rem]">
               See you by the water.
             </p>
-            <p className="mt-4 font-display text-[1.12rem] font-semibold leading-none text-ink [text-shadow:0_1px_10px_rgba(252,253,255,0.85)] md:text-[1.22rem] md:[text-shadow:0_1px_8px_rgba(252,253,255,0.8)]">
+            <p className="mt-4 font-display text-[1.12rem] font-semibold leading-none text-ocean [text-shadow:0_1px_16px_rgba(252,253,255,0.92)] md:text-[1.38rem]">
               Jonas &amp; Cassie
             </p>
           </div>

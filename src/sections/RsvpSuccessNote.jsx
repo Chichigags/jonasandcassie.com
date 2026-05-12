@@ -16,7 +16,7 @@ export function RsvpSuccessNote({ leaving, onDismiss }) {
       }}
     >
       <div
-        className={`relative w-full max-w-[26rem] min-h-[15.5rem] overflow-hidden rounded-[1.15rem] border border-ink/10 shadow-[0_14px_36px_-20px_rgba(28,46,68,0.1),0_4px_14px_-8px_rgba(28,46,68,0.05)] md:max-w-[28rem] md:min-h-[16rem] ${
+        className={`relative w-full max-w-[26rem] min-h-[15.5rem] overflow-hidden rounded-[1.15rem] border border-[rgba(10,22,128,0.12)] shadow-[0_18px_44px_-22px_rgba(10,22,128,0.12),0_6px_16px_-10px_rgba(10,22,128,0.05)] md:max-w-[28rem] md:min-h-[16rem] ${
           leaving
             ? 'translate-y-[4px] opacity-0 transition-[opacity,transform] duration-300 ease-out'
             : 'animate-rsvp-note-in'
@@ -62,7 +62,7 @@ export function RsvpSuccessNote({ leaving, onDismiss }) {
         <button
           type="button"
           onClick={onDismiss}
-          className="absolute right-2.5 top-2.5 z-20 rounded-full px-2 py-1 font-sans text-[1.15rem] leading-none text-ink/35 transition-colors hover:bg-ink/[0.06] hover:text-ink/55"
+          className="absolute right-2.5 top-2.5 z-20 rounded-full px-2 py-1 font-sans text-[1.15rem] leading-none text-[#0A1680]/40 transition-colors hover:bg-[#0A1680]/[0.06] hover:text-[#0A1680]/60"
           aria-label="Close"
         >
           ×
@@ -71,12 +71,12 @@ export function RsvpSuccessNote({ leaving, onDismiss }) {
         <div className="relative z-10 flex max-w-[20rem] flex-col items-start px-8 pb-9 pt-10 text-left md:max-w-[21rem] md:px-9 md:pb-10 md:pt-11">
           <p
             id="rsvp-success-title"
-            className="font-display text-[1.2rem] font-normal leading-[1.35] text-ink md:text-[1.26rem]"
+            className="font-display text-[1.2rem] font-normal leading-[1.35] text-[#0A1680] md:text-[1.3rem]"
           >
             So happy you&apos;ll be part of it.
           </p>
           <div className="mt-5 flex items-start gap-3 border-l border-citrus/75 pl-3.5">
-            <p className="font-sans text-[0.88rem] font-normal leading-relaxed text-faded md:text-[0.9rem]">
+            <p className="font-sans text-[0.88rem] font-normal leading-relaxed text-[#3F4348] md:text-[0.92rem]">
               See you by the lake this summer.
             </p>
           </div>
