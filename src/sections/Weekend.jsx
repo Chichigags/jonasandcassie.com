@@ -65,7 +65,7 @@ export function Weekend() {
   return (
     <section
       id="weekend"
-      className="atmosphere-bg relative -mt-6 w-full px-6 pb-28 pt-10 md:px-10 md:pb-32 md:pt-14"
+      className="relative w-full bg-paper px-6 pb-28 pt-10 md:px-10 md:pb-32 md:pt-14"
     >
       <div className="mx-auto max-w-[1000px]">
         <Reveal>
@@ -104,22 +104,14 @@ export function Weekend() {
                         alt=""
                         aria-hidden
                         className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-top"
-                        style={{
-                          filter:
-                            'saturate(0.92) contrast(0.96) brightness(1.03)',
-                        }}
                       />
                       <div
                         aria-hidden
                         className="pointer-events-none absolute inset-0"
                         style={{
                           background:
-                            'linear-gradient(to bottom, rgba(252,251,248,0.97) 0%, rgba(252,251,248,0.82) 20%, rgba(252,251,248,0.48) 34%, rgba(252,251,248,0.12) 44%, transparent 52%)',
+                            'linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.55) 26%, transparent 44%)',
                         }}
-                      />
-                      <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-[42%] to-[rgba(245,242,236,0.15)]"
                       />
                     </>
                   )}

@@ -1,8 +1,7 @@
 import { Reveal } from '../components/Reveal'
-import { FlowCurveToPhoto } from '../components/FlowWave'
 
 const closingClass =
-  'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus-ink md:text-[1.1rem] md:leading-[1.85] [text-shadow:0_1px_0_rgba(255,255,255,0.35)]'
+  'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus-ink md:text-[1.1rem] md:leading-[1.85]'
 
 const blocks = [
   {
@@ -58,7 +57,7 @@ export function Evening() {
   return (
     <section
       id="evening"
-      className="atmosphere-bg relative overflow-visible px-6 pb-36 pt-6 md:px-12 md:pb-44 md:pt-8 lg:pb-48 lg:pt-10"
+      className="relative w-full overflow-visible bg-paper px-6 pb-32 pt-6 md:px-12 md:pb-40 md:pt-8 lg:pb-44 lg:pt-10"
     >
       <Reveal>
         <header className="mx-auto max-w-prose text-center">
@@ -77,7 +76,7 @@ export function Evening() {
 
       <div className="relative mx-auto mt-14 max-w-content md:mt-16 lg:mt-18">
         <div
-          className="pointer-events-none absolute bottom-10 left-[11.55rem] top-10 hidden w-px bg-gradient-to-b from-citrus/25 via-ocean/15 to-citrus/20 md:block lg:left-[12.05rem]"
+          className="pointer-events-none absolute bottom-10 left-[11.55rem] top-10 hidden w-px bg-ocean/15 md:block lg:left-[12.05rem]"
           aria-hidden
         />
 
@@ -113,8 +112,6 @@ export function Evening() {
           ))}
         </ul>
       </div>
-
-      <FlowCurveToPhoto />
     </section>
   )
 }

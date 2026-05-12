@@ -3,10 +3,7 @@ import beijingImg from '../assets/story/beijing.png'
 import singaporeImg from '../assets/story/singapore.png'
 
 /**
- * Story — same layout; warm ivory field; slight editorial offset on photos.
- *
- * Photos are imported so Vite emits correct URLs on any base path. Desktop
- * uses CSS grid with minmax on the photo track so that column cannot collapse.
+ * Story — top edge soft-fades from hero; clean paper field.
  */
 export function Story() {
   const imgStyle = {
@@ -21,9 +18,9 @@ export function Story() {
   return (
     <section
       id="story"
-      className="atmosphere-bg relative z-[4] -mt-[clamp(2.25rem,5.5vw,3.75rem)] w-full pt-[clamp(3.25rem,8vw,5rem)] pb-16 md:pb-20 lg:pb-22"
+      className="relative z-[1] w-full bg-paper pt-[clamp(2rem,5vw,3rem)] pb-16 md:pb-20 lg:pb-22"
     >
-      <div className="story-container mx-auto max-w-[1200px] px-6 md:px-10">
+      <div className="story-container relative mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="story-row grid grid-cols-1 gap-10 md:grid-cols-[minmax(300px,1.15fr)_minmax(0,1fr)] md:items-center md:gap-x-12 lg:gap-x-14">
           <div className="story-images-col flex w-full items-center justify-center">
             <div
@@ -38,7 +35,7 @@ export function Story() {
                 alt="A couple walking through a Beijing hutong on a sunlit afternoon"
                 width={480}
                 height={510}
-                className="story-image story-image-beijing block h-auto max-w-full translate-x-0.5 rotate-[0.35deg] saturate-[0.94] contrast-[0.97] brightness-[1.01] sm:max-w-[calc(50%_-_10px)]"
+                className="story-image story-image-beijing block h-auto max-w-full translate-x-0.5 rotate-[0.35deg] sm:max-w-[calc(50%_-_10px)]"
                 style={imgStyle}
                 loading="eager"
                 decoding="async"
@@ -49,7 +46,7 @@ export function Story() {
                 alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
                 width={480}
                 height={510}
-                className="story-image story-image-singapore block h-auto max-w-full -translate-x-0.5 -rotate-[0.25deg] saturate-[0.94] contrast-[0.97] brightness-[1.01] sm:max-w-[calc(50%_-_10px)]"
+                className="story-image story-image-singapore block h-auto max-w-full -translate-x-0.5 -rotate-[0.25deg] sm:max-w-[calc(50%_-_10px)]"
                 style={imgStyle}
                 loading="eager"
                 decoding="async"
@@ -61,7 +58,7 @@ export function Story() {
             <div className="story-text-col flex w-full min-w-0 flex-col justify-center">
               <div className="story-text text-left">
                 <p className="eyebrow mb-0">HOW WE GOT HERE</p>
-                <h2 className="mt-5 max-md:whitespace-nowrap max-md:text-[clamp(1.02rem,4.8vw,1.45rem)] max-md:tracking-[-0.025em] font-display font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[1.4rem] lg:text-[1.62rem] xl:text-[1.82rem] 2xl:text-[1.98rem] xl:whitespace-nowrap">
+                <h2 className="mt-5 font-display text-[1.95rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[1.4rem] lg:text-[1.62rem] xl:text-[1.82rem] 2xl:text-[1.98rem] xl:whitespace-nowrap">
                   From Beijing to Singapore
                 </h2>
                 <p className="story-line-2 mt-8 font-sans text-[1.02rem] font-normal leading-[1.72] text-navy-soft md:text-[1.05rem] md:leading-[1.75] mb-[18px]">

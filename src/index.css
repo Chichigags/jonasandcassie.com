@@ -83,13 +83,4 @@
     font-weight: 400;
     @apply text-ocean;
   }
-
-  /** One continuous “lake day” light — warm ivory + faint sky / sunset mist */
-  .atmosphere-bg {
-    background-color: #f5f2ec;
-    background-image:
-      radial-gradient(ellipse 120% 70% at 50% -20%, rgba(220, 232, 252, 0.38), transparent 52%),
-      radial-gradient(ellipse 90% 55% at 95% 15%, rgba(255, 244, 228, 0.22), transparent 48%),
-      radial-gradient(ellipse 70% 45% at 0% 60%, rgba(245, 242, 236, 0.9), transparent 55%);
-  }
 }
