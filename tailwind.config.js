@@ -26,6 +26,8 @@ export default {
         citrus: {
           DEFAULT: '#C89A5A',
           deep: '#b8894e',
+          /** Schedule closing lines — readable honey on ivory */
+          ink: '#7a4520',
         },
         cream: '#FFFFFF',
       },
@@ -81,6 +83,7 @@ export default {
         float: 'float 14s ease-in-out infinite',
         'float-slow': 'float 18s ease-in-out infinite',
         'rsvp-note-in': 'rsvpNoteIn 0.45s ease-out both',
+        'rsvp-photo-in': 'rsvpPhotoIn 1.15s ease-out 0.2s both',
       },
       keyframes: {
         fadeUp: {
@@ -94,6 +97,10 @@ export default {
         rsvpNoteIn: {
           '0%': { opacity: '0', transform: 'translateY(6px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        rsvpPhotoIn: {
+          '0%': { opacity: '0', transform: 'scale(0.96) translateY(12px)' },
+          '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
         },
       },
     },

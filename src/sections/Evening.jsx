@@ -1,5 +1,8 @@
 import { Reveal } from '../components/Reveal'
 
+const closingClass =
+  'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus-ink md:text-[1.1rem] md:leading-[1.85] [text-shadow:0_1px_0_rgba(255,255,255,0.35)]'
+
 const blocks = [
   {
     time: '5:00 PM',
@@ -8,7 +11,7 @@ const blocks = [
       'We’ll meet at the pier and board the boat together.',
       'One important Swiss detail: the boat leaves exactly on time. Not “fashionably late” time. Swiss time.',
     ],
-    honeyLine: 'Very Swiss.',
+    closingLine: 'Very Swiss.',
   },
   {
     time: '5:15 – 7:15 PM',
@@ -16,8 +19,8 @@ const blocks = [
     body: [
       'A scenic ride across Lake Lucerne with mountain views, good company, and an apéro to get the celebrations started.',
       'Time to meet, mingle, and get to know each other — because not everyone has had the pleasure yet.',
-      'Consider this the official start of the celebration.',
     ],
+    closingLine: 'Consider this the official start of the celebration.',
   },
   {
     time: '7:45 – 10:45 PM',
@@ -25,8 +28,8 @@ const blocks = [
     body: [
       'Long tables, short speeches, good food, fine wine, and hopefully even better conversations.',
       'And around 10 PM, Switzerland will conveniently provide fireworks for us.',
-      'We can’t take credit — that part happens every National Day.',
     ],
+    closingLine: 'We can’t take credit — that part happens every National Day.',
   },
   {
     time: '11:00 PM',
@@ -34,21 +37,21 @@ const blocks = [
     body: [
       'We’ll arrange transport back to Lucerne for everyone.',
       'For the responsible guests: this is the elegant ending.',
-      'For everyone else…',
     ],
+    closingLine: 'For everyone else…',
   },
   {
     time: 'Late-ish',
     title: 'Afterparty somewhere',
     body: [
       'No official plans yet — but we suspect a few drinks, stories, and questionable dance moves may continue somewhere in town.',
-      'Optional, but encouraged.',
     ],
+    closingLine: 'Optional, but encouraged.',
   },
 ]
 
 /**
- * Evening — calm itinerary; honey accent only on “Very Swiss.”
+ * Evening — each block ends with a readable honey italic closing line.
  */
 export function Evening() {
   return (
@@ -99,10 +102,8 @@ export function Evening() {
                         <p key={j}>{para}</p>
                       ))}
                     </div>
-                    {block.honeyLine && (
-                      <p className="mt-6 font-display text-[1.02rem] font-normal italic leading-[1.78] text-citrus md:text-[1.06rem] md:leading-[1.82]">
-                        {block.honeyLine}
-                      </p>
+                    {block.closingLine && (
+                      <p className={closingClass}>{block.closingLine}</p>
                     )}
                   </div>
                 </article>

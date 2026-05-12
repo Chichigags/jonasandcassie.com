@@ -31,7 +31,7 @@ export function LetUsKnow() {
       setStatus('idle')
       setSuccessLeaving(false)
       finishDismissRef.current = null
-    }, 300)
+    }, 480)
   }, [])
 
   useEffect(() => {

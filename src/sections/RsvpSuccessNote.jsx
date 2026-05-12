@@ -1,62 +1,50 @@
-const GRASS_IMAGE = '/images/rsvp-success-grass.png'
+import noteImg from '../assets/rsvp-success-note.png'
 
 /**
- * RSVP success — ivory editorial card; subtle corner botanical; manual close only.
+ * RSVP success — handwritten note fades in, slightly tilted like tape on wall; × to close.
  */
 export function RsvpSuccessNote({ leaving, onDismiss }) {
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center px-6 py-12 transition-opacity duration-300 ease-out ${
-        leaving ? 'pointer-events-none opacity-0' : 'opacity-100'
+      className={`fixed inset-0 z-[9999] flex items-center justify-center px-5 py-10 transition-[opacity,background-color] duration-500 ease-out md:px-8 ${
+        leaving ? 'pointer-events-none bg-transparent opacity-0' : 'bg-ocean/[0.07] opacity-100'
       }`}
-      style={{ background: 'rgba(30, 45, 120, 0.045)' }}
       role="presentation"
       onClick={(e) => {
         if (e.target === e.currentTarget) onDismiss()
       }}
     >
       <div
-        className={`relative w-full max-w-[24rem] overflow-hidden rounded-[1.35rem] border bg-paper shadow-[0_2px_28px_-16px_rgba(30,45,120,0.07),0_1px_3px_rgba(30,45,120,0.04)] md:max-w-[26rem] ${
+        className={`relative mx-auto max-w-[min(92vw,22rem)] md:max-w-[min(88vw,24rem)] ${
           leaving
-            ? 'translate-y-[3px] opacity-0 transition-[opacity,transform] duration-300 ease-out'
-            : 'animate-rsvp-note-in'
+            ? 'pointer-events-none scale-[0.98] opacity-0 transition-all duration-[420ms] ease-out'
+            : 'animate-rsvp-photo-in'
         }`}
-        style={{ borderColor: 'rgba(30, 45, 120, 0.07)' }}
         role="dialog"
         aria-modal="true"
-        aria-labelledby="rsvp-success-title"
+        aria-label="RSVP received"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="pointer-events-none absolute inset-0 bg-paper" aria-hidden />
-
-        <div
-          className="pointer-events-none absolute -bottom-1 -right-1 h-[min(46%,220px)] w-[min(58%,280px)] opacity-[0.18] max-md:opacity-[0.16]"
-          style={{
-            backgroundImage: `url(${GRASS_IMAGE})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain',
-            backgroundPosition: 'bottom right',
-            filter: 'blur(0.6px)',
-          }}
-          aria-hidden
-        />
+        <p className="sr-only">
+          Nice, Jonas, Cassie and Riva can&apos;t wait to see you this summer.
+        </p>
 
         <button
           type="button"
           onClick={onDismiss}
-          className="absolute right-3 top-3 z-20 flex h-8 w-8 items-center justify-center rounded-full text-[1.1rem] font-light leading-none text-ocean/40 transition-colors hover:bg-ocean/[0.06] hover:text-ocean/60"
+          className="absolute -right-1 -top-1 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-paper/90 text-[1.15rem] font-light leading-none text-ocean/55 shadow-postcard ring-1 ring-ocean/10 transition-colors hover:bg-paper hover:text-ocean/75 md:right-0 md:top-0"
           aria-label="Close"
         >
           ×
         </button>
 
-        <div className="relative z-10 px-10 pb-12 pt-11 text-left md:px-12 md:pb-14 md:pt-12">
-          <p
-            id="rsvp-success-title"
-            className="font-display text-[1.65rem] font-semibold leading-[1.2] tracking-[-0.02em] text-ocean md:text-[1.85rem]"
-          >
-            Nice, can&apos;t wait to see you in Lucerne.
-          </p>
+        <div className="-rotate-[2.25deg] origin-center shadow-[0_18px_40px_-22px_rgba(30,45,120,0.18),0_6px_16px_-8px_rgba(30,45,120,0.1)] ring-1 ring-ocean/[0.06]">
+          <img
+            src={noteImg}
+            alt="Handwritten note: Nice, Jonas, Cassie and Riva can’t wait to see you this summer."
+            className="block h-auto w-full rounded-[2px]"
+            decoding="async"
+          />
         </div>
       </div>
     </div>
