@@ -90,7 +90,7 @@ export function Weekend() {
                 <article
                   className={`relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-ocean/18 shadow-postcard ${
                     index === 0
-                      ? 'min-h-[22rem] md:min-h-[24rem]'
+                      ? 'min-h-[27rem] sm:min-h-[26rem] md:min-h-[24rem]'
                       : 'bg-[#faf7f2] px-9 py-8 md:px-10 md:py-9'
                   }`}
                 >
@@ -100,7 +100,7 @@ export function Weekend() {
                         src="/images/weekend-friday-full.png"
                         alt=""
                         aria-hidden
-                        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center select-none"
+                        className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-top"
                         style={{
                           filter:
                             'saturate(0.97) contrast(1.02) brightness(1.02)',
@@ -108,7 +108,7 @@ export function Weekend() {
                       />
                       <div
                         aria-hidden
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(253,252,250,0.94)] from-0% via-[rgba(253,252,250,0.55)] via-[38%] to-transparent to-[58%]"
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(253,252,250,0.35)] from-0% via-transparent via-[48%] to-transparent md:from-[rgba(253,252,250,0.28)] md:via-[42%]"
                       />
                     </>
                   )}
