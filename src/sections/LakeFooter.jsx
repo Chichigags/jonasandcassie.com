@@ -1,5 +1,5 @@
 /**
- * Closing card — natural lake/sunset image; light typographic panel only.
+ * Closing card — natural lake/sunset image; type on image, no panel.
  */
 export function LakeFooter() {
   return (
@@ -20,11 +20,11 @@ export function LakeFooter() {
         />
 
         <div className="absolute inset-x-0 top-10 flex justify-center px-4 md:top-16">
-          <div className="rounded-xl bg-air/70 px-7 py-6 text-center shadow-[0_1px_0_rgba(10,22,128,0.04)] backdrop-blur-[6px] md:px-9 md:py-7">
+          <div className="text-center">
             <p className="font-script text-[2.35rem] leading-none text-ocean [text-shadow:0_1px_22px_rgba(252,253,255,0.95),0_0_1px_rgba(252,253,255,0.9)] md:text-[3rem]">
               See you by the water.
             </p>
-            <p className="mt-4 font-display text-[1.12rem] font-semibold leading-none text-charcoal md:text-[1.38rem]">
+            <p className="mt-4 font-display text-[1.12rem] font-semibold leading-none text-ocean [text-shadow:0_1px_16px_rgba(252,253,255,0.92)] md:text-[1.38rem]">
               Jonas &amp; Cassie
             </p>
           </div>

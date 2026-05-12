@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 /**
- * Dress code — golden-hour lake; editorial type on the left.
+ * Dress code — soft lake photo, darkened for type; centered, no white panel.
  */
 export function DressCode() {
   return (
@@ -9,7 +9,11 @@ export function DressCode() {
       id="dress-code"
       className="relative isolate min-h-[420px] w-full overflow-hidden md:min-h-[480px]"
     >
-      <div aria-hidden className="pointer-events-none absolute inset-0">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 scale-[1.08]"
+        style={{ filter: 'blur(9px)' }}
+      >
         <img
           src="/images/dresscode-sunset-lake.png"
           alt=""
@@ -22,28 +26,24 @@ export function DressCode() {
         />
       </div>
 
-      {/* Readability: soft veil on the left only */}
+      {/* Darken scene for legibility — no white veil */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 left-0 w-[min(62vw,15rem)] sm:w-[min(56vw,16.5rem)] md:w-[min(28vw,20rem)] lg:w-[min(24vw,21.5rem)]"
-        style={{
-          background:
-            'linear-gradient(90deg, rgba(252,253,255,0.62) 0%, rgba(252,253,255,0.14) 32%, rgba(252,253,255,0) 48%)',
-        }}
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(7,10,42,0.5)] via-[rgba(10,22,128,0.42)] to-[rgba(10,22,128,0.55)]"
       />
 
-      <div className="relative mx-auto flex min-h-[420px] max-w-[1100px] items-center px-6 py-24 md:min-h-[480px] md:px-14 md:py-28 lg:px-16">
-        <div className="max-w-lg text-left md:max-w-xl">
-          <div className="[text-shadow:0_1px_1px_rgba(255,255,255,0.98),0_0_6px_rgba(255,255,255,0.35)]">
+      <div className="relative mx-auto flex min-h-[420px] max-w-[1100px] flex-col items-center justify-center px-6 py-24 text-center md:min-h-[480px] md:px-14 md:py-28 lg:px-16">
+        <div className="max-w-xl md:max-w-2xl">
+          <div className="[text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">
             <Reveal>
-              <p className="eyebrow !text-charcoal">DRESS CODE</p>
-              <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.05] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
+              <p className="eyebrow !text-cream/75">DRESS CODE</p>
+              <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.05] tracking-[-0.015em] text-cream md:text-[2.85rem]">
                 Summer chic
               </h2>
             </Reveal>
 
             <Reveal delayClass="reveal-delay-1">
-              <div className="mt-7 font-sans text-[1rem] font-normal leading-[1.72] text-charcoal md:text-[1.05rem] md:leading-[1.75]">
+              <div className="mt-7 font-sans text-[1rem] font-normal leading-[1.72] text-cream/88 md:text-[1.05rem] md:leading-[1.75]">
                 <p>Boat-friendly, dance-friendly.</p>
               </div>
             </Reveal>
