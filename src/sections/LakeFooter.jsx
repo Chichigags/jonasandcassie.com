@@ -1,12 +1,16 @@
 /**
- * Closing — lake image graded to match hero warmth; soft landing.
+ * Closing — lake band; soft overlap from gifts; same light family as hero.
  */
 export function LakeFooter() {
   return (
     <footer
       id="lake-footer"
-      className="relative isolate mt-14 w-full overflow-hidden bg-paper md:mt-20"
+      className="relative isolate -mt-6 w-full overflow-hidden md:-mt-8"
     >
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-24 bg-gradient-to-b from-[#f5f2ec] via-[#f5f2ec]/70 to-transparent md:h-28"
+        aria-hidden
+      />
       <div className="relative h-[42svh] min-h-[280px] w-full md:h-[48svh]">
         <img
           src="/images/footer-lake.png"
@@ -14,7 +18,7 @@ export function LakeFooter() {
           className="absolute inset-0 h-full w-full object-cover"
           style={{
             objectPosition: 'center bottom',
-            filter: 'saturate(0.93) contrast(0.94) brightness(1.02)',
+            filter: 'saturate(0.9) contrast(0.93) brightness(1.03)',
           }}
           loading="lazy"
           decoding="async"
@@ -24,7 +28,7 @@ export function LakeFooter() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, rgba(245,242,236,0.1) 0%, transparent 40%, rgba(245,242,236,0.06) 100%)',
+              'linear-gradient(to bottom, rgba(245,242,236,0.2) 0%, transparent 38%, rgba(245,242,236,0.08) 100%)',
           }}
           aria-hidden
         />

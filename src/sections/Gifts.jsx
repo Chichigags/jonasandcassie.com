@@ -7,7 +7,7 @@ export function Gifts() {
   return (
     <section
       id="gifts"
-      className="relative w-full bg-paper px-6 py-14 md:px-12 md:py-18"
+      className="atmosphere-bg relative -mt-2 w-full px-6 py-16 md:px-12 md:py-20"
     >
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
@@ -26,7 +26,10 @@ export function Gifts() {
           </div>
         </Reveal>
 
-        <div className="mx-auto mt-8 h-px w-12 bg-ocean/22" aria-hidden />
+        <div
+          className="mx-auto mt-8 h-px max-w-[6rem] bg-gradient-to-r from-transparent via-ocean/18 to-transparent"
+          aria-hidden
+        />
 
         <Reveal delayClass="reveal-delay-2">
           <p className="mt-7 font-display text-[1.34rem] font-normal italic leading-snug text-ocean md:text-[1.52rem]">

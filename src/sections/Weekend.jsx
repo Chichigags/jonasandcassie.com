@@ -62,7 +62,7 @@ export function Weekend() {
   return (
     <section
       id="weekend"
-      className="relative w-full bg-paper px-6 py-28 md:px-10 md:py-32"
+      className="atmosphere-bg relative -mt-6 w-full px-6 pb-28 pt-10 md:px-10 md:pb-32 md:pt-14"
     >
       <div className="mx-auto max-w-[1000px]">
         <Reveal>
@@ -79,7 +79,7 @@ export function Weekend() {
           </div>
         </Reveal>
 
-        <div className="grid gap-12 md:grid-cols-2 md:items-stretch md:gap-12 lg:gap-14">
+        <div className="grid gap-14 md:grid-cols-2 md:items-stretch md:gap-12 lg:gap-16">
           {plans.map((plan, index) => (
             <Reveal
               key={plan.eyebrow}
@@ -88,10 +88,10 @@ export function Weekend() {
             >
               <div className="flex h-full flex-col">
                 <article
-                  className={`relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-ocean/[0.11] shadow-postcard ${
+                  className={`relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[2rem] ring-1 ring-ocean/[0.055] shadow-none ${
                     index === 0
                       ? 'min-h-[27rem] sm:min-h-[26rem] md:min-h-[24rem]'
-                      : 'bg-paper px-9 py-9 md:px-10 md:py-10'
+                      : 'bg-paper/55 px-10 py-10 md:px-12 md:py-11'
                   }`}
                 >
                   {index === 0 && (
@@ -103,12 +103,12 @@ export function Weekend() {
                         className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-top"
                         style={{
                           filter:
-                            'saturate(0.95) contrast(0.98) brightness(1.02)',
+                            'saturate(0.92) contrast(0.96) brightness(1.03)',
                         }}
                       />
                       <div
                         aria-hidden
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(253,252,250,0.28)] from-0% via-transparent via-[48%] to-transparent md:from-[rgba(253,252,250,0.22)] md:via-[42%]"
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(253,252,250,0.22)] from-0% via-transparent via-[50%] to-[rgba(245,242,236,0.2)]"
                       />
                     </>
                   )}
@@ -116,7 +116,7 @@ export function Weekend() {
                   <div
                     className={
                       index === 0
-                        ? 'relative z-10 flex flex-1 flex-col px-9 pb-9 pt-9 md:px-10 md:pb-10 md:pt-10'
+                        ? 'relative z-10 flex flex-1 flex-col px-9 pb-9 pt-9 md:px-11 md:pb-10 md:pt-10'
                         : 'relative z-10 max-w-[480px]'
                     }
                   >

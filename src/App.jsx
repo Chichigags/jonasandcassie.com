@@ -13,7 +13,7 @@ import { LakeFooter } from './sections/LakeFooter'
 export default function App() {
   return (
     <div className="min-h-screen bg-paper text-navy">
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
         <Story />
         <Evening />

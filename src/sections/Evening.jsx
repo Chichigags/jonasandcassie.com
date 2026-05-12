@@ -1,4 +1,5 @@
 import { Reveal } from '../components/Reveal'
+import { FlowCurveToPhoto } from '../components/FlowWave'
 
 const closingClass =
   'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus-ink md:text-[1.1rem] md:leading-[1.85] [text-shadow:0_1px_0_rgba(255,255,255,0.35)]'
@@ -57,7 +58,7 @@ export function Evening() {
   return (
     <section
       id="evening"
-      className="relative w-full bg-paper px-6 py-28 md:px-12 md:py-32 lg:py-36"
+      className="atmosphere-bg relative overflow-visible px-6 pb-40 pt-16 md:px-12 md:pb-48 md:pt-20 lg:pb-52 lg:pt-24"
     >
       <Reveal>
         <header className="mx-auto max-w-prose text-center">
@@ -76,7 +77,7 @@ export function Evening() {
 
       <div className="relative mx-auto mt-20 max-w-content md:mt-24 lg:mt-28">
         <div
-          className="pointer-events-none absolute bottom-10 left-[11.55rem] top-10 hidden w-px bg-ocean/20 md:block lg:left-[12.05rem]"
+          className="pointer-events-none absolute bottom-10 left-[11.55rem] top-10 hidden w-px bg-gradient-to-b from-citrus/25 via-ocean/15 to-citrus/20 md:block lg:left-[12.05rem]"
           aria-hidden
         />
 
@@ -112,6 +113,8 @@ export function Evening() {
           ))}
         </ul>
       </div>
+
+      <FlowCurveToPhoto />
     </section>
   )
 }

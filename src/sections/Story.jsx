@@ -21,7 +21,7 @@ export function Story() {
   return (
     <section
       id="story"
-      className="story-section relative w-full bg-paper py-28 md:py-32 lg:py-36"
+      className="atmosphere-bg relative z-[4] -mt-[clamp(2.25rem,5.5vw,3.75rem)] w-full pt-[clamp(3.25rem,8vw,5rem)] pb-28 md:pb-32 lg:pb-36"
     >
       <div className="story-container mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="story-row grid grid-cols-1 gap-10 md:grid-cols-[minmax(300px,1.15fr)_minmax(0,1fr)] md:items-center md:gap-x-12 lg:gap-x-14">

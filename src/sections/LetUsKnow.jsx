@@ -6,7 +6,7 @@ import { RsvpSuccessNote } from './RsvpSuccessNote'
 const FORMSPREE_ACTION = 'https://formspree.io/f/xvzldrop'
 
 const fieldClass =
-  'rounded-lg border border-navy/[0.09] bg-paper/95 px-4 py-3 font-sans text-[0.98rem] text-charcoal outline-none transition-colors placeholder:text-navy/30 focus:border-ocean/35 focus:ring-1 focus:ring-ocean/[0.08] md:text-[1.02rem]'
+  'w-full rounded-none border-0 border-b border-ocean/14 bg-transparent px-0 py-3.5 font-sans text-[0.98rem] text-charcoal outline-none transition-colors placeholder:text-navy/28 focus:border-ocean/40 focus:ring-0 md:text-[1.02rem]'
 const labelClass =
   'block font-sans text-[0.78rem] font-medium tracking-[0.02em] text-navy-soft'
 const optionClass =
@@ -105,10 +105,10 @@ export function LetUsKnow() {
   return (
     <section
       id="let-us-know"
-      className="relative w-full bg-paper px-6 py-28 md:px-12 md:py-32 lg:py-36"
+      className="atmosphere-bg relative -mt-4 w-full px-6 pb-28 pt-14 md:-mt-6 md:px-12 md:pb-32 md:pt-18 lg:pb-36"
     >
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 z-0 h-28 bg-gradient-to-b from-bone/55 from-0% via-paper/40 to-transparent md:h-32"
+        className="pointer-events-none absolute inset-x-0 top-0 z-0 h-36 bg-gradient-to-b from-paper/80 via-paper/25 to-transparent md:h-44"
         aria-hidden
       />
 
