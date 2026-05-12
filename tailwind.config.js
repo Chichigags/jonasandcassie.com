@@ -9,12 +9,17 @@ export default {
         bone: '#EDE8DF',
         navy: {
           DEFAULT: '#3F4348',
-          soft: '#6F6A64',
+          /** Primary body copy — readable on desktop */
+          soft: '#4B4B4B',
+          /** Small caps labels (Time, Location, …) */
+          label: '#5B5B5B',
           muted: '#6F6A64',
         },
         ocean: {
           DEFAULT: '#1E2D78',
           deep: '#161f5c',
+          /** Slightly more saturated blue — e.g. Dress code vs yellow headline */
+          vivid: '#152A9A',
         },
         sky: {
           bright: '#93B2F8',
@@ -24,8 +29,8 @@ export default {
         butter: '#E8DFD0',
         charcoal: '#4A4A4A',
         citrus: {
-          DEFAULT: '#E8B923',
-          deep: '#d4a41f',
+          DEFAULT: '#B78A28',
+          deep: '#9a7520',
         },
         cream: '#FFFFFF',
       },
@@ -60,6 +65,8 @@ export default {
       },
       maxWidth: {
         prose: '38rem',
+        /** Schedule / editorial reading column */
+        reading: '32rem',
         content: '54rem',
         wide: '64rem',
       },
@@ -67,6 +74,9 @@ export default {
         soft: '1.25rem',
       },
       boxShadow: {
+        /** Editorial cards — barely there */
+        card:
+          '0 2px 28px -14px rgba(30, 45, 120, 0.045), 0 1px 6px -4px rgba(30, 45, 120, 0.03)',
         gentle:
           '0 12px 28px -20px rgba(30, 45, 120, 0.06)',
         photo:

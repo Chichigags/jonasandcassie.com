@@ -9,14 +9,10 @@ export function Hero() {
           src="/images/hero-meadow.png"
           alt=""
           aria-hidden
-          className="absolute inset-0 h-full w-full object-cover"
-          style={{
-            objectPosition: 'center center',
-            filter: 'saturate(0.94) contrast(0.96) brightness(1.03)',
-          }}
+          className="absolute inset-0 h-full w-full object-cover max-md:object-[center_68%] md:object-center max-md:[filter:saturate(1.08)_contrast(1.02)_brightness(1)] md:[filter:saturate(0.94)_contrast(0.96)_brightness(1.03)]"
         />
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[min(28vh,12rem)] bg-gradient-to-t from-paper from-15% to-transparent"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[min(15vh,6.5rem)] bg-gradient-to-t from-paper from-[18%] to-transparent md:h-[min(28vh,12rem)] md:from-15%"
           aria-hidden
         />
       </div>
@@ -35,13 +31,13 @@ export function Hero() {
             JONAS &amp; CASSIE
           </p>
 
-          <p className="mt-10 font-display italic text-[1.55rem] font-normal leading-tight text-ocean opacity-0 animate-fade-up-slow md:mt-11 md:text-[1.82rem] md:leading-[1.36]">
+          <p className="mt-10 font-display italic text-[1.36rem] font-normal leading-tight text-ocean opacity-0 animate-fade-up-slow md:mt-11 md:text-[1.82rem] md:leading-[1.36]">
             One marriage. Two birthdays.
             <br />
             One summer evening by the lake.
           </p>
 
-          <p className="mt-7 max-w-xl font-sans text-[1.02rem] leading-[1.72] text-navy-soft opacity-0 animate-fade-up-slow md:mt-9 md:text-[1.08rem] md:leading-[1.75]">
+          <p className="mt-14 max-w-xl font-sans text-[1.02rem] leading-[1.82] text-navy-soft opacity-0 animate-fade-up-slow md:mt-16 md:text-[1.08rem] md:leading-[1.86]">
             We&apos;re celebrating a special season of life — our marriage, our
             forties, and the people who make it all meaningful.
           </p>

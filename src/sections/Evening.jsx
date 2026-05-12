@@ -51,21 +51,21 @@ const blocks = [
 ]
 
 /**
- * Evening — each block ends with a citrus italic closing line.
+ * Evening — each block ends with a muted gold italic closing line.
  */
 export function Evening() {
   return (
     <section
       id="evening"
-      className="relative w-full overflow-visible bg-paper px-6 pb-16 pt-6 md:px-12 md:pb-20 md:pt-8 lg:pb-22 lg:pt-10"
+      className="section-flow relative w-full overflow-visible px-6 pb-20 pt-10 md:px-12 md:pb-24 md:pt-12 lg:pb-28 lg:pt-14"
     >
       <Reveal>
         <header className="mx-auto max-w-prose text-center">
           <p className="eyebrow">THE EVENING</p>
-          <h2 className="mt-4 font-display text-[2.5rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.9rem]">
+          <h2 className="mt-5 font-display text-[2.5rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.9rem]">
             Here&apos;s the plan
           </h2>
-          <p className="mx-auto mt-7 max-w-xl font-sans text-[1.02rem] leading-[1.78] text-navy-soft md:text-[1.06rem] md:leading-[1.82]">
+          <p className="mx-auto mt-8 max-w-xl font-sans text-[1.02rem] leading-[1.82] text-navy-soft md:mt-9 md:text-[1.06rem] md:leading-[1.86]">
             <span className="block">A summer evening by the lake —</span>
             <span className="block">
               simple, relaxed, and hopefully memorable.
@@ -93,11 +93,11 @@ export function Evening() {
                     </p>
                   </div>
 
-                  <div className="min-w-0 md:max-w-prose lg:max-w-none">
+                  <div className="min-w-0 w-full md:max-w-reading">
                     <h3 className="font-display text-[1.26rem] font-semibold leading-snug tracking-[-0.01em] text-navy md:text-[1.34rem]">
                       {block.title}
                     </h3>
-                    <div className="mt-4 space-y-4 font-sans text-[0.98rem] leading-[1.78] text-navy-soft md:text-[1.02rem] md:leading-[1.82]">
+                    <div className="mt-5 space-y-4 font-sans text-[0.98rem] leading-[1.82] text-navy-soft md:text-[1.02rem] md:leading-[1.86]">
                       {block.body.map((para, j) => (
                         <p key={j}>{para}</p>
                       ))}

@@ -67,14 +67,37 @@
     font-family: 'Inter', system-ui, sans-serif;
     font-weight: 400;
     font-size: 0.98rem;
-    line-height: 1.72;
-    color: rgba(63, 67, 72, 0.92);
+    line-height: 1.78;
+    color: #4b4b4b;
   }
   @media (min-width: 768px) {
     .body-text {
       font-size: 1.04rem;
-      line-height: 1.75;
+      line-height: 1.82;
     }
+  }
+
+  /**
+   * Soft top wash: sky into paper — links sections without hard breaks.
+   * Uses existing palette only (sky-bright + paper).
+   */
+  .section-flow {
+    background-color: #f5f2ec;
+    background-image: linear-gradient(
+      180deg,
+      rgba(147, 178, 248, 0.05) 0%,
+      rgba(245, 242, 236, 0) min(32vw, 14rem)
+    );
+  }
+
+  /** Warmer ivory lift — alternate with section-flow for rhythm */
+  .section-flow-warm {
+    background-color: #f5f2ec;
+    background-image: linear-gradient(
+      180deg,
+      rgba(232, 223, 208, 0.22) 0%,
+      rgba(245, 242, 236, 0) min(28vw, 12rem)
+    );
   }
 
   .accent-italic {

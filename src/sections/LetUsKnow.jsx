@@ -6,13 +6,13 @@ import { RsvpSuccessNote } from './RsvpSuccessNote'
 const FORMSPREE_ACTION = 'https://formspree.io/f/xvzldrop'
 
 const fieldClass =
-  'w-full rounded-none border-0 border-b border-ocean/14 bg-transparent px-0 py-3.5 font-sans text-[0.98rem] text-charcoal outline-none transition-colors placeholder:text-navy/28 focus:border-ocean/40 focus:ring-0 md:text-[1.02rem]'
-const textareaClass = `${fieldClass} mt-2.5 w-full resize-none min-h-[3.25rem] max-h-[14rem] overflow-y-auto leading-[1.5]`
+  'w-full rounded-none border-0 border-b border-ocean/[0.09] bg-transparent px-0 py-2.5 font-sans text-[0.98rem] text-charcoal outline-none transition-[border-color,color] duration-300 placeholder:text-navy/32 focus:border-ocean/25 focus:ring-0 md:text-[1.02rem]'
+const textareaClass = `${fieldClass} mt-2 w-full resize-none min-h-[2.75rem] max-h-[14rem] overflow-y-auto leading-[1.72]`
 /** Match site body copy (e.g. Weekend / Evening blocks). */
 const labelClass =
   'block font-sans text-[0.98rem] font-normal leading-[1.78] text-navy-soft md:text-[1.02rem] md:leading-[1.82]'
 const optionClass =
-  'flex items-center gap-3 font-sans text-[0.98rem] leading-[1.78] text-navy-soft md:text-[1.02rem] md:leading-[1.82]'
+  'flex items-center gap-3 font-sans text-[0.98rem] leading-[1.82] text-navy-soft md:text-[1.02rem] md:leading-[1.86]'
 
 /**
  * RSVP — warm ivory field; quiet form; editorial capsule button.
@@ -107,7 +107,7 @@ export function LetUsKnow() {
   return (
     <section
       id="let-us-know"
-      className="relative w-full bg-paper px-6 pb-28 pt-14 md:-mt-6 md:px-12 md:pb-32 md:pt-18 lg:pb-36"
+      className="section-flow relative w-full px-6 pb-32 pt-16 md:px-12 md:pb-36 md:pt-20 lg:pb-40"
     >
       {successModal}
 
@@ -121,7 +121,7 @@ export function LetUsKnow() {
 
         <Reveal delayClass="reveal-delay-1">
           <form
-            className="mx-auto mt-12 max-w-xl space-y-8 text-left"
+            className="mx-auto mt-14 max-w-xl space-y-9 text-left"
             onSubmit={(e) => {
               void handleSubmit(e)
             }}
@@ -184,14 +184,26 @@ export function LetUsKnow() {
               type="submit"
               disabled={status === 'submitting' || status === 'success'}
               aria-busy={status === 'submitting'}
-              className="mx-auto flex min-h-[2.35rem] min-w-[min(100%,14rem)] items-center justify-center rounded-full border border-transparent bg-citrus px-12 py-2 font-sans text-[0.88rem] font-medium tracking-[0.04em] text-ocean transition-[opacity,background-color] duration-200 hover:bg-citrus-deep disabled:cursor-not-allowed disabled:opacity-70 md:min-w-[16.5rem] md:text-[0.9rem]"
+              className="group mx-auto mt-1 inline-flex min-h-[2.25rem] items-center justify-center gap-2 rounded-full border border-citrus/65 bg-transparent px-9 py-2 font-sans text-[0.8rem] font-normal tracking-[0.08em] text-citrus transition-[border-color,background-color,color,opacity] duration-300 hover:border-citrus hover:bg-citrus/[0.07] disabled:cursor-not-allowed disabled:opacity-55 md:px-10 md:text-[0.82rem]"
             >
-              {status === 'submitting' ? 'Sending…' : 'Let us know'}
+              {status === 'submitting' ? (
+                'Sending…'
+              ) : (
+                <>
+                  Let us know
+                  <span
+                    aria-hidden
+                    className="inline-block text-[0.92em] transition-transform duration-300 group-hover:translate-x-0.5"
+                  >
+                    →
+                  </span>
+                </>
+              )}
             </button>
 
             {status === 'error' && errorMessage && (
               <p
-                className="text-center font-sans text-[0.92rem] text-navy-soft"
+                className="text-center font-sans text-[0.92rem] text-navy-label"
                 role="alert"
               >
                 {errorMessage}
@@ -201,7 +213,7 @@ export function LetUsKnow() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-12 font-display text-[1.36rem] font-normal italic leading-snug text-ocean md:text-[1.62rem]">
+          <p className="mt-14 font-display text-[1.36rem] font-normal italic leading-snug text-ocean md:mt-16 md:text-[1.62rem] md:leading-relaxed">
             A text, message or call is also fine.
           </p>
         </Reveal>

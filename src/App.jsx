@@ -8,7 +8,7 @@ import { Gifts } from './sections/Gifts'
 import { LakeFooter } from './sections/LakeFooter'
 
 /**
- * Single-column scroll — structure unchanged; unified ink, ivory, honey.
+ * Single-column scroll — shared paper, sky-wash section flow, muted gold accents.
  */
 export default function App() {
   return (

@@ -18,49 +18,38 @@ export function Story() {
   return (
     <section
       id="story"
-      className="relative z-[1] w-full bg-paper pt-[clamp(2rem,5vw,3rem)] pb-16 md:pb-20 lg:pb-22"
+      className="section-flow relative z-[1] w-full pt-[clamp(2.75rem,6vw,4rem)] pb-20 md:pb-24 lg:pb-28"
     >
       <div className="story-container relative mx-auto max-w-[1200px] px-6 md:px-10">
-        <div className="story-row grid grid-cols-1 gap-10 md:grid-cols-[minmax(300px,1.15fr)_minmax(0,1fr)] md:items-center md:gap-x-12 lg:gap-x-14">
+        <div className="story-row grid grid-cols-1 gap-12 md:grid-cols-[minmax(300px,1.15fr)_minmax(0,1fr)] md:items-center md:gap-x-12 lg:gap-x-14 lg:gap-y-8">
           <div className="story-images-col flex w-full items-center justify-center">
             <div
-              className="story-images flex w-full flex-col items-center justify-center sm:flex-row"
+              className="story-images relative flex w-full flex-col items-center justify-center gap-6 sm:flex-row sm:flex-nowrap sm:items-center sm:justify-center sm:gap-0"
               style={{
-                gap: '20px',
-                maxWidth: 'min(100%,520px)',
+                maxWidth: 'min(100%,540px)',
               }}
             >
               <img
                 src={beijingImg}
                 alt="A couple walking through a Beijing hutong on a sunlit afternoon"
-                width={480}
-                height={510}
-                className="story-image story-image-beijing block h-auto max-w-full translate-x-0.5 rotate-[0.35deg] sm:max-w-[calc(50%_-_10px)]"
+                width={690}
+                height={735}
+                className="story-image story-image-beijing relative z-10 block h-auto max-w-full rotate-[1.15deg] sm:max-w-[min(52%,280px)] sm:origin-bottom"
                 style={imgStyle}
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
               />
-              <div className="relative block h-auto w-full max-w-full -translate-x-0.5 -rotate-[0.25deg] sm:max-w-[calc(50%_-_10px)]">
-                <img
-                  src={singaporeImg}
-                  alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
-                  width={480}
-                  height={510}
-                  className="story-image story-image-singapore block h-auto max-w-full"
-                  style={imgStyle}
-                  loading="eager"
-                  decoding="async"
-                />
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 rounded-[12px]"
-                  style={{
-                    background:
-                      'linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.5) 32%, rgba(255,255,255,0.12) 48%, transparent 62%)',
-                  }}
-                />
-              </div>
+              <img
+                src={singaporeImg}
+                alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
+                width={690}
+                height={735}
+                className="story-image story-image-singapore relative z-20 -mt-2 block h-auto max-w-full -rotate-[1.05deg] sm:-ml-10 sm:mt-0 sm:max-w-[min(52%,280px)] md:-ml-12 sm:origin-bottom"
+                style={imgStyle}
+                loading="eager"
+                decoding="async"
+              />
             </div>
           </div>
 
@@ -71,12 +60,12 @@ export function Story() {
                 <h2 className="mt-5 font-display text-[1.95rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[1.4rem] lg:text-[1.62rem] xl:text-[1.82rem] 2xl:text-[1.98rem] xl:whitespace-nowrap">
                   From Beijing to Singapore
                 </h2>
-                <p className="story-line-2 mt-8 font-sans text-[1.02rem] font-normal leading-[1.72] text-navy-soft md:text-[1.05rem] md:leading-[1.75] mb-[18px]">
+                <p className="story-line-2 mt-9 font-sans text-[1.02rem] font-normal leading-[1.78] text-navy-soft md:mt-10 md:text-[1.05rem] md:leading-[1.82] mb-[18px]">
                   What started in Beijing turned into a life built together in
                   Singapore — with plenty of adventures, a few plot twists, and
                   eventually, one very spoiled little dog.
                 </p>
-                <p className="story-line-3 font-sans text-[1.02rem] font-normal leading-[1.72] text-navy-soft md:text-[1.05rem] md:leading-[1.75]">
+                <p className="story-line-3 font-sans text-[1.02rem] font-normal leading-[1.78] text-navy-soft md:text-[1.05rem] md:leading-[1.82]">
                   This summer, we&apos;re taking a moment to celebrate it all,
                   with the people who matter most.
                 </p>

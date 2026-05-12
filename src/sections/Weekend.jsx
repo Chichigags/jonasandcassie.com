@@ -24,7 +24,7 @@ const plans = [
 ]
 
 const cardShell =
-  'relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[2rem] ring-1 ring-ocean/[0.055] shadow-none'
+  'relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[2rem] bg-paper px-10 py-10 shadow-card md:px-11 md:py-11'
 
 function StackedPlanLine({ children }) {
   const labelMatch = /^(Time|Location|Dress code|Transport):\s(.+)$/.exec(children)
@@ -35,10 +35,10 @@ function StackedPlanLine({ children }) {
 
   return (
     <div className="mb-5">
-      <p className="mb-1 font-sans text-[0.72rem] font-medium uppercase leading-snug tracking-[0.07em] text-ocean/75">
+      <p className="mb-1 font-sans text-[0.72rem] font-medium uppercase leading-snug tracking-[0.07em] text-navy-label">
         {labelMatch[1]}
       </p>
-      <p className="font-sans text-[15px] leading-[1.72] text-navy-soft md:text-[16px] md:leading-[1.74]">
+      <p className="font-sans text-[15px] leading-[1.78] text-navy-soft md:text-[16px] md:leading-[1.82]">
         {labelMatch[1] === 'Location' && labelMatch[2].includes('Kantonsstrasse') ? (
           <>
             Lisbeth &amp; Walter Wüest-Meier,
@@ -65,16 +65,16 @@ export function Weekend() {
   return (
     <section
       id="weekend"
-      className="relative w-full bg-paper px-6 pb-28 pt-10 md:px-10 md:pb-32 md:pt-14"
+      className="section-flow-warm relative w-full px-6 pb-32 pt-12 md:px-10 md:pb-36 md:pt-16"
     >
       <div className="mx-auto max-w-[1000px]">
         <Reveal>
-          <div className="mx-auto mb-16 max-w-xl text-center md:mb-20">
+          <div className="mx-auto mb-18 max-w-xl text-center md:mb-22">
             <p className="eyebrow">MORE FUN</p>
-            <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
+            <h2 className="mt-5 font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
               A little bit more
             </h2>
-            <p className="mx-auto mt-7 max-w-md font-sans text-[1.02rem] leading-[1.78] text-navy-soft md:text-[1.06rem] md:leading-[1.82]">
+            <p className="mx-auto mt-8 max-w-md font-sans text-[1.02rem] leading-[1.82] text-navy-soft md:mt-9 md:text-[1.06rem] md:leading-[1.86]">
               Since you&apos;re already here,
               <br className="md:hidden" />
               {' '}let&apos;s start a little early.
@@ -82,7 +82,7 @@ export function Weekend() {
           </div>
         </Reveal>
 
-        <div className="grid gap-14 md:grid-cols-2 md:items-stretch md:gap-12 lg:gap-16">
+        <div className="grid gap-12 md:grid-cols-2 md:items-stretch md:gap-10 lg:gap-14">
           {plans.map((plan, index) => (
             <Reveal
               key={plan.eyebrow}
@@ -90,53 +90,22 @@ export function Weekend() {
               className="h-full"
             >
               <div className="flex h-full flex-col">
-                <article
-                  className={`${cardShell} ${
-                    index === 0
-                      ? 'min-h-[min(105svh,44rem)] sm:min-h-[min(98svh,42rem)] md:min-h-[40rem] lg:min-h-[38rem]'
-                      : 'bg-[#EDE9E2] px-10 py-10 md:px-12 md:py-11'
-                  }`}
-                >
-                  {index === 0 && (
-                    <>
-                      <img
-                        src="/images/weekend-friday-full.png"
-                        alt=""
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-top"
-                      />
-                      <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0"
-                        style={{
-                          background:
-                            'linear-gradient(to bottom, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 18%, rgba(255,255,255,0.48) 36%, rgba(255,255,255,0.12) 52%, transparent 62%)',
-                        }}
-                      />
-                    </>
-                  )}
-
-                  <div
-                    className={
-                      index === 0
-                        ? 'relative z-10 flex flex-1 flex-col px-9 pb-10 pt-10 md:px-11 md:pb-11 md:pt-11'
-                        : 'relative z-10 max-w-[480px]'
-                    }
-                  >
+                <article className={cardShell}>
+                  <div className="relative z-10 max-w-[480px]">
                     <p className="mb-4 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-ocean md:text-[0.74rem]">
                       {plan.eyebrow}
                     </p>
                     <h3 className="mb-6 font-display text-[1.78rem] font-semibold leading-[1.12] text-ocean md:text-[1.92rem]">
                       {plan.title}
                     </h3>
-                    <div className="space-y-3 font-sans text-[0.98rem] leading-[1.78] text-navy-soft md:text-[1rem] md:leading-[1.82]">
+                    <div className="space-y-3.5 font-sans text-[0.98rem] leading-[1.82] text-navy-soft md:text-[1rem] md:leading-[1.86]">
                       {plan.body
                         .filter((line) => !/^(Time|Location|Dress code|Transport):/.test(line))
                         .map((line) => (
                           <p key={line}>{line}</p>
                         ))}
                     </div>
-                    <div className="mt-7">
+                    <div className="mt-8">
                       {plan.body
                         .filter((line) => /^(Time|Location|Dress code|Transport):/.test(line))
                         .map((line) => (

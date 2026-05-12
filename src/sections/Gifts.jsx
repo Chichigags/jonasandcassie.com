@@ -7,18 +7,18 @@ export function Gifts() {
   return (
     <section
       id="gifts"
-      className="relative w-full bg-paper px-6 py-16 md:px-12 md:py-20"
+      className="relative w-full section-flow px-6 pt-18 pb-28 md:px-12 md:pt-22 md:pb-36"
     >
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="eyebrow">ONE LAST THING</p>
-          <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
+          <h2 className="mt-5 font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
             Gifts
           </h2>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1">
-          <div className="mx-auto mt-7 max-w-[34rem] font-sans text-[1.02rem] leading-[1.72] text-navy-soft md:text-[1.06rem] md:leading-[1.75]">
+          <div className="mx-auto mt-8 max-w-[34rem] font-sans text-[1.02rem] leading-[1.82] text-navy-soft md:mt-9 md:text-[1.06rem] md:leading-[1.86]">
             <p>
               Your presence is already the best gift — especially if you&apos;re
               traveling to celebrate with us.
