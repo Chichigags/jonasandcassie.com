@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 /**
- * Dress code — wide lake / wildflower plate; ocean + ginger type with lift for contrast.
+ * Dress code — wide lake / wildflower plate; ginger title, ocean body lines.
  */
 export function DressCode() {
   return (
@@ -40,7 +40,7 @@ export function DressCode() {
             <p className="eyebrow !text-ocean [text-shadow:0_1px_2px_rgba(255,255,255,0.95),0_0_12px_rgba(255,255,255,0.55)]">
               DRESS CODE
             </p>
-            <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.05] tracking-[-0.015em] text-ocean [text-shadow:0_1px_2px_rgba(255,255,255,0.98),0_0_18px_rgba(255,255,255,0.65)] md:text-[2.5rem]">
+            <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.05] tracking-[-0.015em] text-[#D6A83F] [text-shadow:0_1px_2px_rgba(255,255,255,0.98),0_0_20px_rgba(255,255,255,0.7),0_1px_3px_rgba(10,22,128,0.08)] md:text-[2.5rem]">
               Summer chic
             </h2>
           </Reveal>
@@ -52,7 +52,7 @@ export function DressCode() {
           </Reveal>
 
           <Reveal delayClass="reveal-delay-2">
-            <p className="mt-8 font-display text-[1.26rem] font-normal italic leading-snug tracking-[-0.012em] text-[#D6A83F] [text-shadow:0_1px_2px_rgba(255,255,255,0.95),0_0_14px_rgba(255,255,255,0.55),0_1px_8px_rgba(10,22,128,0.12)] md:text-[1.32rem]">
+            <p className="mt-8 font-display text-[1.26rem] font-normal italic leading-snug tracking-[-0.012em] text-ocean [text-shadow:0_1px_2px_rgba(255,255,255,0.95),0_0_14px_rgba(255,255,255,0.55)] md:text-[1.32rem]">
               No black tie. No pressure.
             </p>
           </Reveal>
