@@ -1,60 +1,44 @@
-const SKY_IMAGE = '/images/rsvp-success-sky.png'
+const GRASS_IMAGE = '/images/rsvp-success-grass.png'
 
 /**
- * RSVP success — photographic sky note: soft image inside the card, type top-left.
+ * RSVP success — ivory editorial card; subtle corner botanical; manual close only.
  */
 export function RsvpSuccessNote({ leaving, onDismiss }) {
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center px-5 py-10 transition-opacity duration-300 ease-out ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center px-6 py-12 transition-opacity duration-300 ease-out ${
         leaving ? 'pointer-events-none opacity-0' : 'opacity-100'
       }`}
-      style={{ background: 'rgba(10, 22, 128, 0.05)' }}
+      style={{ background: 'rgba(29, 46, 111, 0.04)' }}
       role="presentation"
       onClick={(e) => {
         if (e.target === e.currentTarget) onDismiss()
       }}
     >
       <div
-        className={`relative w-full max-w-[26rem] min-h-[15.5rem] overflow-hidden rounded-[1.15rem] border border-[rgba(10,22,128,0.12)] shadow-[0_18px_44px_-22px_rgba(10,22,128,0.12),0_6px_16px_-10px_rgba(10,22,128,0.05)] md:max-w-[28rem] md:min-h-[16rem] ${
+        className={`relative w-full max-w-[24rem] overflow-hidden rounded-[1.35rem] border bg-[#F7F3ED] shadow-[0_2px_28px_-16px_rgba(29,46,111,0.08),0_1px_3px_rgba(29,46,111,0.04)] md:max-w-[26rem] ${
           leaving
-            ? 'translate-y-[4px] opacity-0 transition-[opacity,transform] duration-300 ease-out'
+            ? 'translate-y-[3px] opacity-0 transition-[opacity,transform] duration-300 ease-out'
             : 'animate-rsvp-note-in'
         }`}
+        style={{ borderColor: 'rgba(29, 46, 111, 0.08)' }}
         role="dialog"
         aria-modal="true"
         aria-labelledby="rsvp-success-title"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Photographic sky — scaled so flowers stay modest, bottom-right */}
+        {/* Base */}
+        <div className="pointer-events-none absolute inset-0 bg-[#F7F3ED]" aria-hidden />
+
+        {/* Corner botanical — barely visible */}
         <div
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute -bottom-1 -right-1 h-[min(46%,220px)] w-[min(58%,280px)] opacity-[0.18] max-md:opacity-[0.16]"
           style={{
-            backgroundImage: `url(${SKY_IMAGE})`,
+            backgroundImage: `url(${GRASS_IMAGE})`,
             backgroundRepeat: 'no-repeat',
-            backgroundSize: '168% auto',
-            backgroundPosition: '94% 92%',
-            filter: 'saturate(0.88) contrast(0.97) brightness(1.02)',
-          }}
-          aria-hidden
-        />
-
-        {/* Airy veil: open sky for type, flowers stay soft in the corner */}
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(118deg, rgba(252,253,255,0.96) 0%, rgba(250,248,243,0.9) 28%, rgba(252,253,255,0.55) 52%, rgba(252,253,255,0.22) 78%, rgba(252,253,255,0.06) 100%)',
-          }}
-          aria-hidden
-        />
-
-        {/* High-sky lift — slight brightening upper-left for cloud/editorial air */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-50"
-          style={{
-            background:
-              'radial-gradient(ellipse 95% 70% at 8% 12%, rgba(255,255,255,0.65) 0%, transparent 52%)',
+            backgroundSize: 'contain',
+            backgroundPosition: 'bottom right',
+            filter: 'blur(0.6px)',
           }}
           aria-hidden
         />
@@ -62,24 +46,22 @@ export function RsvpSuccessNote({ leaving, onDismiss }) {
         <button
           type="button"
           onClick={onDismiss}
-          className="absolute right-2.5 top-2.5 z-20 rounded-full px-2 py-1 font-sans text-[1.15rem] leading-none text-[#0A1680]/40 transition-colors hover:bg-[#0A1680]/[0.06] hover:text-[#0A1680]/60"
+          className="absolute right-3 top-3 z-20 flex h-8 w-8 items-center justify-center rounded-full text-[1.1rem] font-light leading-none text-[#1D2E6F]/45 transition-colors hover:bg-[#1D2E6F]/[0.06] hover:text-[#1D2E6F]/65"
           aria-label="Close"
         >
           ×
         </button>
 
-        <div className="relative z-10 flex max-w-[20rem] flex-col items-start px-8 pb-9 pt-10 text-left md:max-w-[21rem] md:px-9 md:pb-10 md:pt-11">
+        <div className="relative z-10 px-10 pb-12 pt-11 text-left md:px-12 md:pb-14 md:pt-12">
           <p
             id="rsvp-success-title"
-            className="font-display text-[1.2rem] font-normal leading-[1.35] text-[#0A1680] md:text-[1.3rem]"
+            className="font-display text-[1.65rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[#1D2E6F] md:text-[1.85rem]"
           >
-            So happy you&apos;ll be part of it.
+            Lovelysue in Lucerne
           </p>
-          <div className="mt-5 flex items-start gap-3 border-l border-citrus/75 pl-3.5">
-            <p className="font-sans text-[0.88rem] font-normal leading-relaxed text-[#3F4348] md:text-[0.92rem]">
-              See you by the lake this summer.
-            </p>
-          </div>
+          <p className="mt-6 max-w-[22rem] font-sans text-[0.84rem] font-normal italic leading-relaxed text-[#7B8088] opacity-70 md:text-[0.88rem] md:leading-relaxed">
+            Or, as they say here — bis gli in Lozärn.
+          </p>
         </div>
       </div>
     </div>

@@ -13,20 +13,15 @@ const optionClass =
   'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-charcoal md:text-[1.02rem]'
 
 /**
- * RSVP — POST to Formspree; success as a quiet floating note (portal).
+ * RSVP — POST to Formspree; success modal closes manually only.
  */
 export function LetUsKnow() {
   const [status, setStatus] = useState('idle')
   const [errorMessage, setErrorMessage] = useState('')
   const [successLeaving, setSuccessLeaving] = useState(false)
-  const autoDismissRef = useRef(null)
   const finishDismissRef = useRef(null)
 
   const dismissSuccessModal = useCallback(() => {
-    if (autoDismissRef.current) {
-      window.clearTimeout(autoDismissRef.current)
-      autoDismissRef.current = null
-    }
     if (finishDismissRef.current) {
       window.clearTimeout(finishDismissRef.current)
       finishDismissRef.current = null
@@ -46,20 +41,15 @@ export function LetUsKnow() {
     }
 
     document.body.style.overflow = 'hidden'
-    autoDismissRef.current = window.setTimeout(dismissSuccessModal, 5400)
 
     return () => {
-      if (autoDismissRef.current) {
-        window.clearTimeout(autoDismissRef.current)
-        autoDismissRef.current = null
-      }
       if (finishDismissRef.current) {
         window.clearTimeout(finishDismissRef.current)
         finishDismissRef.current = null
       }
       document.body.style.overflow = ''
     }
-  }, [status, dismissSuccessModal])
+  }, [status])
 
   async function handleSubmit(e) {
     e.preventDefault()
