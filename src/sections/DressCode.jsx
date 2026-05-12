@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 const summerChic =
-  'font-display font-semibold not-italic leading-[1.08] tracking-[-0.02em] text-[#EECA3A] [text-shadow:0_1px_2px_rgba(30,45,120,0.12),0_0_24px_rgba(255,255,255,0.55)]'
+  'font-display font-semibold not-italic leading-[1.08] tracking-[-0.02em] text-[#E8B923]'
 
 /**
  * Dress code — new lake / wildflowers plate; reference bright gold title, navy body.
@@ -49,9 +49,9 @@ export function DressCode() {
                 className="mx-auto mt-5 flex items-center justify-center gap-2 md:mt-6"
                 aria-hidden
               >
-                <span className="h-px flex-1 max-w-[3rem] bg-gradient-to-r from-transparent to-[#EECA3A]/90" />
-                <span className="inline-block h-1 w-1 rotate-45 bg-[#EECA3A]" />
-                <span className="h-px flex-1 max-w-[3rem] bg-gradient-to-l from-transparent to-[#EECA3A]/90" />
+                <span className="h-px flex-1 max-w-[3rem] bg-[#E8B923]" />
+                <span className="inline-block h-1 w-1 rotate-45 bg-[#E8B923]" />
+                <span className="h-px flex-1 max-w-[3rem] bg-[#E8B923]" />
               </div>
             </Reveal>
 
