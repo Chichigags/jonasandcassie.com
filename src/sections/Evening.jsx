@@ -58,7 +58,7 @@ export function Evening() {
   return (
     <section
       id="evening"
-      className="atmosphere-bg relative overflow-visible px-6 pb-40 pt-16 md:px-12 md:pb-48 md:pt-20 lg:pb-52 lg:pt-24"
+      className="atmosphere-bg relative overflow-visible px-6 pb-36 pt-6 md:px-12 md:pb-44 md:pt-8 lg:pb-48 lg:pt-10"
     >
       <Reveal>
         <header className="mx-auto max-w-prose text-center">
@@ -75,7 +75,7 @@ export function Evening() {
         </header>
       </Reveal>
 
-      <div className="relative mx-auto mt-20 max-w-content md:mt-24 lg:mt-28">
+      <div className="relative mx-auto mt-14 max-w-content md:mt-16 lg:mt-18">
         <div
           className="pointer-events-none absolute bottom-10 left-[11.55rem] top-10 hidden w-px bg-gradient-to-b from-citrus/25 via-ocean/15 to-citrus/20 md:block lg:left-[12.05rem]"
           aria-hidden

@@ -23,6 +23,9 @@ const plans = [
   },
 ]
 
+const cardShell =
+  'relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[2rem] ring-1 ring-ocean/[0.055] shadow-none'
+
 function StackedPlanLine({ children }) {
   const labelMatch = /^(Time|Location|Dress code|Transport):\s(.+)$/.exec(children)
 
@@ -88,10 +91,10 @@ export function Weekend() {
             >
               <div className="flex h-full flex-col">
                 <article
-                  className={`relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[2rem] ring-1 ring-ocean/[0.055] shadow-none ${
+                  className={`${cardShell} ${
                     index === 0
-                      ? 'min-h-[27rem] sm:min-h-[26rem] md:min-h-[24rem]'
-                      : 'bg-paper/55 px-10 py-10 md:px-12 md:py-11'
+                      ? 'min-h-[min(105svh,44rem)] sm:min-h-[min(98svh,42rem)] md:min-h-[40rem] lg:min-h-[38rem]'
+                      : 'bg-[#EDE9E2] px-10 py-10 md:px-12 md:py-11'
                   }`}
                 >
                   {index === 0 && (
@@ -108,7 +111,15 @@ export function Weekend() {
                       />
                       <div
                         aria-hidden
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(253,252,250,0.22)] from-0% via-transparent via-[50%] to-[rgba(245,242,236,0.2)]"
+                        className="pointer-events-none absolute inset-0"
+                        style={{
+                          background:
+                            'linear-gradient(to bottom, rgba(252,251,248,0.97) 0%, rgba(252,251,248,0.82) 20%, rgba(252,251,248,0.48) 34%, rgba(252,251,248,0.12) 44%, transparent 52%)',
+                        }}
+                      />
+                      <div
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-[42%] to-[rgba(245,242,236,0.15)]"
                       />
                     </>
                   )}
@@ -116,7 +127,7 @@ export function Weekend() {
                   <div
                     className={
                       index === 0
-                        ? 'relative z-10 flex flex-1 flex-col px-9 pb-9 pt-9 md:px-11 md:pb-10 md:pt-10'
+                        ? 'relative z-10 flex flex-1 flex-col px-9 pb-10 pt-10 md:px-11 md:pb-11 md:pt-11'
                         : 'relative z-10 max-w-[480px]'
                     }
                   >

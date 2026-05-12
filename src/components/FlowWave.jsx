@@ -1,31 +1,31 @@
 /**
- * Organic section bridges — soft waves (fill: text-paper = #F5F2EC).
+ * Organic section bridges — hero wave sits outside photo overflow clip.
  */
 
-/** Hero → story: gentle wave into warm ivory */
+/** Hero → story: visible soft wave into warm ivory */
 export function FlowWaveHeroBottom() {
   return (
     <div
-      className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] flex justify-center text-paper"
+      className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] flex justify-center"
       aria-hidden
     >
       <svg
-        className="w-[min(118vw,1680px)] shrink-0"
-        viewBox="0 0 1440 100"
+        className="w-[min(118vw,1680px)] shrink-0 text-paper drop-shadow-[0_-8px_24px_rgba(30,45,120,0.12)]"
+        viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        style={{ height: 'clamp(2.5rem, 6.5vw, 4.75rem)' }}
+        style={{ height: 'clamp(3.25rem, 8.5vw, 5.75rem)' }}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           fill="currentColor"
-          d="M0,48 C240,5 480,88 720,38 C960,-5 1200,72 1440,44 L1440,100 L0,100 Z"
+          d="M0,52 C220,6 460,102 720,38 C980,-12 1240,92 1440,46 L1440,120 L0,120 Z"
         />
       </svg>
     </div>
   )
 }
 
-/** Ivory → full-bleed photo: soft scallop (paper overlaps next band slightly) */
+/** Ivory → full-bleed photo: soft scallop */
 export function FlowCurveToPhoto() {
   return (
     <div
