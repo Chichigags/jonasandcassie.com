@@ -124,34 +124,43 @@ export function Weekend() {
                   </div>
 
                   {index === 0 && (
-                    <div className="relative mt-auto min-h-[12.5rem] w-full flex-1 md:min-h-[13rem] lg:min-h-[13.5rem]">
+                    <div className="relative mt-auto isolate min-h-[10.5rem] w-full flex-1 overflow-hidden sm:min-h-[11.5rem] md:min-h-[12.25rem] lg:min-h-[12.75rem]">
                       <img
                         src="/images/weekend-riva.png"
                         alt=""
                         aria-hidden
                         className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
-                        style={{ objectPosition: '88% 100%' }}
+                        style={{
+                          objectPosition: '78% 100%',
+                          filter:
+                            'saturate(0.97) contrast(1.02) brightness(1.015)',
+                        }}
                       />
-                      {/* Short vertical blend into text area + soft L/R into card air — keeps dog sharp lower in frame */}
+                      {/* Editorial merge: warm paper wash + gentle diagonal light — photo stays visible, no white fog */}
                       <div
                         aria-hidden
                         className="pointer-events-none absolute inset-0"
                         style={{
                           background: `
-                            linear-gradient(to bottom,
-                              rgba(252,253,255,1) 0%,
-                              rgba(252,253,255,0.55) 4%,
-                              rgba(252,253,255,0.12) 10%,
-                              transparent 16%),
-                            linear-gradient(90deg,
-                              rgba(252,253,255,0.82) 0%,
-                              rgba(252,253,255,0.28) 14%,
-                              transparent 36%),
-                            linear-gradient(270deg,
-                              rgba(252,253,255,0.2) 0%,
-                              transparent 14%)
+                            linear-gradient(
+                              to bottom,
+                              rgba(253, 252, 249, 0.42) 0%,
+                              rgba(252, 250, 246, 0.14) 22%,
+                              rgba(252, 250, 246, 0.03) 34%,
+                              transparent 46%
+                            ),
+                            linear-gradient(
+                              108deg,
+                              rgba(250, 247, 241, 0.26) 0%,
+                              rgba(250, 247, 241, 0.07) 28%,
+                              transparent 58%
+                            )
                           `,
                         }}
+                      />
+                      <div
+                        aria-hidden
+                        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-ink/[0.05]"
                       />
                     </div>
                   )}
