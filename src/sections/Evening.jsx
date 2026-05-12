@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 const closingClass =
-  'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus md:text-[1.1rem] md:leading-[1.85] [text-shadow:-0.75px_-0.75px_0_rgba(0,0,0,0.22),0.75px_-0.75px_0_rgba(0,0,0,0.22),-0.75px_0.75px_0_rgba(0,0,0,0.22),0.75px_0.75px_0_rgba(0,0,0,0.22),0_0_2px_rgba(0,0,0,0.15)]'
+  'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus [text-shadow:none] drop-shadow-none md:text-[1.1rem] md:leading-[1.85]'
 
 const blocks = [
   {
@@ -51,7 +51,7 @@ const blocks = [
 ]
 
 /**
- * Evening — each block ends with a readable honey italic closing line.
+ * Evening — each block ends with a citrus italic closing line.
  */
 export function Evening() {
   return (
@@ -103,7 +103,9 @@ export function Evening() {
                       ))}
                     </div>
                     {block.closingLine && (
-                      <p className={closingClass}>{block.closingLine}</p>
+                      <p className={closingClass} style={{ textShadow: 'none' }}>
+                        {block.closingLine}
+                      </p>
                     )}
                   </div>
                 </article>

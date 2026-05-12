@@ -110,7 +110,7 @@ export function Weekend() {
                         className="pointer-events-none absolute inset-0"
                         style={{
                           background:
-                            'linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.55) 26%, transparent 44%)',
+                            'linear-gradient(to bottom, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 18%, rgba(255,255,255,0.48) 36%, rgba(255,255,255,0.12) 52%, transparent 62%)',
                         }}
                       />
                     </>

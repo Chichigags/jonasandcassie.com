@@ -8,10 +8,11 @@ const FORMSPREE_ACTION = 'https://formspree.io/f/xvzldrop'
 const fieldClass =
   'w-full rounded-none border-0 border-b border-ocean/14 bg-transparent px-0 py-3.5 font-sans text-[0.98rem] text-charcoal outline-none transition-colors placeholder:text-navy/28 focus:border-ocean/40 focus:ring-0 md:text-[1.02rem]'
 const textareaClass = `${fieldClass} mt-2.5 w-full resize-none min-h-[3.25rem] max-h-[14rem] overflow-y-auto leading-[1.5]`
+/** Match site body copy (e.g. Weekend / Evening blocks). */
 const labelClass =
-  'block font-sans text-[0.78rem] font-medium tracking-[0.02em] text-navy-soft'
+  'block font-sans text-[0.98rem] font-normal leading-[1.78] text-navy-soft md:text-[1.02rem] md:leading-[1.82]'
 const optionClass =
-  'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-charcoal md:text-[1.02rem]'
+  'flex items-center gap-3 font-sans text-[0.98rem] leading-[1.78] text-navy-soft md:text-[1.02rem] md:leading-[1.82]'
 
 /**
  * RSVP — warm ivory field; quiet form; editorial capsule button.
@@ -168,13 +169,13 @@ export function LetUsKnow() {
 
             <div>
               <label htmlFor="rsvp-message" className={labelClass}>
-                Any dietary restrictions? If not, any love or life advice for
-                us?
+                Any dietary restrictions?
               </label>
               <textarea
                 id="rsvp-message"
                 name="message"
                 rows={1}
+                placeholder="If not, any love or life advice for us?"
                 className={textareaClass}
               />
             </div>

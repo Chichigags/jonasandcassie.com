@@ -41,16 +41,26 @@ export function Story() {
                 decoding="async"
                 fetchPriority="high"
               />
-              <img
-                src={singaporeImg}
-                alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
-                width={480}
-                height={510}
-                className="story-image story-image-singapore block h-auto max-w-full -translate-x-0.5 -rotate-[0.25deg] sm:max-w-[calc(50%_-_10px)]"
-                style={imgStyle}
-                loading="eager"
-                decoding="async"
-              />
+              <div className="relative block h-auto w-full max-w-full -translate-x-0.5 -rotate-[0.25deg] sm:max-w-[calc(50%_-_10px)]">
+                <img
+                  src={singaporeImg}
+                  alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
+                  width={480}
+                  height={510}
+                  className="story-image story-image-singapore block h-auto max-w-full"
+                  style={imgStyle}
+                  loading="eager"
+                  decoding="async"
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 rounded-[12px]"
+                  style={{
+                    background:
+                      'linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.5) 32%, rgba(255,255,255,0.12) 48%, transparent 62%)',
+                  }}
+                />
+              </div>
             </div>
           </div>
 
