@@ -24,7 +24,7 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-[1100px] flex-col justify-center px-6 py-24 md:px-12 md:py-28 lg:px-16">
         <div className="max-w-2xl [text-shadow:0_1px_20px_rgba(252,253,255,0.85)]">
-          <p className="font-sans text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-ocean opacity-0 animate-fade-up md:text-[0.82rem]">
+          <p className="font-sans text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-charcoal opacity-0 animate-fade-up md:text-[0.82rem]">
             LUCERNE · AUGUST 1, 2026
           </p>
 
@@ -32,7 +32,7 @@ export function Hero() {
             Life, Love &amp; 40
           </h1>
 
-          <p className="mt-5 font-sans text-[0.92rem] font-semibold uppercase tracking-[0.13em] text-ocean opacity-0 animate-fade-up-slow md:text-[1rem]">
+          <p className="mt-5 font-sans text-[0.92rem] font-semibold uppercase tracking-[0.13em] text-charcoal opacity-0 animate-fade-up-slow md:text-[1rem]">
             JONAS &amp; CASSIE
           </p>
 
@@ -45,10 +45,6 @@ export function Hero() {
           <p className="mt-7 max-w-xl font-sans text-[1.02rem] leading-[1.68] text-navy-soft opacity-0 animate-fade-up-slow md:text-[1.08rem] md:leading-[1.72]">
             We&apos;re celebrating a special season of life — our marriage, our
             forties, and the people who make it all meaningful.
-          </p>
-
-          <p className="mt-8 font-display text-[1.34rem] font-medium leading-snug text-navy opacity-0 animate-fade-up-slow md:text-[1.55rem]">
-            We&apos;d love for you to be part of it.
           </p>
         </div>
       </div>

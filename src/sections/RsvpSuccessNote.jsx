@@ -73,11 +73,11 @@ export function RsvpSuccessNote({ leaving, onDismiss }) {
             id="rsvp-success-title"
             className="font-display text-[1.2rem] font-normal leading-[1.35] text-[#0A1680] md:text-[1.3rem]"
           >
-            Thank you — we can&apos;t wait to see you by the lake.
+            So happy you&apos;ll be part of it.
           </p>
-          <div className="mt-5 flex items-start gap-3 border-l border-[#E7A94C]/75 pl-3.5">
+          <div className="mt-5 flex items-start gap-3 border-l border-citrus/75 pl-3.5">
             <p className="font-sans text-[0.88rem] font-normal leading-relaxed text-[#3F4348] md:text-[0.92rem]">
-              See you in Lucerne.
+              See you by the lake this summer.
             </p>
           </div>
         </div>

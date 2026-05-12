@@ -87,8 +87,16 @@ export function Weekend() {
               className="h-full"
             >
               <div className="flex h-full flex-col">
-                <article className="flex-1 rounded-[18px] border border-ocean/18 bg-air px-9 py-8 shadow-postcard md:px-10 md:py-9">
-                  <div className="max-w-[480px]">
+                <article className="relative flex-1 overflow-hidden rounded-[18px] border border-ocean/18 bg-air px-9 py-8 shadow-postcard md:px-10 md:py-9">
+                  {index === 0 && (
+                    <img
+                      src="/images/weekend-riva.png"
+                      alt=""
+                      aria-hidden
+                      className="pointer-events-none absolute bottom-0 right-0 h-[min(7.75rem,38vw)] w-[min(11.25rem,52%)] translate-x-[10%] translate-y-[8%] object-cover object-[88%_100%] opacity-[0.88] select-none md:h-[min(8.5rem,34vw)] md:w-[min(12.5rem,48%)] md:translate-x-[12%] md:translate-y-[10%]"
+                    />
+                  )}
+                  <div className="relative z-10 max-w-[480px]">
                     <p className="mb-3.5 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-ocean md:text-[0.74rem]">
                       {plan.eyebrow}
                     </p>

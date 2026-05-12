@@ -6,11 +6,11 @@ import { RsvpSuccessNote } from './RsvpSuccessNote'
 const FORMSPREE_ACTION = 'https://formspree.io/f/xvzldrop'
 
 const fieldClass =
-  'rounded-xl border border-navy/10 bg-paper/90 px-5 py-4 font-sans text-[0.98rem] text-navy outline-none transition-colors placeholder:text-navy/35 focus:border-ocean focus:ring-1 focus:ring-ocean/12 md:text-[1.02rem]'
+  'rounded-xl border border-navy/10 bg-paper/90 px-5 py-4 font-sans text-[0.98rem] text-charcoal outline-none transition-colors placeholder:text-navy/35 focus:border-ocean focus:ring-1 focus:ring-ocean/12 md:text-[1.02rem]'
 const labelClass =
-  'block font-sans text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-ocean'
+  'block font-sans text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-charcoal'
 const optionClass =
-  'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-navy-soft md:text-[1.02rem]'
+  'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-charcoal md:text-[1.02rem]'
 
 /**
  * RSVP — POST to Formspree; success as a quiet floating note (portal).
@@ -192,7 +192,7 @@ export function LetUsKnow() {
               type="submit"
               disabled={status === 'submitting' || status === 'success'}
               aria-busy={status === 'submitting'}
-              className="mx-auto block min-h-[2.75rem] rounded-xl bg-ocean px-8 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-[opacity,background-color] duration-200 hover:bg-ocean-deep disabled:cursor-not-allowed disabled:opacity-70"
+              className="mx-auto block min-h-[2.75rem] rounded-xl bg-citrus px-8 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-[opacity,background-color] duration-200 hover:bg-citrus-deep disabled:cursor-not-allowed disabled:opacity-70"
             >
               {status === 'submitting' ? 'Sending…' : 'Let us know'}
             </button>

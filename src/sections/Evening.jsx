@@ -115,15 +115,16 @@ export function Evening() {
             Here&apos;s the plan
           </h2>
           <p className="mx-auto mt-6 max-w-xl font-sans text-[1.02rem] leading-[1.72] text-navy-soft md:text-[1.06rem] md:leading-[1.75]">
-            A summer evening by the lake — simple, relaxed, and hopefully
-            memorable.
+            <span className="block">A summer evening by the lake —</span>
+            <span className="block">simple, relaxed,</span>
+            <span className="block">and hopefully memorable.</span>
           </p>
         </header>
       </Reveal>
 
       <div className="relative mx-auto mt-16 max-w-content md:mt-20">
         <div
-          className="pointer-events-none absolute bottom-8 left-[11.05rem] top-8 hidden w-px bg-ocean/28 md:block lg:left-[11.65rem]"
+          className="pointer-events-none absolute bottom-8 left-[11.55rem] top-8 hidden w-px bg-ocean/28 md:block lg:left-[12.05rem]"
           aria-hidden
         />
 
@@ -133,9 +134,9 @@ export function Evening() {
               <Reveal
                 delayClass={i === 0 ? '' : `reveal-delay-${Math.min(i, 3)}`}
               >
-                <article className="grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,10.75rem)_minmax(0,1fr)] md:gap-x-12 lg:gap-x-16">
+                <article className="grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,11.25rem)_minmax(0,1fr)] md:gap-x-12 lg:gap-x-16">
                   <div className="md:pt-0.5">
-                    <p className="font-display text-[1.38rem] font-semibold leading-none tracking-[-0.02em] text-ocean md:text-[1.52rem]">
+                    <p className="font-display text-[1.48rem] font-semibold leading-none tracking-[-0.02em] text-ocean md:text-[1.62rem]">
                       {block.time}
                     </p>
                   </div>

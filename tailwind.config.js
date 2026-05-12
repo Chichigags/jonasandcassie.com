@@ -25,7 +25,11 @@ export default {
         },
         sage: '#A8B8A3',
         butter: '#FBEDB0',
-        citrus: '#F1B94C',
+        charcoal: '#4A4A4A',
+        citrus: {
+          DEFAULT: '#D8862E',
+          deep: '#C27828',
+        },
         cream: '#FFFFFF',
       },
       fontFamily: {

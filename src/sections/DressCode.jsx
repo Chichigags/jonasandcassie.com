@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 /**
- * Dress code — full-bleed lake; editorial type on the image (no floating card).
+ * Dress code — golden-hour lake; editorial type on the left.
  */
 export function DressCode() {
   return (
@@ -11,16 +11,18 @@ export function DressCode() {
     >
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <img
-          src="/images/dresscode-lake.png"
+          src="/images/dresscode-sunset-lake.png"
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
           style={{
-            objectPosition: 'center bottom',
+            objectPosition: 'center center',
+            filter:
+              'saturate(0.93) brightness(0.98) contrast(0.94) hue-rotate(-3deg)',
           }}
         />
       </div>
 
-      {/* Tight left veil only — gradient hits fully transparent quickly; rest of frame is untouched */}
+      {/* Readability: soft veil on the left only */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 left-0 w-[min(62vw,15rem)] sm:w-[min(56vw,16.5rem)] md:w-[min(28vw,20rem)] lg:w-[min(24vw,21.5rem)]"
@@ -34,20 +36,20 @@ export function DressCode() {
         <div className="max-w-lg text-left md:max-w-xl">
           <div className="[text-shadow:0_1px_1px_rgba(255,255,255,0.98),0_0_6px_rgba(255,255,255,0.35)]">
             <Reveal>
-              <p className="eyebrow">DRESS CODE</p>
+              <p className="eyebrow !text-charcoal">DRESS CODE</p>
               <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.05] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
                 Summer chic
               </h2>
             </Reveal>
 
             <Reveal delayClass="reveal-delay-1">
-              <div className="mt-7 font-sans text-[1rem] font-normal leading-[1.72] text-navy md:text-[1.05rem] md:leading-[1.75]">
+              <div className="mt-7 font-sans text-[1rem] font-normal leading-[1.72] text-charcoal md:text-[1.05rem] md:leading-[1.75]">
                 <p>Boat-friendly, dance-friendly.</p>
               </div>
             </Reveal>
 
             <Reveal delayClass="reveal-delay-2">
-              <p className="mt-8 font-display text-[1.32rem] font-normal italic leading-snug text-ocean md:text-[1.48rem]">
+              <p className="mt-8 font-display text-[1.32rem] font-normal italic leading-snug text-citrus md:text-[1.48rem]">
                 No black tie. No pressure.
               </p>
             </Reveal>
