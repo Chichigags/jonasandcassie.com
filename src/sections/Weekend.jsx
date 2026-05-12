@@ -87,28 +87,20 @@ export function Weekend() {
               className="h-full"
             >
               <div className="flex h-full flex-col">
-                <article className="relative flex-1 overflow-hidden rounded-[18px] border border-ocean/18 bg-air px-9 py-8 shadow-postcard md:px-10 md:py-9">
-                  {index === 0 && (
-                    <>
-                      <img
-                        src="/images/weekend-riva.png"
-                        alt=""
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-bottom select-none"
-                        style={{ objectPosition: '50% 100%' }}
-                      />
-                      {/* Fade photo into card air — reads as one surface, not a pasted cutout */}
-                      <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0"
-                        style={{
-                          background:
-                            'linear-gradient(to bottom, #FCFDFF 0%, #FCFDFF 18%, rgba(252,253,255,0.88) 32%, rgba(252,253,255,0.42) 52%, rgba(252,253,255,0.08) 72%, transparent 100%)',
-                        }}
-                      />
-                    </>
-                  )}
-                  <div className="relative z-10 max-w-[480px]">
+                <article
+                  className={`relative flex h-full min-h-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-ocean/18 bg-air shadow-postcard ${
+                    index === 0
+                      ? ''
+                      : 'px-9 py-8 md:px-10 md:py-9'
+                  }`}
+                >
+                  <div
+                    className={
+                      index === 0
+                        ? 'relative z-10 max-w-[480px] shrink-0 px-9 pb-6 pt-8 md:px-10 md:pb-7 md:pt-9'
+                        : 'relative z-10 max-w-[480px]'
+                    }
+                  >
                     <p className="mb-3.5 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-ocean md:text-[0.74rem]">
                       {plan.eyebrow}
                     </p>
@@ -130,6 +122,22 @@ export function Weekend() {
                         ))}
                     </div>
                   </div>
+
+                  {index === 0 && (
+                    <div className="relative mt-auto min-h-[9.5rem] w-full flex-1 md:min-h-[11rem]">
+                      <img
+                        src="/images/weekend-riva.png"
+                        alt=""
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-bottom"
+                        style={{ objectPosition: '50% 100%' }}
+                      />
+                      <div
+                        aria-hidden
+                        className="pointer-events-none absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-air to-transparent md:h-14"
+                      />
+                    </div>
+                  )}
                 </article>
               </div>
             </Reveal>
