@@ -1,7 +1,16 @@
 import { Reveal } from '../components/Reveal'
 
+const ASSET = (path) => {
+  const raw = import.meta.env.BASE_URL || '/'
+  const base = raw.endsWith('/') ? raw : `${raw}/`
+  return `${base}${path.replace(/^\//, '')}`
+}
+
 /**
  * Story — same layout; warm ivory field; slight editorial offset on photos.
+ *
+ * Image column uses md:shrink-0 so flex never collapses it when the headline
+ * has a large min-content width (nowrap was starving the photo flex child).
  */
 export function Story() {
   const imgStyle = {
@@ -11,6 +20,7 @@ export function Story() {
     objectFit: 'contain',
     borderRadius: '12px',
     opacity: 1,
+    filter: 'saturate(0.94) contrast(0.97) brightness(1.01)',
   }
 
   return (
@@ -20,39 +30,43 @@ export function Story() {
     >
       <div className="story-container mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="story-row flex flex-col gap-10 md:flex-row md:items-center md:gap-12 lg:gap-14">
-          {/* Photos stay outside Reveal so they are never opacity-0 (fixes missing images with filter/IO edge cases). Film grade on wrapper only. */}
-          <div className="story-images-col flex w-full min-w-0 items-center justify-center md:flex-[5_1_0%]">
+          <div className="story-images-col flex w-full items-center justify-center md:shrink-0 md:flex-[5_1_0%]">
             <div
-              className="story-images flex w-full flex-col items-center justify-center sm:flex-row [&_img]:[filter:saturate(0.94)_contrast(0.97)_brightness(1.01)]"
+              className="story-images flex w-full flex-col items-center justify-center sm:flex-row"
               style={{
                 gap: '20px',
                 maxWidth: '90%',
               }}
             >
               <img
-                src="/images/beijing.png"
+                src={ASSET('/images/beijing.png')}
                 alt="A couple walking through a Beijing hutong on a sunlit afternoon"
-                className="story-image story-image-beijing block max-w-full translate-x-0.5 rotate-[0.35deg] sm:max-w-[calc(50%_-_10px)]"
+                width={480}
+                height={510}
+                className="story-image story-image-beijing block h-auto max-w-full translate-x-0.5 rotate-[0.35deg] sm:max-w-[calc(50%_-_10px)]"
                 style={imgStyle}
-                loading="lazy"
+                loading="eager"
                 decoding="async"
+                fetchPriority="high"
               />
               <img
-                src="/images/singapore.png"
+                src={ASSET('/images/singapore.png')}
                 alt="A couple and a small dog by Marina Bay in Singapore at golden hour"
-                className="story-image story-image-singapore block max-w-full -translate-x-0.5 -rotate-[0.25deg] sm:max-w-[calc(50%_-_10px)]"
+                width={480}
+                height={510}
+                className="story-image story-image-singapore block h-auto max-w-full -translate-x-0.5 -rotate-[0.25deg] sm:max-w-[calc(50%_-_10px)]"
                 style={imgStyle}
-                loading="lazy"
+                loading="eager"
                 decoding="async"
               />
             </div>
           </div>
 
           <Reveal className="min-w-0 md:flex-[4_1_0%]">
-            <div className="story-text-col flex w-full flex-col justify-center">
+            <div className="story-text-col flex w-full min-w-0 flex-col justify-center">
               <div className="story-text text-left">
                 <p className="eyebrow mb-0">HOW WE GOT HERE</p>
-                <h2 className="mt-5 whitespace-nowrap font-display text-[1.95rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[1.4rem] lg:text-[1.62rem] xl:text-[1.82rem] 2xl:text-[1.98rem]">
+                <h2 className="mt-5 font-display text-[1.95rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[1.4rem] lg:text-[1.62rem] xl:text-[1.82rem] 2xl:text-[1.98rem] xl:whitespace-nowrap">
                   From Beijing to Singapore
                 </h2>
                 <p className="story-line-2 mt-8 font-sans text-[1.02rem] font-normal leading-[1.72] text-navy-soft md:text-[1.05rem] md:leading-[1.75] mb-[18px]">
