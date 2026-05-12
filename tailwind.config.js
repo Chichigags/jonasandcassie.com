@@ -78,6 +78,7 @@ export default {
         'fade-up-slow': 'fadeUp 1.05s ease-out 0.42s both',
         float: 'float 14s ease-in-out infinite',
         'float-slow': 'float 18s ease-in-out infinite',
+        'rsvp-note-in': 'rsvpNoteIn 0.45s ease-out both',
       },
       keyframes: {
         fadeUp: {
@@ -87,6 +88,10 @@ export default {
         float: {
           '0%, 100%': { transform: 'rotate(-0.4deg) translateY(0)' },
           '50%': { transform: 'rotate(0.5deg) translateY(-3px)' },
+        },
+        rsvpNoteIn: {
+          '0%': { opacity: '0', transform: 'translateY(6px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },

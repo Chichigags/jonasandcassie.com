@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Reveal } from '../components/Reveal'
+import { RsvpSuccessNote } from './RsvpSuccessNote'
 
 const FORMSPREE_ACTION = 'https://formspree.io/f/xvzldrop'
 
@@ -11,11 +13,53 @@ const optionClass =
   'flex items-center gap-3 font-sans text-[0.98rem] leading-relaxed text-navy-soft md:text-[1.02rem]'
 
 /**
- * RSVP — POST to Formspree; inline thank-you, no redirect.
+ * RSVP — POST to Formspree; success as a quiet floating note (portal).
  */
 export function LetUsKnow() {
   const [status, setStatus] = useState('idle')
   const [errorMessage, setErrorMessage] = useState('')
+  const [successLeaving, setSuccessLeaving] = useState(false)
+  const autoDismissRef = useRef(null)
+  const finishDismissRef = useRef(null)
+
+  const dismissSuccessModal = useCallback(() => {
+    if (autoDismissRef.current) {
+      window.clearTimeout(autoDismissRef.current)
+      autoDismissRef.current = null
+    }
+    if (finishDismissRef.current) {
+      window.clearTimeout(finishDismissRef.current)
+      finishDismissRef.current = null
+    }
+    setSuccessLeaving(true)
+    finishDismissRef.current = window.setTimeout(() => {
+      setStatus('idle')
+      setSuccessLeaving(false)
+      finishDismissRef.current = null
+    }, 300)
+  }, [])
+
+  useEffect(() => {
+    if (status !== 'success') {
+      document.body.style.overflow = ''
+      return undefined
+    }
+
+    document.body.style.overflow = 'hidden'
+    autoDismissRef.current = window.setTimeout(dismissSuccessModal, 5400)
+
+    return () => {
+      if (autoDismissRef.current) {
+        window.clearTimeout(autoDismissRef.current)
+        autoDismissRef.current = null
+      }
+      if (finishDismissRef.current) {
+        window.clearTimeout(finishDismissRef.current)
+        finishDismissRef.current = null
+      }
+      document.body.style.overflow = ''
+    }
+  }, [status, dismissSuccessModal])
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -34,6 +78,7 @@ export function LetUsKnow() {
 
       if (res.ok) {
         form.reset()
+        setSuccessLeaving(false)
         setStatus('success')
         return
       }
@@ -53,11 +98,24 @@ export function LetUsKnow() {
     }
   }
 
+  const successModal =
+    status === 'success' && typeof document !== 'undefined'
+      ? createPortal(
+          <RsvpSuccessNote
+            leaving={successLeaving}
+            onDismiss={dismissSuccessModal}
+          />,
+          document.body,
+        )
+      : null
+
   return (
     <section
       id="let-us-know"
       className="relative w-full bg-air px-6 py-24 md:px-12 md:py-28 lg:py-32"
     >
+      {successModal}
+
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="eyebrow mb-4">YES?</p>
@@ -129,23 +187,13 @@ export function LetUsKnow() {
 
             <button
               type="submit"
-              disabled={status === 'submitting'}
+              disabled={status === 'submitting' || status === 'success'}
               aria-busy={status === 'submitting'}
               className="mx-auto block min-h-[2.75rem] rounded-xl bg-ocean px-8 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-[opacity,background-color] duration-200 hover:bg-ocean-deep disabled:cursor-not-allowed disabled:opacity-70"
             >
               {status === 'submitting' ? 'Sending…' : 'Let us know'}
             </button>
 
-            {status === 'success' && (
-              <div className="space-y-2 pt-1 text-center" role="status">
-                <p className="font-sans text-[1.02rem] font-normal leading-snug text-ocean md:text-[1.06rem]">
-                  Thank you — we can&apos;t wait to see you by the lake.
-                </p>
-                <p className="font-sans text-[0.88rem] leading-relaxed text-navy-soft md:text-[0.9rem]">
-                  Swiss timing starts now.
-                </p>
-              </div>
-            )}
             {status === 'error' && errorMessage && (
               <p
                 className="text-center font-sans text-[0.92rem] text-navy-soft"
