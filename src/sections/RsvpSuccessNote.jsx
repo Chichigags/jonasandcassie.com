@@ -1,58 +1,8 @@
-/**
- * Tiny watercolor-adjacent stems — corner accent only, not a wreath.
- */
-function WildflowerCorner() {
-  return (
-    <svg
-      className="pointer-events-none absolute bottom-0 left-0 h-[5.25rem] w-[4.5rem] overflow-visible opacity-[0.42] md:h-[5.75rem] md:w-[5rem]"
-      viewBox="0 0 88 104"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden
-    >
-      <defs>
-        <linearGradient
-          id="rsvp-wf-stem"
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="100%"
-        >
-          <stop stopColor="#A8B8A3" stopOpacity="0.55" />
-          <stop offset="1" stopColor="#93B2F8" stopOpacity="0.35" />
-        </linearGradient>
-        <radialGradient id="rsvp-wf-bloom-a" cx="50%" cy="50%" r="50%">
-          <stop stopColor="#FBEDB0" stopOpacity="0.75" />
-          <stop offset="1" stopColor="#F1B94C" stopOpacity="0.2" />
-        </radialGradient>
-        <radialGradient id="rsvp-wf-bloom-b" cx="50%" cy="50%" r="50%">
-          <stop stopColor="#93B2F8" stopOpacity="0.5" />
-          <stop offset="1" stopColor="#93B2F8" stopOpacity="0.08" />
-        </radialGradient>
-      </defs>
-      <path
-        d="M8 96 Q22 72 18 48 Q14 28 24 12"
-        stroke="url(#rsvp-wf-stem)"
-        strokeWidth="1.15"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <path
-        d="M14 88 Q34 70 40 44 Q46 22 52 8"
-        stroke="url(#rsvp-wf-stem)"
-        strokeWidth="0.95"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.85"
-      />
-      <ellipse cx="46" cy="14" rx="5" ry="4" fill="url(#rsvp-wf-bloom-b)" />
-      <ellipse cx="22" cy="42" rx="4.5" ry="3.5" fill="url(#rsvp-wf-bloom-a)" />
-      <ellipse cx="34" cy="58" rx="3" ry="2.5" fill="#A8B8A3" fillOpacity="0.35" />
-      <circle cx="58" cy="30" r="2.2" fill="#FBEDB0" fillOpacity="0.55" />
-    </svg>
-  )
-}
+const SKY_IMAGE = '/images/rsvp-success-sky.png'
 
+/**
+ * RSVP success — photographic sky note: soft image inside the card, type top-left.
+ */
 export function RsvpSuccessNote({ leaving, onDismiss }) {
   return (
     <div
@@ -66,7 +16,7 @@ export function RsvpSuccessNote({ leaving, onDismiss }) {
       }}
     >
       <div
-        className={`relative w-full max-w-[22.5rem] rounded-[1.15rem] border border-[rgba(10,22,128,0.12)] bg-paper px-9 pb-10 pt-11 shadow-[0_18px_44px_-22px_rgba(10,22,128,0.12),0_6px_16px_-10px_rgba(10,22,128,0.05)] md:max-w-[24rem] md:px-10 md:pb-11 md:pt-12 ${
+        className={`relative w-full max-w-[26rem] min-h-[15.5rem] overflow-hidden rounded-[1.15rem] border border-[rgba(10,22,128,0.12)] shadow-[0_18px_44px_-22px_rgba(10,22,128,0.12),0_6px_16px_-10px_rgba(10,22,128,0.05)] md:max-w-[28rem] md:min-h-[16rem] ${
           leaving
             ? 'translate-y-[4px] opacity-0 transition-[opacity,transform] duration-300 ease-out'
             : 'animate-rsvp-note-in'
@@ -76,27 +26,60 @@ export function RsvpSuccessNote({ leaving, onDismiss }) {
         aria-labelledby="rsvp-success-title"
         onClick={(e) => e.stopPropagation()}
       >
-        <WildflowerCorner />
+        {/* Photographic sky — scaled so flowers stay modest, bottom-right */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: `url(${SKY_IMAGE})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '168% auto',
+            backgroundPosition: '94% 92%',
+            filter: 'saturate(0.88) contrast(0.97) brightness(1.02)',
+          }}
+          aria-hidden
+        />
+
+        {/* Airy veil: open sky for type, flowers stay soft in the corner */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(118deg, rgba(252,253,255,0.96) 0%, rgba(250,248,243,0.9) 28%, rgba(252,253,255,0.55) 52%, rgba(252,253,255,0.22) 78%, rgba(252,253,255,0.06) 100%)',
+          }}
+          aria-hidden
+        />
+
+        {/* High-sky lift — slight brightening upper-left for cloud/editorial air */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-50"
+          style={{
+            background:
+              'radial-gradient(ellipse 95% 70% at 8% 12%, rgba(255,255,255,0.65) 0%, transparent 52%)',
+          }}
+          aria-hidden
+        />
 
         <button
           type="button"
           onClick={onDismiss}
-          className="absolute right-3 top-3 rounded-full px-2 py-1 font-sans text-[1.15rem] leading-none text-ocean/35 transition-colors hover:bg-ocean/[0.06] hover:text-ocean/55"
+          className="absolute right-2.5 top-2.5 z-20 rounded-full px-2 py-1 font-sans text-[1.15rem] leading-none text-[#0A1680]/40 transition-colors hover:bg-[#0A1680]/[0.06] hover:text-[#0A1680]/60"
           aria-label="Close"
         >
           ×
         </button>
 
-        <div className="relative text-center">
+        <div className="relative z-10 flex max-w-[20rem] flex-col items-start px-8 pb-9 pt-10 text-left md:max-w-[21rem] md:px-9 md:pb-10 md:pt-11">
           <p
             id="rsvp-success-title"
-            className="font-display text-[1.22rem] font-normal leading-snug text-ocean md:text-[1.32rem]"
+            className="font-display text-[1.2rem] font-normal leading-[1.35] text-[#0A1680] md:text-[1.3rem]"
           >
             Thank you — we can&apos;t wait to see you by the lake.
           </p>
-          <p className="mt-3 font-sans text-[0.88rem] font-normal leading-relaxed text-ocean/80 md:text-[0.92rem]">
-            See you in Lucerne.
-          </p>
+          <div className="mt-5 flex items-start gap-3 border-l border-[#E7A94C]/75 pl-3.5">
+            <p className="font-sans text-[0.88rem] font-normal leading-relaxed text-[#3F4348] md:text-[0.92rem]">
+              See you in Lucerne.
+            </p>
+          </div>
         </div>
       </div>
     </div>
