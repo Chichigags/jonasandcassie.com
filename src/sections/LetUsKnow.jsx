@@ -183,7 +183,7 @@ export function LetUsKnow() {
               type="submit"
               disabled={status === 'submitting' || status === 'success'}
               aria-busy={status === 'submitting'}
-              className="mx-auto flex min-h-[2.35rem] min-w-[min(100%,14rem)] items-center justify-center rounded-full border border-transparent bg-citrus px-12 py-2 font-sans text-[0.88rem] font-medium tracking-[0.04em] text-cream transition-[opacity,background-color] duration-200 hover:bg-citrus-deep disabled:cursor-not-allowed disabled:opacity-70 md:min-w-[16.5rem] md:text-[0.9rem]"
+              className="mx-auto flex min-h-[2.35rem] min-w-[min(100%,14rem)] items-center justify-center rounded-full border border-transparent bg-citrus px-12 py-2 font-sans text-[0.88rem] font-medium tracking-[0.04em] text-ocean transition-[opacity,background-color] duration-200 hover:bg-citrus-deep disabled:cursor-not-allowed disabled:opacity-70 md:min-w-[16.5rem] md:text-[0.9rem]"
             >
               {status === 'submitting' ? 'Sending…' : 'Let us know'}
             </button>

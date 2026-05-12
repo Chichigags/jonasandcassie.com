@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 const closingClass =
-  'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus-ink md:text-[1.1rem] md:leading-[1.85]'
+  'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus md:text-[1.1rem] md:leading-[1.85] [text-shadow:-0.75px_-0.75px_0_rgba(0,0,0,0.22),0.75px_-0.75px_0_rgba(0,0,0,0.22),-0.75px_0.75px_0_rgba(0,0,0,0.22),0.75px_0.75px_0_rgba(0,0,0,0.22),0_0_2px_rgba(0,0,0,0.15)]'
 
 const blocks = [
   {
@@ -57,7 +57,7 @@ export function Evening() {
   return (
     <section
       id="evening"
-      className="relative w-full overflow-visible bg-paper px-6 pb-32 pt-6 md:px-12 md:pb-40 md:pt-8 lg:pb-44 lg:pt-10"
+      className="relative w-full overflow-visible bg-paper px-6 pb-16 pt-6 md:px-12 md:pb-20 md:pt-8 lg:pb-22 lg:pt-10"
     >
       <Reveal>
         <header className="mx-auto max-w-prose text-center">

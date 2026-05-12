@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 const summerChic =
-  'font-display font-semibold not-italic leading-[1.08] tracking-[-0.02em] text-[#E8B923]'
+  'font-display font-semibold not-italic leading-[1.08] tracking-[-0.02em] text-citrus'
 
 /**
  * Dress code — full-bleed photo; top/bottom paper gradients only.

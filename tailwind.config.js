@@ -24,10 +24,8 @@ export default {
         butter: '#E8DFD0',
         charcoal: '#4A4A4A',
         citrus: {
-          DEFAULT: '#C89A5A',
-          deep: '#b8894e',
-          /** Schedule closing lines — readable honey on ivory */
-          ink: '#7a4520',
+          DEFAULT: '#E8B923',
+          deep: '#d4a41f',
         },
         cream: '#FFFFFF',
       },

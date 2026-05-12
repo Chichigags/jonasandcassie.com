@@ -17,7 +17,7 @@ const plans = [
       'This day also happens to be Swiss National Day — so we’re starting the morning on a farm just outside Lucerne. Very fitting.',
       'Time: 11:00 AM – 2:00 PM on Saturday, August 1',
       'Location: Lisbeth & Walter Wüest-Meier, Kantonsstrasse 16, 6211 Buchs LU (about 20 mins drive from Lucerne)',
-      'Dress code: something red or white — if you feel like leaning into it',
+      'Dress code: something yellow or white — if you feel like leaning into it',
       "Transport: We’ll sort out the details once we know who's coming — either carpooling or meeting at Sursee station.",
     ],
   },
@@ -47,9 +47,9 @@ function StackedPlanLine({ children }) {
             <br />
             (about 20 mins drive from Lucerne)
           </>
-        ) : labelMatch[2].includes('something red or white') ? (
+        ) : labelMatch[2].includes('something yellow or white') ? (
           <>
-            something red or white —
+            something yellow or white —
             <br />
             if you feel like leaning into it
           </>
