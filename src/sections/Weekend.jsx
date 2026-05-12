@@ -88,16 +88,35 @@ export function Weekend() {
             >
               <div className="flex h-full flex-col">
                 <article
-                  className={`relative flex h-full min-h-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-ocean/18 bg-air shadow-postcard ${
+                  className={`relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[18px] border border-ocean/18 shadow-postcard ${
                     index === 0
-                      ? ''
-                      : 'px-9 py-8 md:px-10 md:py-9'
+                      ? 'min-h-[22rem] md:min-h-[24rem]'
+                      : 'bg-[#faf7f2] px-9 py-8 md:px-10 md:py-9'
                   }`}
                 >
+                  {index === 0 && (
+                    <>
+                      <img
+                        src="/images/weekend-friday-full.png"
+                        alt=""
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center select-none"
+                        style={{
+                          filter:
+                            'saturate(0.97) contrast(1.02) brightness(1.02)',
+                        }}
+                      />
+                      <div
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(253,252,250,0.94)] from-0% via-[rgba(253,252,250,0.55)] via-[38%] to-transparent to-[58%]"
+                      />
+                    </>
+                  )}
+
                   <div
                     className={
                       index === 0
-                        ? 'relative z-10 max-w-[480px] shrink-0 px-9 pb-6 pt-8 md:px-10 md:pb-7 md:pt-9'
+                        ? 'relative z-10 flex flex-1 flex-col px-9 pb-8 pt-8 md:px-10 md:pb-9 md:pt-9'
                         : 'relative z-10 max-w-[480px]'
                     }
                   >
@@ -122,48 +141,6 @@ export function Weekend() {
                         ))}
                     </div>
                   </div>
-
-                  {index === 0 && (
-                    <div className="relative mt-auto isolate min-h-[10.5rem] w-full flex-1 overflow-hidden sm:min-h-[11.5rem] md:min-h-[12.25rem] lg:min-h-[12.75rem]">
-                      <img
-                        src="/images/weekend-riva.png"
-                        alt=""
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
-                        style={{
-                          objectPosition: '78% 100%',
-                          filter:
-                            'saturate(0.97) contrast(1.02) brightness(1.015)',
-                        }}
-                      />
-                      {/* Editorial merge: warm paper wash + gentle diagonal light — photo stays visible, no white fog */}
-                      <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0"
-                        style={{
-                          background: `
-                            linear-gradient(
-                              to bottom,
-                              rgba(253, 252, 249, 0.42) 0%,
-                              rgba(252, 250, 246, 0.14) 22%,
-                              rgba(252, 250, 246, 0.03) 34%,
-                              transparent 46%
-                            ),
-                            linear-gradient(
-                              108deg,
-                              rgba(250, 247, 241, 0.26) 0%,
-                              rgba(250, 247, 241, 0.07) 28%,
-                              transparent 58%
-                            )
-                          `,
-                        }}
-                      />
-                      <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-ocean/10"
-                      />
-                    </div>
-                  )}
                 </article>
               </div>
             </Reveal>

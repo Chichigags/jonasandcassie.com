@@ -116,8 +116,9 @@ export function Evening() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl font-sans text-[1.02rem] leading-[1.72] text-navy-soft md:text-[1.06rem] md:leading-[1.75]">
             <span className="block">A summer evening by the lake —</span>
-            <span className="block">simple, relaxed,</span>
-            <span className="block">and hopefully memorable.</span>
+            <span className="block">
+              simple, relaxed, and hopefully memorable.
+            </span>
           </p>
         </header>
       </Reveal>

@@ -1,7 +1,7 @@
 import { Reveal } from '../components/Reveal'
 
 /**
- * Dress code — editorial lake. Typography uses softer ink/blush here only; rest of site stays ocean.
+ * Dress code — lake background; ocean labels + body, ginger accents on title lines.
  */
 export function DressCode() {
   return (
@@ -62,20 +62,20 @@ export function DressCode() {
       <div className="relative mx-auto flex min-h-[420px] max-w-[1100px] flex-col items-center justify-center px-6 py-24 text-center md:min-h-[460px] md:px-12 md:py-24 lg:px-14">
         <div className="max-w-xl">
           <Reveal>
-            <p className="eyebrow !text-charcoal">DRESS CODE</p>
-            <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.05] tracking-[-0.015em] text-[#1a2e4a] [text-shadow:0_1px_2px_rgba(255,255,255,0.45)] md:text-[2.5rem]">
+            <p className="eyebrow !text-ocean">DRESS CODE</p>
+            <h2 className="mt-4 font-display text-[2.45rem] font-semibold not-italic leading-[1.05] tracking-[-0.015em] text-[#D6A83F] [text-shadow:0_1px_2px_rgba(255,255,255,0.5)] md:text-[2.5rem]">
               Summer chic
             </h2>
           </Reveal>
 
           <Reveal delayClass="reveal-delay-1">
-            <div className="mt-7 font-sans text-[1rem] font-normal leading-[1.72] text-charcoal md:text-[1.02rem] md:leading-[1.75]">
+            <div className="mt-7 font-sans text-[1rem] font-normal leading-[1.72] text-ocean md:text-[1.02rem] md:leading-[1.75]">
               <p>Boat-friendly, dance-friendly.</p>
             </div>
           </Reveal>
 
           <Reveal delayClass="reveal-delay-2">
-            <p className="mt-8 font-display text-[1.26rem] font-normal italic leading-snug tracking-[-0.012em] text-[#a88f8d] md:text-[1.32rem]">
+            <p className="mt-8 font-display text-[1.26rem] font-normal italic leading-snug tracking-[-0.012em] text-[#D6A83F] md:text-[1.32rem]">
               No black tie. No pressure.
             </p>
           </Reveal>
