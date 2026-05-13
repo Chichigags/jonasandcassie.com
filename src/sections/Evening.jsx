@@ -3,6 +3,59 @@ import { Reveal } from '../components/Reveal'
 const closingClass =
   'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus [text-shadow:none] drop-shadow-none md:text-[1.1rem] md:leading-[1.85]'
 
+/** Same wording as `blocks` — optional spans only control line breaks. */
+function EveningBodyParagraph({ text }) {
+  if (
+    text.startsWith(
+      'One important Swiss detail: the boat leaves exactly on time.',
+    )
+  ) {
+    return (
+      <>
+        One important Swiss detail: the boat leaves exactly on time.{' '}
+        <span className="whitespace-nowrap">
+          Not &ldquo;fashionably late&rdquo; time. Swiss time.
+        </span>
+      </>
+    )
+  }
+  if (text.startsWith('Time to meet, mingle, and get to know each other')) {
+    return (
+      <>
+        Time to meet, mingle, and get to know each other — because{' '}
+        <span className="whitespace-nowrap">
+          not everyone has had the pleasure yet.
+        </span>
+      </>
+    )
+  }
+  if (text.startsWith('And around 10 PM,')) {
+    return (
+      <>
+        And around 10 PM, Switzerland will conveniently provide{' '}
+        <span className="whitespace-nowrap">fireworks for us.</span>
+      </>
+    )
+  }
+  if (text.startsWith('For the responsible guests:')) {
+    return (
+      <span className="whitespace-nowrap">
+        For the responsible guests: this is the elegant ending.
+      </span>
+    )
+  }
+  if (text.startsWith('No official plans yet')) {
+    return (
+      <>
+        No official plans yet — but we suspect a few drinks, stories, and{' '}
+        <span className="whitespace-nowrap">questionable dance moves</span> may
+        continue somewhere in town.
+      </>
+    )
+  }
+  return text
+}
+
 const blocks = [
   {
     time: '5:00 PM',
@@ -57,10 +110,10 @@ export function Evening() {
   return (
     <section
       id="evening"
-      className="section-flow relative w-full overflow-visible px-6 pb-20 pt-10 md:px-12 md:pb-24 md:pt-12 lg:pb-28 lg:pt-14"
+      className="section-flow relative w-full overflow-visible px-6 pb-24 pt-16 md:px-12 md:pb-28 md:pt-20 lg:pb-32 lg:pt-24"
     >
       <Reveal>
-        <header className="mx-auto max-w-prose text-center">
+        <header className="mx-auto max-w-prose pt-2 text-center md:pt-3">
           <p className="eyebrow">THE EVENING</p>
           <h2 className="mt-5 font-display text-[2.5rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.9rem]">
             Here&apos;s the plan
@@ -99,11 +152,24 @@ export function Evening() {
                     </h3>
                     <div className="mt-5 space-y-4 font-sans text-[0.98rem] leading-[1.82] text-navy-soft md:text-[1.02rem] md:leading-[1.86]">
                       {block.body.map((para, j) => (
-                        <p key={j}>{para}</p>
+                        <p key={j}>
+                          <EveningBodyParagraph text={para} />
+                        </p>
                       ))}
                     </div>
                     {block.closingLine && (
-                      <p className={closingClass} style={{ textShadow: 'none' }}>
+                      <p
+                        className={`${closingClass} ${
+                          block.closingLine.startsWith('We can')
+                            ? 'max-w-full text-balance md:whitespace-nowrap'
+                            : ''
+                        } ${
+                          block.closingLine.startsWith('For everyone')
+                            ? 'block whitespace-nowrap'
+                            : ''
+                        }`}
+                        style={{ textShadow: 'none' }}
+                      >
                         {block.closingLine}
                       </p>
                     )}

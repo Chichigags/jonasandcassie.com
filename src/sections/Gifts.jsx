@@ -7,7 +7,7 @@ export function Gifts() {
   return (
     <section
       id="gifts"
-      className="relative w-full section-flow px-6 pt-18 pb-28 md:px-12 md:pt-22 md:pb-36"
+      className="relative w-full section-flow px-6 pt-24 pb-32 md:px-12 md:pt-28 md:pb-40"
     >
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
@@ -27,12 +27,12 @@ export function Gifts() {
         </Reveal>
 
         <div
-          className="mx-auto mt-8 h-px w-16 bg-ocean/28 md:w-20 md:bg-ocean/32"
+          className="mx-auto mt-10 h-px w-16 bg-stone-300/80 md:mt-11 md:w-20"
           aria-hidden
         />
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mt-7 font-display text-[1.34rem] font-normal italic leading-snug text-ocean md:text-[1.52rem]">
+          <p className="mx-auto mt-12 max-w-md px-2 pt-2 font-display text-[1.42rem] font-normal italic leading-snug text-ocean md:mt-14 md:px-0 md:text-[1.58rem] md:leading-snug">
             Truly — no gifts needed.
           </p>
         </Reveal>
