@@ -18,7 +18,7 @@ export function Story() {
   return (
     <section
       id="story"
-      className="section-flow relative z-[1] w-full pt-[clamp(3.5rem,8vw,5.5rem)] pb-24 md:pb-28 lg:pb-32"
+      className="section-flow relative z-[1] w-full pt-[clamp(2.75rem,6vw,4rem)] pb-20 md:pb-24 lg:pb-28"
     >
       <div className="story-container relative mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="story-row grid grid-cols-1 gap-12 md:grid-cols-[minmax(300px,1.15fr)_minmax(0,1fr)] md:items-center md:gap-x-12 lg:gap-x-14 lg:gap-y-8">
@@ -60,14 +60,12 @@ export function Story() {
                 <h2 className="mt-5 font-display text-[1.95rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[1.4rem] lg:text-[1.62rem] xl:text-[1.82rem] 2xl:text-[1.98rem] xl:whitespace-nowrap">
                   From Beijing to Singapore
                 </h2>
-                <p className="story-line-2 mt-9 text-pretty font-sans text-[1.02rem] font-normal leading-[1.78] text-navy-soft md:mt-10 md:text-[1.05rem] md:leading-[1.82] mb-[18px]">
+                <p className="story-line-2 mt-9 font-sans text-[1.02rem] font-normal leading-[1.78] text-navy-soft md:mt-10 md:text-[1.05rem] md:leading-[1.82] mb-[18px]">
                   What started in Beijing turned into a life built together in
-                  Singapore — with plenty of adventures, a few plot twists, and{' '}
-                  <span className="whitespace-nowrap sm:whitespace-normal">
-                    eventually, one very spoiled little dog.
-                  </span>
+                  Singapore — with plenty of adventures, a few plot twists, and
+                  eventually, one very spoiled little dog.
                 </p>
-                <p className="story-line-3 text-pretty font-sans text-[1.02rem] font-normal leading-[1.78] text-navy-soft md:text-[1.05rem] md:leading-[1.82]">
+                <p className="story-line-3 font-sans text-[1.02rem] font-normal leading-[1.78] text-navy-soft md:text-[1.05rem] md:leading-[1.82]">
                   This summer, we&apos;re taking a moment to celebrate it all,
                   with the people who matter most.
                 </p>

@@ -39,13 +39,13 @@
     font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.35em;
-    @apply text-stone-400;
+    letter-spacing: 0.14em;
+    @apply text-ocean;
   }
   @media (min-width: 768px) {
     .eyebrow {
       font-size: 0.76rem;
-      letter-spacing: 0.35em;
+      letter-spacing: 0.13em;
     }
   }
 
@@ -85,8 +85,8 @@
     background-color: #f5f2ec;
     background-image: linear-gradient(
       180deg,
-      rgba(147, 178, 248, 0.06) 0%,
-      rgba(245, 242, 236, 0) min(40vw, 18rem)
+      rgba(147, 178, 248, 0.05) 0%,
+      rgba(245, 242, 236, 0) min(32vw, 14rem)
     );
   }
 
@@ -95,8 +95,8 @@
     background-color: #f5f2ec;
     background-image: linear-gradient(
       180deg,
-      rgba(232, 223, 208, 0.24) 0%,
-      rgba(245, 242, 236, 0) min(36vw, 16rem)
+      rgba(232, 223, 208, 0.22) 0%,
+      rgba(245, 242, 236, 0) min(28vw, 12rem)
     );
   }
 

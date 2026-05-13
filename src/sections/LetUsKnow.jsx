@@ -6,15 +6,13 @@ import { RsvpSuccessNote } from './RsvpSuccessNote'
 const FORMSPREE_ACTION = 'https://formspree.io/f/xvzldrop'
 
 const fieldClass =
-  'w-full rounded-none border-0 border-b border-ocean/[0.09] bg-transparent px-0 py-2.5 font-sans text-[0.98rem] text-charcoal outline-none transition-[border-color,color] duration-300 placeholder:text-stone-400/90 placeholder:font-normal focus:border-ocean/25 focus:ring-0 md:text-[1.02rem]'
+  'w-full rounded-none border-0 border-b border-ocean/[0.09] bg-transparent px-0 py-2.5 font-sans text-[0.98rem] text-charcoal outline-none transition-[border-color,color] duration-300 placeholder:text-navy/32 focus:border-ocean/25 focus:ring-0 md:text-[1.02rem]'
 const textareaClass = `${fieldClass} mt-2 w-full resize-none min-h-[2.75rem] max-h-[14rem] overflow-y-auto leading-[1.72]`
 /** Match site body copy (e.g. Weekend / Evening blocks). */
 const labelClass =
-  'block font-sans text-[0.98rem] font-medium leading-[1.78] text-stone-800 md:text-[1.02rem] md:leading-[1.82]'
-const legendOptionalClass =
-  'text-[0.8rem] font-normal leading-[1.65] text-stone-400 md:text-[0.84rem] md:leading-[1.72]'
+  'block font-sans text-[0.98rem] font-normal leading-[1.78] text-navy-soft md:text-[1.02rem] md:leading-[1.82]'
 const optionClass =
-  'flex items-center gap-3 font-sans text-[0.98rem] font-normal leading-[1.82] text-navy-soft md:text-[1.02rem] md:leading-[1.86]'
+  'flex items-center gap-3 font-sans text-[0.98rem] leading-[1.82] text-navy-soft md:text-[1.02rem] md:leading-[1.86]'
 
 /**
  * RSVP — warm ivory field; quiet form; editorial capsule button.
@@ -109,13 +107,13 @@ export function LetUsKnow() {
   return (
     <section
       id="let-us-know"
-      className="section-flow relative w-full px-6 pb-36 pt-20 md:px-12 md:pb-40 md:pt-24 lg:pb-44"
+      className="section-flow relative w-full px-6 pb-32 pt-16 md:px-12 md:pb-36 md:pt-20 lg:pb-40"
     >
       {successModal}
 
       <div className="relative z-10 mx-auto max-w-2xl text-center">
         <Reveal>
-          <p className="eyebrow mb-5">YES?</p>
+          <p className="eyebrow mb-4">YES?</p>
           <h2 className="font-display text-[2.45rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.85rem]">
             Are you coming?
           </h2>
@@ -144,7 +142,7 @@ export function LetUsKnow() {
             </div>
 
             <fieldset>
-              <legend className={`${legendOptionalClass} text-left`}>
+              <legend className={labelClass}>
                 Will you join any of these as well? (optional)
               </legend>
               <div className="mt-2.5 grid gap-2.5">
@@ -153,7 +151,7 @@ export function LetUsKnow() {
                     type="checkbox"
                     name="friday_dinner"
                     value="Yes"
-                    className="h-3.5 w-3.5 min-h-[0.875rem] min-w-[0.875rem] shrink-0 accent-stone-400"
+                    className="h-3.5 w-3.5 min-h-[0.875rem] min-w-[0.875rem] shrink-0 accent-citrus"
                   />
                   Friday dinner
                 </label>
@@ -162,7 +160,7 @@ export function LetUsKnow() {
                     type="checkbox"
                     name="saturday_brunch"
                     value="Yes"
-                    className="h-3.5 w-3.5 min-h-[0.875rem] min-w-[0.875rem] shrink-0 accent-stone-400"
+                    className="h-3.5 w-3.5 min-h-[0.875rem] min-w-[0.875rem] shrink-0 accent-citrus"
                   />
                   Saturday brunch
                 </label>
@@ -186,7 +184,7 @@ export function LetUsKnow() {
               type="submit"
               disabled={status === 'submitting' || status === 'success'}
               aria-busy={status === 'submitting'}
-              className="group mx-auto mt-1 inline-flex min-h-[2.25rem] items-center justify-center gap-2 rounded-full border border-stone-300/90 bg-transparent px-9 py-2 font-sans text-[0.8rem] font-medium tracking-[0.06em] text-stone-700 transition-[border-color,background-color,color,opacity] duration-300 hover:border-stone-400 hover:bg-stone-100/60 disabled:cursor-not-allowed disabled:opacity-55 md:px-10 md:text-[0.82rem]"
+              className="group mx-auto mt-1 inline-flex min-h-[2.25rem] items-center justify-center gap-2 rounded-full border border-citrus/65 bg-transparent px-9 py-2 font-sans text-[0.8rem] font-normal tracking-[0.08em] text-citrus transition-[border-color,background-color,color,opacity] duration-300 hover:border-citrus hover:bg-citrus/[0.07] disabled:cursor-not-allowed disabled:opacity-55 md:px-10 md:text-[0.82rem]"
             >
               {status === 'submitting' ? (
                 'Sending…'
@@ -215,7 +213,7 @@ export function LetUsKnow() {
         </Reveal>
 
         <Reveal delayClass="reveal-delay-2">
-          <p className="mx-auto mt-16 max-w-md text-center font-sans text-[1.02rem] font-normal italic leading-relaxed text-stone-500 md:mt-20 md:text-[1.1rem] md:leading-relaxed">
+          <p className="mt-14 font-display text-[1.36rem] font-normal italic leading-snug text-ocean md:mt-16 md:text-[1.62rem] md:leading-relaxed">
             A text, message or call is also fine.
           </p>
         </Reveal>

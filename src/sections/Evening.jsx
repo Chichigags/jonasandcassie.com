@@ -56,6 +56,21 @@ function EveningBodyParagraph({ text }) {
   return text
 }
 
+/** Renders time with a slightly smaller AM/PM so it matches the numerals better. */
+function EveningTimeLine({ time }) {
+  if (time === 'Late-ish') return time
+  const m = time.match(/^(.*?)(\s+(?:PM|AM))$/i)
+  if (!m) return time
+  return (
+    <>
+      {m[1]}
+      <span className="text-[0.68em] font-semibold tracking-[0.05em] opacity-[0.9]">
+        {m[2]}
+      </span>
+    </>
+  )
+}
+
 const blocks = [
   {
     time: '5:00 PM',
@@ -110,10 +125,10 @@ export function Evening() {
   return (
     <section
       id="evening"
-      className="section-flow relative w-full overflow-visible px-6 pb-24 pt-16 md:px-12 md:pb-28 md:pt-20 lg:pb-32 lg:pt-24"
+      className="section-flow relative w-full overflow-visible px-6 pb-20 pt-10 md:px-12 md:pb-24 md:pt-12 lg:pb-28 lg:pt-14"
     >
       <Reveal>
-        <header className="mx-auto max-w-prose pt-2 text-center md:pt-3">
+        <header className="mx-auto max-w-prose text-center">
           <p className="eyebrow">THE EVENING</p>
           <h2 className="mt-5 font-display text-[2.5rem] font-semibold not-italic leading-[1.06] tracking-[-0.015em] text-ocean md:text-[2.9rem]">
             Here&apos;s the plan
@@ -142,7 +157,7 @@ export function Evening() {
                 <article className="grid grid-cols-1 gap-5 md:grid-cols-[minmax(0,11.25rem)_minmax(0,1fr)] md:gap-x-12 lg:gap-x-16">
                   <div className="md:pt-0.5">
                     <p className="font-display text-[1.48rem] font-semibold leading-none tracking-[-0.02em] text-ocean md:text-[1.62rem]">
-                      {block.time}
+                      <EveningTimeLine time={block.time} />
                     </p>
                   </div>
 
