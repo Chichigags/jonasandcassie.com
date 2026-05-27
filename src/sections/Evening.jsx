@@ -54,7 +54,8 @@ const blocks = [
     time: '5:00 PM',
     title: 'Meet at Lucerne Pier at KKL',
     body: [
-      'We’ll meet at the pier and board the boat together. One important Swiss detail: the boat leaves exactly on time. Not ‘fashionably late’ time. Swiss time.',
+      'We’ll meet at the pier and board the boat together.',
+      'One important Swiss detail: the boat leaves exactly on time. Not ‘fashionably late’ time. Swiss time.',
     ],
     closingLine: 'Very Swiss.',
   },
