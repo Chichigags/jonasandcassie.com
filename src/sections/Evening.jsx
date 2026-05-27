@@ -3,32 +3,10 @@ import { Reveal } from '../components/Reveal'
 const closingClass =
   'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus [text-shadow:none] drop-shadow-none md:text-[1.1rem] md:leading-[1.85]'
 
+const bodyParagraphClass = 'text-pretty tracking-[-0.01em]'
+
 /** Same wording as `blocks` — optional spans only control line breaks. */
 function EveningBodyParagraph({ text }) {
-  if (
-    text.startsWith(
-      'One important Swiss detail: the boat leaves exactly on time.',
-    )
-  ) {
-    return (
-      <>
-        One important Swiss detail: the boat leaves exactly on time.{' '}
-        <span className="whitespace-nowrap">
-          Not &ldquo;fashionably late&rdquo; time. Swiss time.
-        </span>
-      </>
-    )
-  }
-  if (text.startsWith('Time to meet, mingle, and get to know each other')) {
-    return (
-      <>
-        Time to meet, mingle, and get to know each other — because{' '}
-        <span className="whitespace-nowrap">
-          not everyone has had the pleasure yet.
-        </span>
-      </>
-    )
-  }
   if (text.startsWith('And around 10 PM,')) {
     return (
       <>
@@ -76,8 +54,7 @@ const blocks = [
     time: '5:00 PM',
     title: 'Meet at Lucerne Pier at KKL',
     body: [
-      'We’ll meet at the pier and board the boat together.',
-      'One important Swiss detail: the boat leaves exactly on time. Not “fashionably late” time. Swiss time.',
+      'We’ll meet at the pier and board the boat together. One important Swiss detail: the boat leaves exactly on time. Not ‘fashionably late’ time. Swiss time.',
     ],
     closingLine: 'Very Swiss.',
   },
@@ -86,7 +63,7 @@ const blocks = [
     title: 'Boat ride to Weggis',
     body: [
       'A scenic ride across Lake Lucerne with mountain views, good company, and an apéro to get the celebrations started.',
-      'Time to meet, mingle, and get to know each other — because not everyone has had the pleasure yet.',
+      'Time to meet, mingle, and get to know each other because not everyone has had the pleasure\u00a0yet.',
     ],
     closingLine: 'Consider this the official start of the celebration.',
   },
@@ -165,9 +142,9 @@ export function Evening() {
                     <h3 className="font-display text-[1.26rem] font-semibold leading-snug tracking-[-0.01em] text-navy md:text-[1.34rem]">
                       {block.title}
                     </h3>
-                    <div className="mt-5 space-y-4 font-sans text-[0.98rem] leading-[1.82] text-navy-soft md:text-[1.02rem] md:leading-[1.86]">
+                    <div className="mt-5 flex flex-col gap-3 font-sans text-[1rem] leading-[1.78] text-navy-soft md:mt-[1.125rem] md:gap-[0.875rem] md:text-[1.02rem] md:leading-[1.86]">
                       {block.body.map((para, j) => (
-                        <p key={j}>
+                        <p key={j} className={bodyParagraphClass}>
                           <EveningBodyParagraph text={para} />
                         </p>
                       ))}
