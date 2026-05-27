@@ -1,8 +1,8 @@
 import { Reveal } from '../components/Reveal'
 
-/** Match Hero / Dress code / RSVP body column: max-w-xl; gold lines use text-balance. */
+/** Gold closing line — no text-balance (natural wrap). */
 const closingClass =
-  'mt-5 text-balance font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus [text-shadow:none] drop-shadow-none md:text-[1.1rem] md:leading-[1.85]'
+  'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus [text-shadow:none] drop-shadow-none md:text-[1.1rem] md:leading-[1.85]'
 
 const bodyParagraphClass =
   'max-w-none text-pretty text-[1rem] font-normal leading-[1.78] tracking-[-0.01em] text-navy-soft md:text-[1.02rem] md:leading-[1.86] md:tracking-normal'
@@ -93,7 +93,7 @@ export function Evening() {
         </header>
       </Reveal>
 
-      <div className="relative mx-auto mt-14 max-w-content md:mt-16 lg:mt-18">
+      <div className="relative mx-auto mt-14 w-full max-w-[1200px] md:mt-16 lg:mt-18">
         <div
           className="pointer-events-none absolute bottom-10 left-[11.55rem] top-10 hidden w-px bg-ocean/15 md:block lg:left-[12.05rem]"
           aria-hidden
@@ -112,7 +112,7 @@ export function Evening() {
                     </p>
                   </div>
 
-                  <div className="min-w-0 w-full max-w-xl">
+                  <div className="min-w-0 w-full">
                     <h3 className="font-display text-[1.26rem] font-semibold leading-snug tracking-[-0.01em] text-navy md:text-[1.34rem]">
                       {block.title}
                     </h3>
