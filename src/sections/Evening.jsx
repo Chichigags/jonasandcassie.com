@@ -1,38 +1,11 @@
 import { Reveal } from '../components/Reveal'
 
+/** Match Hero / Dress code / RSVP body column: max-w-xl; gold lines use text-balance. */
 const closingClass =
-  'mt-5 font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus [text-shadow:none] drop-shadow-none md:text-[1.1rem] md:leading-[1.85]'
+  'mt-5 text-balance font-display text-[1.06rem] font-medium italic leading-[1.82] tracking-[-0.012em] text-citrus [text-shadow:none] drop-shadow-none md:text-[1.1rem] md:leading-[1.85]'
 
-const bodyParagraphClass = 'text-pretty tracking-[-0.01em]'
-
-/** Same wording as `blocks` — optional spans only control line breaks. */
-function EveningBodyParagraph({ text }) {
-  if (text.startsWith('And around 10 PM,')) {
-    return (
-      <>
-        And around 10 PM, Switzerland will conveniently provide{' '}
-        <span className="whitespace-nowrap">fireworks for us.</span>
-      </>
-    )
-  }
-  if (text.startsWith('For the responsible guests:')) {
-    return (
-      <span className="whitespace-nowrap">
-        For the responsible guests: this is the elegant ending.
-      </span>
-    )
-  }
-  if (text.startsWith('No official plans yet')) {
-    return (
-      <>
-        No official plans yet — but we suspect a few drinks, stories, and{' '}
-        <span className="whitespace-nowrap">questionable dance moves</span> may
-        continue somewhere in town.
-      </>
-    )
-  }
-  return text
-}
+const bodyParagraphClass =
+  'max-w-none text-pretty text-[1rem] font-normal leading-[1.78] tracking-[-0.01em] text-navy-soft md:text-[1.02rem] md:leading-[1.86] md:tracking-normal'
 
 /** Renders time with a slightly smaller AM/PM so it matches the numerals better. */
 function EveningTimeLine({ time }) {
@@ -139,14 +112,14 @@ export function Evening() {
                     </p>
                   </div>
 
-                  <div className="min-w-0 w-full md:max-w-reading">
+                  <div className="min-w-0 w-full max-w-xl">
                     <h3 className="font-display text-[1.26rem] font-semibold leading-snug tracking-[-0.01em] text-navy md:text-[1.34rem]">
                       {block.title}
                     </h3>
-                    <div className="mt-5 flex flex-col gap-3 font-sans text-[1rem] leading-[1.78] text-navy-soft md:mt-[1.125rem] md:gap-[0.875rem] md:text-[1.02rem] md:leading-[1.86]">
+                    <div className="mt-5 flex flex-col gap-3 md:mt-[1.125rem] md:gap-[0.875rem]">
                       {block.body.map((para, j) => (
                         <p key={j} className={bodyParagraphClass}>
-                          <EveningBodyParagraph text={para} />
+                          {para}
                         </p>
                       ))}
                     </div>
@@ -154,7 +127,7 @@ export function Evening() {
                       <p
                         className={`${closingClass} ${
                           block.closingLine.startsWith('We can')
-                            ? 'max-w-full text-balance md:whitespace-nowrap'
+                            ? 'max-w-full md:whitespace-nowrap'
                             : ''
                         } ${
                           block.closingLine.startsWith('For everyone')
